@@ -64,6 +64,6 @@
 // Force Hardware Acceleration
 // **********************************************
 
-    @mixin excel() {
+    @mixin accel() {
         @include translate3d(0,0,0);
     }
