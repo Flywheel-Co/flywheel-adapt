@@ -1,0 +1,12 @@
+// Blur Filter
+// **********************************************
+
+    @mixin blur($value) {
+
+        -webkit-filter: blur($value);
+        -moz-filter:    blur($value);
+        -o-filter:      blur($value);
+        -ms-filter:     blur($value);
+        filter:         blur($value);
+
+    }

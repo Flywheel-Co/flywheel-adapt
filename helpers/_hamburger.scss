@@ -1,0 +1,38 @@
+// Hamburger Button
+// **********************************************
+
+    @mixin hamburger($color: #333333, $width: 24px, $height:18px, $barSize : 5) {
+
+        $barHeight: $height / $barSize;
+
+        position: relative;
+        height: $height;
+        padding-left: $width + 5px;
+        color: $color;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        cursor: pointer;
+        .hamburger-buns {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -($barHeight / 2);
+            height: $barHeight;
+            width: $width;
+            color: $color;
+            background-color: $color;
+        }
+        span {
+            @extend .hamburger-buns;
+            &:before {
+                @extend .hamburger-buns;
+                top: -($barHeight * 1.5);
+                content: '';
+            }
+            &:after {
+                @extend .hamburger-buns;
+                top: ($barHeight * 2.5);
+                content: '';
+            }
+        }
+    }

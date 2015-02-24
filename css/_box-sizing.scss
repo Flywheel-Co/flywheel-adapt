@@ -1,0 +1,13 @@
+// Box Sizing
+// **********************************************
+
+    @mixin box-sizing($value:border-box) {
+
+        -webkit-box-sizing: $value;
+        -moz-box-sizing: $value;
+        box-sizing: $value;
+
+    }
+
+    @mixin bs($value) { @include box-sizing($value); }
+

@@ -1,0 +1,132 @@
+/**
+*   Device mixin to be used for media queries
+*
+*   Options are :
+*   mobile, mobile-portrait, monbile-landscape, tablet, tablet-portrait, tablet-landscape, desktop
+*
+*   @include device(mobile) { content }
+**/
+
+// Device Break Points
+// **********************************************
+
+    $mediaMobilePortrait:  320px;
+    $mediaMobileLandscape: 480px;
+    $mediaTabletPortrait:  768px;
+    $mediaTabletLandscape: 1028px;
+    $mediaDesktop:         1224px;
+
+// Device Media Queries
+// **********************************************
+
+    @mixin device($media) {
+        @if $media == mobile
+        { // smartphone mobile devices
+            @media only screen and (max-width: $mediaMobileLandscape) { @content; }
+        }@else if $media == tablet
+        { // tablet devices
+            @media only screen and (min-width : $mediaMobileLandscape+1) and (max-width : $mediaTabletLandscape) { @content; }
+        }@else if $media == mobile-portrait
+        { // smartphone portrait
+            @media only screen and (max-width: $mediaMobilePortrait) { @content; }
+        }@else if $media == mobile-landscape
+        { // smartphone landscape
+            @media only screen and (min-width: $mediaMobilePortrait+1) and (max-width : $mediaMobileLandscape) { @content; }
+        }@else if $media == tablet-portrait
+        { // tablet portrait
+            @media only screen and (min-width : $mediaMobileLandscape+1) and (max-width : $mediaTabletPortrait) { @content; }
+        }@else if $media == tablet-landscape
+        { // tablet landscapt
+            @media only screen and (min-width: $mediaTabletPortrait+1) and (max-width : $mediaTabletLandscape) { @content; }
+        }@else if $media == desktop
+        { // desktop
+            @media only screen and (min-width: $mediaDesktop+1) { @content; }
+        }
+    }
+
+    // Aliases **********************************
+
+    @mixin mobile-portrait() {
+        @include device(mobile-portrait) { @content; }
+    }
+    @mixin mobile() {
+        @include device(mobile) { @content; }
+    }
+    @mixin tablet-portrait() {
+        @include device(tablet-portrait) { @content; }
+    }
+    @mixin tablet() {
+        @include device(tablet) { @content; }
+    }
+    @mixin desktop() {
+        @include device(desktop) { @content; }
+    }
+
+// Device Classes
+// **********************************************
+
+    // mobile ***********************************
+
+        .showOnlyMobile {
+            display:none !important;
+            @include device(mobile) { display:block !important; }
+        }
+        .hideOnlyMobile {
+            @include device(mobile) { display:none; }
+        }
+        .showMobile {
+            @include device(mobile) { display:block !important; }
+        }
+        .hideMobile {
+            @include device(mobile) { display:none; }
+        }
+
+    // tablet ***********************************
+
+        .showOnlyTablet {
+            display:none !important;
+            @include device(tablet) { display:block !important; }
+        }
+        .hideOnlyTablet {
+            @include device(tablet) { display:none; }
+        }
+        .showTablet {
+            @include device(tablet) { display:block; }
+        }
+        .hideTablet {
+            @include device(tablet) { display:none; }
+        }
+
+        .showOnlyTabletPortrait {
+            display:none !important;
+            @include device(tablet-portrait) { display:block !important; }
+        }
+        .hideOnlyTabletPortrait {
+            @include device(tablet-portrait) { display:none; }
+        }
+        .showTabletPortrait {
+            @include device(tablet-portrait) { display:block !important; }
+        }
+        .hideTabletPortrait {
+            @include device(tablet-portrait) { display:none; }
+        }
+
+    // desktop **********************************
+
+        .showOnlyDesktop {
+            display:block;
+            @include device(mobile) { display:none; }
+            @include device(tablet) { display:none; }
+            @include device(desktop) { display:block; }
+        }
+        .hideOnlyDesktop {
+            display:none;
+            @include device(mobile) { display:block; }
+            @include device(tablet) { display:block; }
+        }
+        .showDesktop {
+            @include device(desktop) { display:block; }
+        }
+        .hideDesktop {
+            @include device(desktop) { display:none; }
+        }

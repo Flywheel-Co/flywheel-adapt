@@ -1,0 +1,14 @@
+// Font Face
+// **********************************************
+
+    @mixin font-face($fontFamily, $fontFilename) {
+
+        @font-face {
+          font-family: $fontFamily;
+          $prefix : $fontFamily + "/" + $fontFilename;
+          src:  url($prefix + ".otf") format('opentype');
+        }
+
+    }
+
+

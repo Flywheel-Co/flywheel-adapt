@@ -1,0 +1,17 @@
+// Background Image
+// **********************************************
+
+    @mixin bgimg($width, $height, $bgoptions, $cover:false) {
+
+        display:     block;
+        width:       $width;
+        height:      $height;
+        background:  $bgoptions;
+        text-indent: -9999px;
+        overflow:    hidden;
+
+        @if $cover == true {
+            background-size:cover;
+        }
+
+    }
