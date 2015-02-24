@@ -4,17 +4,17 @@ This is a group of frequently used and re-used Sass mixins, and other helpers to
 
 ## Usage
 
-### Composer
+#### Composer
 Coming soon!
 
-### Other
+#### Other
 
 To include Flywheel's Sass tools in a project, simply import the sucker:
 `@import 'sass-tools/sass-tools';`
 
 ## Functionality
 
-### CSS Mixins
+#### CSS Mixins
 
 * **animation** - `delay, duration, animation, (repeat), (direction)`
 * **background-gradient** - (startColor), (endColor), (type)
@@ -38,7 +38,7 @@ To include Flywheel's Sass tools in a project, simply import the sucker:
  * **accel**
  * **excel** - _deprecated._ aliases to accel
 
-### Helpers
+#### Helpers
 
 * **bgimg** - `width, height, bgoptions, (cover)`
 * **blur** - `value`
@@ -48,7 +48,7 @@ To include Flywheel's Sass tools in a project, simply import the sucker:
 * **setBoxRatio** - `width, height, (ratio)`
 * **break-word**
 
-### Media Sizes
+#### Media Sizes
 
 * **$mediaMobilePortrait**
 * **$mediaMobileLandscape**
@@ -56,7 +56,7 @@ To include Flywheel's Sass tools in a project, simply import the sucker:
 * **$mediaTabletLandscape**
 * **$mediaDesktop**
 
-### Media Queries
+#### Media Queries
 
 * **device** - `media`
 * **mobile-portrait**
@@ -65,7 +65,7 @@ To include Flywheel's Sass tools in a project, simply import the sucker:
 * **tablet**
 * **desktop**
 
-### CSS Classes
+#### CSS Classes
 
 * **clearfix**
 * **floatleft**
