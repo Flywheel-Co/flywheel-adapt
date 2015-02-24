@@ -3,3 +3,10 @@
     @mixin boxSize($value:border-box) {
         @include box-sizing($value);
     }
+
+// Hardware Acceleration for animations *********
+
+    @mixin excel() {
+        @include accel();
+    }
+

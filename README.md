@@ -7,10 +7,10 @@ This is a group of frequently used and re-used Sass mixins, and other helpers to
 * **animation** - `delay, duration, animation, (repeat), (direction)`
 * **background-gradient** - (startColor), (endColor), (type)
 * **border-radius** - `value`
-* * **border-top-radius** - `value`
-* * **border-bottom-radius** - `value`
+ * **border-top-radius** - `value`
+ * **border-bottom-radius** - `value`
 * **box-shadow** - `top, left, blur, color`
-* * **box-shadow-inset** - `top, left, blur, color`
+ * **box-shadow-inset** - `top, left, blur, color`
 * **box-sizing** - `(value)`
  * **boxSize** - _deprecated._ aliases to box-sizing
  * **bs** - aliases to box-sizing
