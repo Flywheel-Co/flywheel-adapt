@@ -9,5 +9,5 @@
 
     }
 
-    @mixin bs($value) { @include box-sizing($value); }
+    @mixin bs($value:border-box) { @include box-sizing($value); }
 
