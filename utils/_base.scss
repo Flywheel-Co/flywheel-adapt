@@ -1,0 +1,14 @@
+// Globals
+// **********************************************
+
+    html, body { height:100%; }
+
+// Form Elements
+// **********************************************
+
+    input {
+        -webkit-appearance:none;
+        -webkit-border-radius:0;
+    }
+
+    input[type="submit"] { cursor:pointer; }

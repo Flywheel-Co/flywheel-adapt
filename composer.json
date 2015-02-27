@@ -1,6 +1,6 @@
 {
     "name": "flywheel/sass-tools",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Flypress is a custom built WordPress plugin for use with Flywheel built websites to provide frequently relied upon functionality and modificatoin.",
     "type": "wordpress-muplugin",
     "repository": {
