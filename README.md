@@ -5,7 +5,27 @@ This is a group of frequently used and re-used Sass mixins, and other helpers to
 ## Usage
 
 #### Composer
-Coming soon!
+
+Example Usage:
+
+    {
+        "repositories": [
+            {
+                "type": "git",
+                "url":  "git@github.com:Flywheel-Co/sass-tools.git"
+            }
+        ],
+        "require": {
+            "flywheel/sass-tools": "~1.0",
+        },
+        "extra": {
+            "installer-paths": {
+                "assets/sass/{$name}": ["flywheel/sass-tools"]
+            }
+        }
+    }
+
+
 
 #### Other
 
