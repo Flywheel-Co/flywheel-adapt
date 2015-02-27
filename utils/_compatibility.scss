@@ -1,12 +1,14 @@
 // Box Sizing ***********************************
 
     @mixin boxSize($value:border-box) {
+        @warn "Deprecated Mixin: boxSize\r\nThe 'boxSize' mixin has been moved to 'box-sizing' for consistency-sake.";
         @include box-sizing($value);
     }
 
 // Hardware Acceleration for animations *********
 
     @mixin excel() {
+        @warn "Deprecated Mixin: excel\r\nThe 'excel' mixin has moved to 'accel' because our brains our mush.";
         @include accel();
     }
 
