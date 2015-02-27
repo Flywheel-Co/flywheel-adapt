@@ -1,0 +1,19 @@
+{
+  "name": "sass-tools",
+  "description": "Flywheel Co. Sass Tools",
+  "version": "1.1.1",
+  "keywords": [],
+  "homepage": "http://flywheel.co",
+  "dependencies": {},
+  "devDependencies": {},
+  "license": ["OFL-1.1", "MIT", "CC-BY-3.0"],
+  "main": [
+    "./_sass-tools.scss"
+  ],
+  "private": "true",
+  "ignore": [
+    "*/.*",
+    "*.json",
+    "*.md"
+  ]
+}
