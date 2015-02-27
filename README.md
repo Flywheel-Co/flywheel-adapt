@@ -25,12 +25,27 @@ Example Usage:
         }
     }
 
+#### Bower
+
+Example Usage:
+
+    ...
+
+    "dependencies": {
+        "sass-tools": "git@github.com:Flywheel-Co/sass-tools.git"
+    }
+
+    ...
 
 
-#### Other
+#### Standard
 
-To include Flywheel's Sass tools in a project, simply import the sucker:
-`@import 'sass-tools/sass-tools';`
+Example Usage:
+
+    @import 'sass-tools/sass-tools';
+
+    ...
+
 
 ## Functionality
 
