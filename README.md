@@ -65,6 +65,7 @@ Example Usage:
 * **placeholder** - @content
 * **keyframes** - @content
 * **transition** - `transitionProperty, transitionTime, method`
+ * **transition-delay** - `value`
 * **transform** - `value`
  * **rotate** - `degrees`
  * **transform-origin** - `value`

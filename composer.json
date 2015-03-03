@@ -1,8 +1,8 @@
 {
     "name": "flywheel/sass-tools",
-    "version": "1.1.2",
-    "description": "Flypress is a custom built WordPress plugin for use with Flywheel built websites to provide frequently relied upon functionality and modificatoin.",
-    "type": "wordpress-muplugin",
+    "version": "1.1.3",
+    "description": "This is a group of frequently used and re-used Sass mixins, and other helpers to assist in rapid development.",
+    "type": "library",
     "repository": {
         "name": "sass-tools",
         "type": "git",
