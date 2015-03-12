@@ -1,0 +1,354 @@
+
+// animation declaration for supporting browsers
+// delay, duration, animation type
+@mixin animation ($delay, $duration, $animation, $repeat : 0, $direction : forwards) {
+    -webkit-animation: $animation $duration $delay $repeat $direction; 
+    -moz-animation: $animation $duration $delay $repeat $direction;
+    -o-animation: $animation $duration $delay $repeat $direction;
+    animation: $animation $duration $delay $repeat $direction;
+}
+
+@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999, $direction: top) {
+    background-color: $startColor;
+    // background-image: -webkit-gradient(linear, left $direction, left $direction, from($startColor), to($endColor));
+    background-image: -webkit-linear-gradient($direction, $startColor, $endColor);
+    background-image: -moz-linear-gradient($direction, $startColor, $endColor);
+    background-image: -ms-linear-gradient($direction, $startColor, $endColor);
+    background-image: -o-linear-gradient($direction, $startColor, $endColor);
+    background-image: linear-gradient($direction, $startColor, $endColor);
+   //  filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
+}
+
+// blur an element
+@mixin blur($val) {
+	-webkit-filter: blur($val);
+	-moz-filter: blur($val);
+	-o-filter: blur($val);
+	-ms-filter: blur($val);
+	filter: blur($val);
+}
+
+// set border radius  ( @include border-radius(3px) )
+@mixin border-radius($value) {
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value;
+}
+@mixin border-bottom-radius($radius){
+	border-bottom-right-radius: $radius;
+	-moz-border-radius-bottomright: $radius;
+	-webkit-border-bottom-right-radius: $radius;
+
+	border-bottom-left-radius: $radius;
+	-moz-border-radius-bottomleft: $radius;
+	-webkit-border-bottom-left-radius: $radius;
+}
+
+@mixin border-top-radius($radius){
+	border-top-right-radius: $radius;
+	-moz-border-radius-topright: $radius;
+	-webkit-border-top-right-radius: $radius;
+
+	border-top-left-radius: $radius;
+	-moz-border-radius-topleft: $radius;
+	-webkit-border-top-left-radius: $radius;
+}
+
+// set box sizing across supporting browsers  ( @include boxSize() )
+@mixin boxSize() {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+@mixin bs() { @include boxSize(); }
+
+@mixin box-shadow($top, $left, $blur, $color) {
+	-webkit-box-shadow: $top $left $blur $color;
+	-moz-box-shadow: $top $left $blur $color;
+	box-shadow: $top $left $blur $color;
+}
+
+@mixin box-shadow-inset($top, $left, $blur, $color) {
+	-webkit-box-shadow: inset $top $left $blur $color;
+	-moz-box-shadow: inset $top $left $blur $color;
+	box-shadow: inset $top $left $blur $color;
+}
+
+// Basic floating clear.
+@mixin clearfix(){
+	zoom: 1;
+	&:before, &:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+	&:after { clear: both; }  
+}
+@mixin cf { @include clearfix(); }
+
+@mixin cursor-grab {
+	cursor : -webkit-grab !important;
+	cursor : -moz-grab !important;
+}
+@mixin cursor-grabbing {
+	cursor : -webkit-grabbing;
+	cursor : -moz-grabbing;
+}
+
+// force hardware excel for css animations
+@mixin excel() {
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+//  Set the fontface
+@mixin font-face($family, $filename) {
+	@font-face {
+	  font-family: $family;
+	  $prefix : $family + "/" + $filename;
+	  src:  url($prefix + ".otf") format('opentype');
+	}
+}
+
+/**
+ * Hamburger button
+ *
+ * @param $size Button width
+ * @param $bh Bar height 
+ * @param $offset Offeset of top and bottom bars if any
+ * @return Response
+ */
+@mixin hamburger($size : 30px, $bh : 4px, $offset : 2px) {
+	padding: 0 !important;
+	overflow: hidden;
+	@include border-radius(100%);
+	@include transition(all, .2s, linear);
+	&:hover {
+		background-color: #eeeeee;
+	}
+	span {
+		display: block;
+		position: relative;
+		margin: 16px 7px;
+		padding: 0;
+		width: $size;
+		height: 4px;
+		background-color: #454545;
+		text-indent: -99999px;
+		overflow: visible;
+		@include border-radius(3px);
+		@include transition(all, .2s, linear);
+		@include excel;
+		&:after, &:before {
+			content: '';
+			display: block;
+			position: absolute;
+			margin: 0 $offset;
+			top: -7px;
+			width: $size - ($offset * 2);
+			height: $bh;
+			background-color: #454545;
+			@include border-radius(3px);
+			@include transition(all, .2s, linear);
+			@include excel;
+		}
+		&:before {
+			top: auto;
+			bottom: -7px;
+		}
+	}
+}
+
+
+// Keyframes mixin for supporting browsers
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} { @content; }
+	@-moz-keyframes #{$name} { @content; }
+	@-ms-keyframes #{$name} { @content; }
+	@keyframes #{$name} { @content; } 
+}
+
+// Modify the placeholder across supporting browsers.
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+}
+
+
+// transform rotate by degrees.  ( @include rotate(-40) )
+@mixin rotate( $degrees ) {
+	-webkit-transform: rotate($degrees + deg);
+	-moz-transform: rotate($degrees + deg);
+	-ms-transform: rotate($degrees + deg);
+	-o-transform: rotate($degrees + deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+@mixin scale($scale) {
+	-webkit-transform: scale($scale);
+	-moz-transform: scale($scale);
+	-ms-transform: scale($scale);
+	-o-transform: scale($scale);
+}
+
+@mixin selection() {
+	p::selection { @content; }
+	p::-moz-selection { @content; }
+}
+
+@mixin setBoxRatio($w, $h, $ratio : 2) {
+	@include device(mobile) {
+		width: $w / $ratio;
+		height: $h / $ratio;
+		margin-left: ($w / ($ratio * 2)) * -1;
+		background-size: 100% 100%;
+	}	
+}
+
+@mixin transform-origin($x, $y) {
+    -ms-transform-origin: $x $y;
+    -webkit-transform-origin: $x $y;
+    -moz-transform-origin: $x $y;
+    -o-transform-origin: $x $y;
+    transform-origin: $x $y;
+}
+
+// transitions across supporting browsers
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+@mixin translate($x, $y) {
+	-webkit-transform: translate($x, $y);
+	-moz-transform: translate($x, $y);
+	-ms-transform: translate($x, $y);
+	-o-transform: translate($x, $y);
+	transform: translate($x, $y);
+}
+
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+// transform rotate by degrees.  ( @include rotate(-40) )
+@mixin y( $val ) {
+	-webkit-transform: translatey($val);
+	-moz-transform: translatey($val);
+	-ms-transform: translatey($val);
+	-o-transform: translatey($val);
+	transform: translatey($val);
+}
+
+
+/** 
+*	Device mixin to be used for media queries
+*	
+*	Options are : 
+*	mobile, mobile-portrait, monbile-landscape, tablet, tablet-portrait, tablet-landscape, desktop 
+*
+*	@include device(mobile) { content }
+**/
+
+// Device Mixin Break Points
+$mediaMobilePortrait: 320px;  
+$mediaMobileLandscape: 480px;
+$mediaTabletPortrait: 769px;
+$mediaTabletLandscape: 1028px;
+$mediaDesktop: 1224px;
+
+@mixin device($media) {
+	@if $media == mobile 
+	{ // smartphone mobile devices
+		@media only screen and (max-width: $mediaMobileLandscape) { @content; }
+	}@else if $media == tablet 
+	{ // tablet devices
+		@media only screen and (min-width : $mediaMobileLandscape+1) and (max-width : $mediaTabletLandscape) { @content; }
+	}@else if $media == mobile-portrait 
+	{ // smartphone portrait
+		@media only screen and (max-width: $mediaMobilePortrait) { @content; }
+	}@else if $media == mobile-landscape 
+	{ // smartphone landscape
+		@media only screen and (min-width: $mediaMobilePortrait+1) and (max-width : $mediaMobileLandscape) { @content; }
+	}@else if $media == tablet-portrait 
+	{ // tablet portrait
+		@media only screen and (min-width : $mediaMobileLandscape+1) and (max-width : $mediaTabletPortrait) { @content; }
+	}@else if $media == tablet-landscape 
+	{ // tablet landscapt
+		@media only screen and (min-width: $mediaTabletPortrait+1) and (max-width : $mediaTabletLandscape) { @content; }
+	}@else if $media == desktop 
+	{ // desktop
+		@media only screen and (min-width: $mediaDesktop+1) { @content; }
+	}
+}
+
+/**
+*
+* a few classes that can be used for hiding and showing based on browser/device size.
+*
+**/
+// mobile
+.showOnlyMobile {
+	display:none !important;
+	@include device(mobile) { display:block !important; }
+}
+.hideOnlyMobile {
+	display: block !important;
+	@include device(mobile) { display:none !important; }
+}
+.showMobile {
+	@include device(mobile) { display:block; }
+}
+.hideMobile {
+	@include device(mobile) { display:none; }
+}
+.hm { @extend .hideMobile; }
+
+// desktop
+.showOnlyDesktop {
+	display:block;
+	@include device(mobile) { display:none; }
+	@include device(tablet) { display:none; }
+	@include device(desktop) { display:block; }
+}
+.hideOnlyDesktop {
+	display:none;
+	@include device(mobile) { display:block; }
+	@include device(tablet) { display:block; }
+}
+.showDesktop {
+	@include device(desktop) { display:block; }
+}
+.hideDesktop {
+	@include device(desktop) { display:none; }
+}
+
+// float classes
+.clearfix {
+	@include clearfix();
+}
+.floatright {
+	float:right;
+}
+.floatleft { 
+	float:left;
+}
+
+/**
+*	Preload Images
+*	
+*	To use, add the class preload to the body and remove once the document is ready via JS
+*/
+.preload * {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+}
