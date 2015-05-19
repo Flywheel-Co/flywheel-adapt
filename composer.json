@@ -1,6 +1,6 @@
 {
-    "name": "flywheel/sass-tools",
-    "version": "1.1.3",
+    "name": "flywheel/adapt",
+    "version": "1.1.4",
     "description": "This is a group of frequently used and re-used Sass mixins, and other helpers to assist in rapid development.",
     "type": "sass",
     "repository": {
