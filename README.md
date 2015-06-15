@@ -28,16 +28,20 @@ Example Usage:
 ***
 
 ##### Bower
+
+This is currently a private package and can only be included by permitted projects.
+
 ```json
+{
     "dependencies": {
         "flywheel-adapt": "git@github.com:Flywheel-Co/flywheel-adapt.git"
     }
+}
 ```
 ```sass
 // import the _adapt.scss via the bower vendor folder defined in your `.bowerrc` file.
 @import "../vendor/flywheel-adapt/adapt";
 ```
-
 
 ##### Via Download
 
