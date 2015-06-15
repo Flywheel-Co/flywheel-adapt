@@ -28,10 +28,14 @@ Example Usage:
 ***
 
 ##### Bower
-```
+```json
     "dependencies": {
         "flywheel-adapt": "git@github.com:Flywheel-Co/flywheel-adapt.git"
     }
+```
+```sass
+// import the _adapt.scss via the bower vendor folder defined in your `.bowerrc` file.
+@import "../vendor/flywheel-adapt/adapt";
 ```
 
 
