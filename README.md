@@ -177,6 +177,15 @@ The distance between the z-plane and the user for 3d elements
 
 ***
 
+##### prefix( `map, [browser]` )
+A browser prefixer 
+```sass
+@include prefix( (filter:blur(3px)) );
+@include p( (filter:blur(3px)) );
+```
+
+***
+
 ##### rotate ( `degrees` )
 ```sass
 @include rotate(45);
