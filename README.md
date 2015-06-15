@@ -12,15 +12,15 @@ Example Usage:
         "repositories": [
             {
                 "type": "git",
-                "url":  "git@github.com:Flywheel-Co/sass-tools.git"
+                "url":  "git@github.com:Flywheel-Co/flywheel-adapt.git"
             }
         ],
         "require": {
-            "flywheel/sass-tools": "~1.0",
+            "flywheel/flywheel-adapt": "~1.0",
         },
         "extra": {
             "installer-paths": {
-                "assets/sass/{$name}": ["flywheel/sass-tools"]
+                "assets/sass/{$name}": ["flywheel/flywheel-adapt"]
             }
         }
     }
@@ -32,7 +32,7 @@ Example Usage:
     ...
 
     "dependencies": {
-        "sass-tools": "git@github.com:Flywheel-Co/sass-tools.git"
+        "flywheel-adapt": "git@github.com:Flywheel-Co/flywheel-adapt.git"
     }
 
     ...
@@ -42,7 +42,7 @@ Example Usage:
 
 Example Usage:
 
-    @import 'sass-tools/sass-tools';
+    @import 'flywheel-adapt/adapt';
 
     ...
 
@@ -54,6 +54,9 @@ Example Usage:
 * **animation** - `delay, duration, animation, (repeat), (direction)`
 * **background-gradient** - (startColor), (endColor), (type)
 * **border-radius** - `value`
+    @include border-radius($borderRadius)
+    **Settings**
+    $borderRadius
  * **border-top-radius** - `value`
  * **border-bottom-radius** - `value`
 * **box-shadow** - `top, left, blur, color`
@@ -79,7 +82,7 @@ Example Usage:
 * **bgimg** - `width, height, bgoptions, (cover)`
 * **blur** - `value`
 * **clearfix**
-* **hamburger** - `(color), (width), (height), (barSize)`
+* **hamburger** - `(color), (width), (height), (barSize)` (note : this HTML element must include a span.buns element )
 * **size** - `width, height, (display)`
 * **setBoxRatio** - `width, height, (ratio)`
 * **break-word**

@@ -2,6 +2,7 @@
 // **********************************************
 
     @import 'utils/reset';
+    @import 'utils/settings';       //  Import default settings.  They can be overwritten by the user
     @import 'utils/prefixer';
 
 // Helpers
