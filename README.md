@@ -1,6 +1,6 @@
-# Flywheel Co. Sass Tools
+# Flywheel Adapt 
 
-This is a group of frequently used and re-used Sass mixins, and other helpers to assist in rapid development.
+This is a SASS based foundation of commonly used mixins, classes and a default reset.  It can be pulled into your project via Composer, Bower or download and import.
 
 ## Usage
 
@@ -49,11 +49,12 @@ Example Usage:
 
 ## Mixins
 
-##### accel
+##### accel()
 It should be noted that Matt spelled this `excel` for a while.  Obviously he was not winning any spelling bees
 ```sass
 @include accel;
 ```
+
 
 ##### animation( `delay, duration, animation [repeat, direction]` )
 
@@ -61,16 +62,24 @@ It should be noted that Matt spelled this `excel` for a while.  Obviously he was
 @include animation(0s, 1s, my-animation-name, inifit, forward);
 ```
 
+
 ##### background-gradient( `startColor, endColor, [type]` )
 ```sass
 @include background-gradient(#fff, #000);
 ```
-##### bgimg( `width, height, bgoptions, [cover]` )
+
+
+##### bgimg( `width, height, bgoptions, [cover : bool]` ) 
+```sass
+@include bgimg(100px, 200px, left center no-repeat, true);
+```
+
 
 ##### blur( `value` )
 ```sass
 @include blur(5px);
 ```
+
 
 ##### border-radius( `value` )
 ```sass
@@ -78,37 +87,44 @@ It should be noted that Matt spelled this `excel` for a while.  Obviously he was
 @include br(3px);
 ```
 
+
 ##### border-top-radius( `value` )
 ```sass
 @include border-top-radius(10px);
 ```
+
 
 ##### border-bottom-radius( `value` )
 ```sass
 @include border-bottom-radius(10px);
 ```
 
+
 ##### box-shadow( `x, y, blur, color` )
 ```sass
-@include box-shadow(x, y, blur, color);
+@include box-shadow(1px, 1px, 3px, #333333);
 ```
+
 
 ##### box-shadow-inset( `x, y, blur, color` )
 ```sass
-@include box-shadow-inset(x, y, blur, color);
+@include box-shadow-inset(1px, 1px, 3px, #333333);
 ```
 
-##### box-sizing( `[value]` )
-**boxSize** _deprecated._ aliases to box-sizing
+
+##### box-sizing( `[value : border-box]` )
 ```sass
 @include box-sizing;
 @include bs;
 ```
 
+##### break-word
+
+
 ##### clearfix
-##### cf
 Clear fix implementation   
 ```sass
+@include clearfix;
 @include cf;
 ```
 
@@ -119,24 +135,69 @@ Clear fix implementation
 ```
 
 ##### placeholder @content
+```sass
+@include placeholder {
+    color: #86b648;
+    font-weight: bold;
+}
+```
 
 ##### keyframes @content
 
-##### rotate `degrees`
+##### perspective( `value` )
+The distance between the z-plane and the user for 3d elements
+```sass
+@include perspective(20px);
+```
+
+
+##### rotate ( `degrees` )
 ```sass
 @include rotate(45);
 ```
 
-##### transition `transitionProperty, transitionTime, method`
+
+##### size( `width, height, (display:false)` )
+This is a helper to write out the width and height in a more concise syntax
+```sass
+@include size(23px, 24px, block);
+```
+
+
+##### transition( `transitionProperty, transitionTime, method` )
 ```sass
 @include transition(all, .4s, ease-in-out);
 ```
-##### transition-delay `value`
-##### transform `value`
 
-##### transform-origin `value`
-##### perspective `value`
-##### translate3d `x, y, z`
+
+##### transition-delay( `value` )
+Delay a transition from starting until the time increment has passed
+```sass
+@include transition-delay(2s);
+```
+
+
+##### transform( `property` )
+Open ended transform property
+```sass
+@include transform(rotate(45deg))
+```
+
+##### translate3d( `x, y, z` )
+Translate an elements position in 3d space
+```sass
+@include translate3d(20px, 30px, 10px);
+```
+
+##### transform-origin( `value` )
+Change the origin of a transformations for an element
+**value** : x-offset y-offset z-offset
+```sass
+@include transform-origin(2px);
+@include transform-origin(20% 30%);
+@include transform-origin(20% 30% 10px);
+```
+
 
 ##### hamburger `(color), (width), (height), (barSize)` 
 _note_ : this HTML element must include a span.buns element
@@ -148,9 +209,11 @@ _note_ : this HTML element must include a span.buns element
 ```html
 <div class="menu"><span class="buns">Menu</span></div>
 ```
-##### size `width, height, (display)`
-##### setBoxRatio `width, height, (ratio)`
-##### break-word
+
+
+##### setBoxRatio( `width, height, (ratio)` )
+** This needs to be reviewed.
+
 
 ## Media Sizes
 
