@@ -1,15 +1,16 @@
 // Border Radius
 // **********************************************
-
-    @mixin border-radius($value) {
+    
+    @mixin border-radius($value: $borderRadius) {
 
         -webkit-border-radius: $value;
         -moz-border-radius: $value;
         border-radius: $value;
 
     }
+    @mixin br($value: $borderRadius) { @import border-radius($value) }
 
-    @mixin border-bottom-radius($value) {
+    @mixin border-bottom-radius($value: $borderRadius) {
 
         border-bottom-right-radius: $value;
         -moz-border-radius-bottomright: $value;
@@ -20,7 +21,7 @@
 
     }
 
-    @mixin border-top-radius($value) {
+    @mixin border-top-radius($value: $borderRadius) {
 
         border-top-right-radius: $value;
         -moz-border-radius-topright: $value;
