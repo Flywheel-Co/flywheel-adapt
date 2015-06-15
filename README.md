@@ -43,6 +43,8 @@ This is currently a private package and can only be included by permitted projec
 @import "../vendor/flywheel-adapt/adapt";
 ```
 
+*** 
+
 ##### Via Download
 
 ```
