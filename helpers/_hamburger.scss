@@ -12,7 +12,9 @@
         font-size: 1.2em;
         text-transform: uppercase;
         cursor: pointer;
-        .hamburger-buns {
+
+        .buns {
+            display: block;
             position: absolute;
             top: 50%;
             left: 0;
@@ -23,14 +25,14 @@
             background-color: $color;
         }
         span {
-            @extend .hamburger-buns;
+            @extend .buns;
             &:before {
-                @extend .hamburger-buns;
+                @extend .buns;
                 top: -($barHeight * 1.5);
                 content: '';
             }
             &:after {
-                @extend .hamburger-buns;
+                @extend .buns;
                 top: ($barHeight * 2.5);
                 content: '';
             }

@@ -1,7 +1,7 @@
 // Background Gradient
 // **********************************************
 
-    @mixin background-gradient($startColor:#3C3C3C, $endColor:#999999, $type:top) {
+    @mixin background-gradient($startColor, $endColor, $type:top) {
 
         background-color: $startColor;
         @if $type == top {
@@ -10,6 +10,7 @@
         @if $type == left {
             background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
         }
+
         background-image: -webkit-linear-gradient($type, $startColor, $endColor);
         background-image: -moz-linear-gradient($type, $startColor, $endColor);
         background-image: -ms-linear-gradient($type, $startColor, $endColor);
