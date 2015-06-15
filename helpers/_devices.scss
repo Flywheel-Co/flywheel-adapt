@@ -10,16 +10,17 @@
 // Device Break Points
 // **********************************************
 
-    $mediaMobilePortrait:  320px;
-    $mediaMobileLandscape: 480px;
-    $mediaTabletPortrait:  768px;
-    $mediaTabletLandscape: 1028px;
-    $mediaDesktop:         1224px;
+    $mediaMobilePortrait:  $mobilePortraitSize;
+    $mediaMobileLandscape: $mobileLandscapeSize;
+    $mediaTabletPortrait:  $tabletPortraitSize;
+    $mediaTabletLandscape: $tabletLandscapeSize;
+    $mediaDesktop:         $desktopSize;
 
 // Device Media Queries
 // **********************************************
 
     @mixin device($media) {
+        
         @if $media == mobile
         { // smartphone mobile devices
             @media only screen and (max-width: $mediaMobileLandscape) { @content; }
