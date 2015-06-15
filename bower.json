@@ -1,7 +1,7 @@
 {
-  "name": "sass-tools",
+  "name": "flywheel/adapt",
   "description": "Flywheel Co. Sass Tools",
-  "version": "1.1.3",
+  "version": "1.1.5",
   "keywords": [],
   "homepage": "http://flywheel.co",
   "dependencies": {},
