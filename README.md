@@ -244,18 +244,24 @@ _note_ : this HTML element must include a span.buns element
 
 ## Media Sizes
 
-##### $mobilePortraitSize `320px`
-##### $mobileLandscapeSize `480px`
-##### $tabletPortraitSize `768px`
-##### $tabletLandscapeSize `1028px`
-##### $desktopSize `1224px`
+These are the default media break points shipped with Adapt.  These can be modified in your own settings.
+
+##### $mobilePortraitSize : `320px`
+##### $mobileLandscapeSize : `480px`
+##### $tabletPortraitSize : `768px`
+##### $tabletLandscapeSize : `1028px`
+##### $desktopSize : `1224px`
 
 ## Media Queries
 
-##### device `media`
+##### device( `media` ) { @content }
 ```sass
 @include device(mobile) {
     width : 100%
+}
+@include device(tablet-portrait) {
+    width : 100%
+    height : auto;
 }
 ```
 > You can also include the media query using the device name as the function
@@ -264,30 +270,36 @@ _note_ : this HTML element must include a span.buns element
 @include mobile {
     width : 100%;
 }
+@include tablet-portrait {
+    width : 100%;
+    height : auto;
+}
 ```
 
 ## Browser Prefixes
 ##### $browserPrefixes `webkit moz ms o`
 
-##### CSS Classes
+Browser prefixes are used in the `prefix` mixin.  Any number of prefixes can be defined.  Defaults above.
 
-* **clearfix**
-* **floatleft**
-* **floatright**
-* **preload** - To use, add the class preload to the body and remove once the document is ready via JS
-* **showOnlyMobile**
-* **hideOnlyMobile**
-* **showMobile**
-* **hideMobile**
-* **showOnlyTablet**
-* **hideOnlyTablet**
-* **showTablet**
-* **hideTablet**
-* **showOnlyTabletPortrait**
-* **hideOnlyTabletPortrait**
-* **showTabletPortrait**
-* **hideTabletPortrait**
-* **showOnlyDesktop**
-* **hideOnlyDesktop**
-* **showDesktop**
-* **hideDesktop**
+## CSS Classes
+
+* **clearfix** - Clear floated child elements
+* **floatleft** - Float an element to the left
+* **floatright** - Float an element to the right
+* **preload** - Add class to body element and remove with JS on page load
+* **showOnlyMobile** - Show this element only to mobile resolutions
+* **hideOnlyMobile** - Hide this element only from mobile resolutions
+* **showMobile** - Show this element to mobile resolutions
+* **hideMobile** - Hide this element from mobile resolutions
+* **showOnlyTablet** - Show this element only to tablet resolutions
+* **hideOnlyTablet** - Hide this element only from tablet resolutions
+* **showTablet** - Show this element to tablet resolutions
+* **hideTablet** - Show this element from tablet resolutions
+* **showOnlyTabletPortrait** - Show this element only to tablet-portrait resolutions
+* **hideOnlyTabletPortrait** - Hide this element only from tablet-portrait resolutions
+* **showTabletPortrait** - Show this element to tablet-portrait resolutions
+* **hideTabletPortrait** - Hide this element from tablet-portrait resolutions
+* **showOnlyDesktop** - Show this element only to desktop resolutions
+* **hideOnlyDesktop** - Hide this element only from desktop resolutions
+* **showDesktop** - Show this element to desktop resolutions
+* **hideDesktop** - Hide this element from desktop resolutions
