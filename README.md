@@ -4,7 +4,7 @@ This is a group of frequently used and re-used Sass mixins, and other helpers to
 
 ## Usage
 
-#### Composer
+##### Composer
 
 Example Usage:
 
@@ -25,7 +25,7 @@ Example Usage:
         }
     }
 
-#### Bower
+##### Bower
 
 Example Usage:
 
@@ -38,7 +38,7 @@ Example Usage:
     ...
 
 
-#### Standard
+##### Standard
 
 Example Usage:
 
@@ -47,64 +47,139 @@ Example Usage:
     ...
 
 
-## Functionality
+## Mixins
 
-#### CSS Mixins
+##### accel
+It should be noted that Matt spelled this `excel` for a while.  Obviously he was not winning any spelling bees
+```sass
+@include accel;
+```
 
-* **animation** - `delay, duration, animation, (repeat), (direction)`
-* **background-gradient** - (startColor), (endColor), (type)
-* **border-radius** - `value`
-    @include border-radius($borderRadius)
-    **Settings**
-    $borderRadius
- * **border-top-radius** - `value`
- * **border-bottom-radius** - `value`
-* **box-shadow** - `top, left, blur, color`
- * **box-shadow-inset** - `top, left, blur, color`
-* **box-sizing** - `(value)`
- * **boxSize** - _deprecated._ aliases to box-sizing
- * **bs** - aliases to box-sizing
-* **font-face** - `fontFamily, fontFilename`
-* **placeholder** - @content
-* **keyframes** - @content
-* **transition** - `transitionProperty, transitionTime, method`
- * **transition-delay** - `value`
-* **transform** - `value`
- * **rotate** - `degrees`
- * **transform-origin** - `value`
- * **perspective** - `value`
- * **translate3d** - `x, y, z`
- * **accel**
- * **excel** - _deprecated._ aliases to accel
+##### animation( `delay, duration, animation [repeat, direction]` )
 
-#### Helpers
+```sass
+@include animation(0s, 1s, my-animation-name, inifit, forward);
+```
 
-* **bgimg** - `width, height, bgoptions, (cover)`
-* **blur** - `value`
-* **clearfix**
-* **hamburger** - `(color), (width), (height), (barSize)` (note : this HTML element must include a span.buns element )
-* **size** - `width, height, (display)`
-* **setBoxRatio** - `width, height, (ratio)`
-* **break-word**
+##### background-gradient( `startColor, endColor, [type]` )
+```sass
+@include background-gradient(#fff, #000);
+```
+##### bgimg( `width, height, bgoptions, [cover]` )
 
-#### Media Sizes
+##### blur( `value` )
+```sass
+@include blur(5px);
+```
 
-* **$mediaMobilePortrait**
-* **$mediaMobileLandscape**
-* **$mediaTabletPortrait**
-* **$mediaTabletLandscape**
-* **$mediaDesktop**
+##### border-radius( `value` )
+```sass
+@include border-radius(3px);
+@include br(3px);
+```
 
-#### Media Queries
+##### border-top-radius( `value` )
+```sass
+@include border-top-radius(10px);
+```
 
-* **device** - `media`
-* **mobile-portrait**
-* **mobile**
-* **tablet-portrait**
-* **tablet**
-* **desktop**
+##### border-bottom-radius( `value` )
+```sass
+@include border-bottom-radius(10px);
+```
 
-#### CSS Classes
+##### box-shadow( `x, y, blur, color` )
+```sass
+@include box-shadow(x, y, blur, color);
+```
+
+##### box-shadow-inset( `x, y, blur, color` )
+```sass
+@include box-shadow-inset(x, y, blur, color);
+```
+
+##### box-sizing( `[value]` )
+**boxSize** _deprecated._ aliases to box-sizing
+```sass
+@include box-sizing;
+@include bs;
+```
+
+##### clearfix
+##### cf
+Clear fix implementation   
+```sass
+@include cf;
+```
+
+
+##### font-face( `fontFamily, fontFilename` )
+```sass
+@include font-face('Lato', 'lato.otf');
+```
+
+##### placeholder @content
+
+##### keyframes @content
+
+##### rotate `degrees`
+```sass
+@include rotate(45);
+```
+
+##### transition `transitionProperty, transitionTime, method`
+```sass
+@include transition(all, .4s, ease-in-out);
+```
+##### transition-delay `value`
+##### transform `value`
+
+##### transform-origin `value`
+##### perspective `value`
+##### translate3d `x, y, z`
+
+##### hamburger `(color), (width), (height), (barSize)` 
+_note_ : this HTML element must include a span.buns element
+```sass
+.menu {
+    @include hamburger(#333, 22px, 22px, 3px);
+}
+```
+```html
+<div class="menu"><span class="buns">Menu</span></div>
+```
+##### size `width, height, (display)`
+##### setBoxRatio `width, height, (ratio)`
+##### break-word
+
+## Media Sizes
+
+##### $mobilePortraitSize `320px`
+##### $mobileLandscapeSize `480px`
+##### $tabletPortraitSize `768px`
+##### $tabletLandscapeSize `1028px`
+##### $desktopSize `1224px`
+
+## Media Queries
+
+##### device `media`
+```sass
+@include device(mobile) {
+    width : 100%
+}
+```
+> You can also include the media query using the device name as the function
+
+```sass
+@include mobile {
+    width : 100%;
+}
+```
+
+## Browser Prefixes
+##### $browserPrefixes `webkit moz ms o`
+
+##### CSS Classes
 
 * **clearfix**
 * **floatleft**
