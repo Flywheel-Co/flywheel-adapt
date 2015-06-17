@@ -8,7 +8,7 @@
   "devDependencies": {},
   "license": ["OFL-1.1", "MIT", "CC-BY-3.0"],
   "main": [
-    "./_sass-tools.scss"
+    "./_adapt.scss"
   ],
   "private": "true",
   "ignore": [
