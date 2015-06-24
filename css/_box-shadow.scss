@@ -5,6 +5,6 @@
         @include p((box-shadow: $x $y $blur $color));
     }
 
-    @mixin box-shadow-inset($top, $left, $blur, $color) {
+    @mixin box-shadow-inset($x, $y, $blur, $color) {
         @include p((box-shadow: inset $x $y $blur $color));
     }
