@@ -51,6 +51,21 @@ This is currently a private package and can only be included by permitted projec
 @import 'flywheel-adapt/adapt';
 ```
 
+## Configuration
+
+Adapt contains a few values for initial configuration to assist streamline and customize the library instance. 
+
+| Setting              | Description                                                                       |    
+| -------------------- | --------------------------------------------------------------------------------- |
+| **$borderRadius**        | **Default:** `3px`<br>Standard border radius.                                   |
+| **$browserPrefixes**     | **Default:** `webkit moz ms o`<br>Space-separated list of vendor prefixes applied throughout the Adapt library. |
+| **$desktopSize**         | **Default:** `1224px`<br>Media breakpoint for desktop devices.                  |
+| **$includeReset**        | **Default:** `true`<br>Conditionally include the Eric Meyer CSS reset definitions. |
+| **$mobileLandscapeSize** | **Default:** `480px`<br>Media breakpoint for mobile devices in landscape mode.  |
+| **$mobilePortraitSize**  | **Default:** `320px`<br>Media breakpoint for mobile devices in portrait mode.   |
+| **$tabletLandscapeSize** | **Default:** `1028px`<br>Media breakpoint for tablet devices in landscape mode. |
+| **$tabletPortraitSize**  | **Default:** `768px`<br>Media breakpoint for tablet devices in portrait mode.   |
+
 
 ## Mixins
 
