@@ -1,9 +1,11 @@
 // Initial Utilities
 // **********************************************
 
-    @import 'utils/reset';
-    @import 'utils/settings';       //  Import default settings.  They can be overwritten by the user
+    @import 'utils/settings';               //  Import default settings.  They can be overwritten by the user
     @import 'utils/prefixer';
+    @import 'utils/reset';
+
+    @if $includeReset { @include reset; }   // Conditionally include reset styles
 
 // Helpers
 // **********************************************
