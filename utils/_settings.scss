@@ -2,25 +2,25 @@
 // **********************************************
 
 // mobile
-$mobilePortraitSize:  320px;
-$mobileLandscapeSize: 480px;
+$mobilePortraitSize:  320px !default;
+$mobileLandscapeSize: 480px !default;
 
 // tablet
-$tabletPortraitSize:  768px;
-$tabletLandscapeSize: 1028px;
+$tabletPortraitSize:  768px !default;
+$tabletLandscapeSize: 1028px !default;
 
 // desktop
-$desktopSize:         1224px;
+$desktopSize:         1224px !default;
 
 // Borders
 // **********************************************
 
-$borderRadius : 3px;
+$borderRadius : 3px !default;
 
 // Browser Prefixes
 // **********************************************
 
-$browserPrefixes : webkit moz ms o;
+$browserPrefixes : webkit moz ms o !default;
 
 // CSS Reset
 // **********************************************
