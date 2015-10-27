@@ -170,6 +170,13 @@ Clear fix implementation
 
 ***
 
+##### grayscale( `percentage` )
+```sass
+@include grayscale(75);
+```
+
+***
+
 ##### placeholder @content
 ```sass
 @include placeholder {
