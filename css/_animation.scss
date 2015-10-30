@@ -1,11 +1,11 @@
 // Animation
 // **********************************************
 
-    @mixin animation ($delay, $duration, $animation, $repeat:0, $direction:forwards) {
+    @mixin animation ($delay, $duration, $animation, $repeat:0, $direction:normal, $easing:linear) {
 
-        -webkit-animation: $animation $duration $delay $repeat $direction;
-        -moz-animation: $animation $duration $delay $repeat $direction;
-        -o-animation: $animation $duration $delay $repeat $direction;
-        animation: $animation $duration $delay $repeat $direction;
+        -webkit-animation: $animation $duration $easing $delay $repeat $direction;
+        -moz-animation: $animation $duration $easing $delay $repeat $direction;
+        -o-animation: $animation $duration $easing $delay $repeat $direction;
+        animation: $animation $duration $easing $delay $repeat $direction;
 
     }
