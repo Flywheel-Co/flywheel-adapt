@@ -16,10 +16,7 @@
 
     @mixin rotate($degrees) {
 
-        -webkit-transform: rotate($degrees + deg);
-        -moz-transform:    rotate($degrees + deg);
-        -ms-transform:     rotate($degrees + deg);
-        -o-transform:      rotate($degrees + deg);
+        @include transform( rotate($degrees + deg));
         filter:            progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
     }
