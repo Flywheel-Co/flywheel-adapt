@@ -1,69 +1,89 @@
-// Transform
-// **********************************************
+/**
+ * Force Hardware Acceleration
+ */
+@mixin accel() {
+    @include translate3d(0,0,0);
+}
 
-    @mixin transform($value) {
+/**
+ * Perspective
+ */
+@mixin perspective($value) {
+    -webkit-perspective: $value;
+    -moz-perspective:    $value;
+    -ms-perspective:     $value;
+    -o-perspective:      $value;
+    perspective:         $value;
+}
 
-        -webkit-transform: $value;
-        -moz-transform:    $value;
-        -ms-transform:     $value;
-        -o-transform:      $value;
-        transform:         $value;
+/**
+ * Rotate
+ */
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees + deg);
+    -moz-transform:    rotate($degrees + deg);
+    -ms-transform:     rotate($degrees + deg);
+    -o-transform:      rotate($degrees + deg);
+    filter:            progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
 
-    }
+/**
+ * Skew
+ *
+ * @param int x X value to skew
+ * @param int y Y value to skey
+ */
+@mixin skew(x, y)
+{
+    @include skewX(x);
+    @include skewY(y);
+}
 
-// Transform - Rotate
-// **********************************************
+/**
+ * Skew by X axis
+ */
+@mixin skewX(value)
+{
+    @include p(skewX: value);
+}
 
-    @mixin rotate($degrees) {
+/**
+ * Skew by X axis
+ */
+@mixin skewY(value)
+{
+    @include p(skewY: value);
+}
 
-        -webkit-transform: rotate($degrees + deg);
-        -moz-transform:    rotate($degrees + deg);
-        -ms-transform:     rotate($degrees + deg);
-        -o-transform:      rotate($degrees + deg);
-        filter:            progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+/**
+ * Transform
+ */
+@mixin transform($value) {
+    -webkit-transform: $value;
+    -moz-transform:    $value;
+    -ms-transform:     $value;
+    -o-transform:      $value;
+    transform:         $value;
+}
 
-    }
+/**
+ * Transform Origin
+ */
+@mixin transform-origin($value) {
+    -webkit-transform-origin: $value;
+    -moz-transform-origin:    $value;
+    -ms-transform-origin:     $value;
+    -o-transform-origin:      $value;
+    transform-origin:         $value;
+}
 
-// Transform Origin
-// **********************************************
-
-    @mixin transform-origin($value) {
-
-        -webkit-transform-origin: $value;
-        -moz-transform-origin:    $value;
-        -ms-transform-origin:     $value;
-        -o-transform-origin:      $value;
-        transform-origin:         $value;
-
-    }
-
-// Perspective
-// **********************************************
-
-    @mixin perspective($value) {
-
-        -webkit-perspective: $value;
-        -moz-perspective:    $value;
-        -ms-perspective:     $value;
-        -o-perspective:      $value;
-        perspective:         $value;
-
-    }
-
-// Transform Translate 3D
-// **********************************************
-
-    @mixin translate3d($x, $y, $z) {
-        -webkit-transform: translate3d($x,$y,$z);
-        -moz-transform:    translate3d($x,$y,$z);
-        -ms-transform:     translate3d($x,$y,$z);
-        -o-transform:      translate3d($x,$y,$z);
-        transform:         translate3d($x,$y,$z);
-    }
-
-// Force Hardware Acceleration
-// **********************************************
-
-    @mixin accel() {
-        @include translate3d(0,0,0);
-    }
+/**
+ * Transform Translate 3D
+ */
+@mixin translate3d($x, $y, $z) {
+    -webkit-transform: translate3d($x,$y,$z);
+    -moz-transform:    translate3d($x,$y,$z);
+    -ms-transform:     translate3d($x,$y,$z);
+    -o-transform:      translate3d($x,$y,$z);
+    transform:         translate3d($x,$y,$z);
+}
