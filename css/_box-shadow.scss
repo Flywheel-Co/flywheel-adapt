@@ -1,10 +1,13 @@
-// Box Shadow
-// **********************************************
+/**
+ * Add box shadow vendor prefixes
+ */
+@mixin box-shadow($x, $y, $blur, $color) {
+    @include p((box-shadow: $x $y $blur $color));
+}
 
-    @mixin box-shadow($x, $y, $blur, $color) {
-        @include p((box-shadow: $x $y $blur $color));
-    }
-
-    @mixin box-shadow-inset($x, $y, $blur, $color) {
-        @include p((box-shadow: inset $x $y $blur $color));
-    }
+/**
+ * Box shadow inset with vendor prefixes
+ */
+@mixin box-shadow-inset($x, $y, $blur, $color) {
+    @include p((box-shadow: inset $x $y $blur $color));
+}
