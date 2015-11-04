@@ -33,26 +33,26 @@
  * @param int x X value to skew
  * @param int y Y value to skey
  */
-@mixin skew(x, y)
+@mixin skew($x, $y)
 {
-    @include skewX(x);
-    @include skewY(y);
+    @include skewX($x);
+    @include skewY($y);
 }
 
 /**
  * Skew by X axis
  */
-@mixin skewX(value)
+@mixin skewX($value)
 {
-    @include p(skewX: value);
+    @include p(skewX: $value);
 }
 
 /**
  * Skew by X axis
  */
-@mixin skewY(value)
+@mixin skewY($value)
 {
-    @include p(skewY: value);
+    @include p(skewY: $value);
 }
 
 /**
