@@ -9,22 +9,15 @@
  * Perspective
  */
 @mixin perspective($value) {
-    -webkit-perspective: $value;
-    -moz-perspective:    $value;
-    -ms-perspective:     $value;
-    -o-perspective:      $value;
-    perspective:         $value;
+    @include p((perspective: $value));
 }
 
 /**
  * Rotate
  */
 @mixin rotate($degrees) {
-    -webkit-transform: rotate($degrees + deg);
-    -moz-transform:    rotate($degrees + deg);
-    -ms-transform:     rotate($degrees + deg);
-    -o-transform:      rotate($degrees + deg);
-    filter:            progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    @include p((transform: rotate($degrees + deg)));
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 /**
@@ -59,31 +52,19 @@
  * Transform
  */
 @mixin transform($value) {
-    -webkit-transform: $value;
-    -moz-transform:    $value;
-    -ms-transform:     $value;
-    -o-transform:      $value;
-    transform:         $value;
+    @include p((transform: $value));
 }
 
 /**
  * Transform Origin
  */
 @mixin transform-origin($value) {
-    -webkit-transform-origin: $value;
-    -moz-transform-origin:    $value;
-    -ms-transform-origin:     $value;
-    -o-transform-origin:      $value;
-    transform-origin:         $value;
+    @include p((transform-origin: $value));
 }
 
 /**
  * Transform Translate 3D
  */
 @mixin translate3d($x, $y, $z) {
-    -webkit-transform: translate3d($x,$y,$z);
-    -moz-transform:    translate3d($x,$y,$z);
-    -ms-transform:     translate3d($x,$y,$z);
-    -o-transform:      translate3d($x,$y,$z);
-    transform:         translate3d($x,$y,$z);
+    @include p((transform: translate3d($x,$y,$z)));
 }
