@@ -44,7 +44,7 @@
  */
 @mixin skewX($value)
 {
-    @include p(skewX: $value);
+    @include p((skewX: $value));
 }
 
 /**
@@ -52,7 +52,7 @@
  */
 @mixin skewY($value)
 {
-    @include p(skewY: $value);
+    @include p((skewY: $value);
 }
 
 /**
