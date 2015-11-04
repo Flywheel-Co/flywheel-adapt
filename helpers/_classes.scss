@@ -1,38 +1,26 @@
-// Floats
-// **********************************************
-
-    .clearfix {
-        zoom: 1;
-        &:before, &:after {
-            content: "\0020";
-            display: block;
-            height: 0;
-            overflow: hidden;
-        }
-        &:after { clear: both; }
+.clearfix {
+    zoom: 1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
     }
+    &:after { clear: both; }
+}
 
-    .floatright {
-        float:right;
-    }
+.floatright {
+    float:right;
+}
 
-    .floatleft {
-        float:left;
-    }
+.floatleft {
+    float:left;
+}
 
-// Preload Images
-// **********************************************
-
-    /**
-    * To use, add the class preload to the body and remove
-    * once the document is ready via JS
-    */
-
-    .preload * {
-
-        -webkit-transition: none !important;
-        -moz-transition:    none !important;
-        -ms-transition:     none !important;
-        -o-transition:      none !important;
-
-    }
+/**
+* To use, add the class preload to the body and remove
+* once the document is ready via JS
+*/
+.preload * {
+    @include p((transition: none !important));
+}
