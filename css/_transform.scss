@@ -44,15 +44,15 @@
  */
 @mixin skewX($value)
 {
-    @include p((skewX: $value));
+    @include p((transform: skewX($value)));
 }
 
 /**
- * Skew by X axis
+ * Skew by Y axis
  */
 @mixin skewY($value)
 {
-    @include p((skewY: $value);
+    @include p((transform: skewY($value)));
 }
 
 /**
