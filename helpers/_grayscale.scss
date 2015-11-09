@@ -1,10 +1,6 @@
-// Grayscale Filter
-// **********************************************
-
-	@mixin grayscale($percent:100) {
-		-webkit-filter: grayscale($percent);
-	    -moz-filter:    grayscale($percent);
-	    -ms-filter:     grayscale($percent);
-	    -o-filter:      grayscale($percent);
-	    filter:         grayscale($percent);
-	}
+/**
+ * grayscale prefixer
+ */
+@mixin grayscale($percent:100) {
+    @include p((filter: grayscale($perfenct)));
+}
