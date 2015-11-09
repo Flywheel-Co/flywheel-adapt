@@ -77,10 +77,10 @@ It should be noted that Matt spelled this `excel` for a while.  Obviously he was
 
 ***
 
-##### animation( `delay, duration, animation [repeat, direction]` )
+##### animation( `delay, duration, animation [repeat, direction, easing]` )
 
 ```sass
-@include animation(0s, 1s, my-animation-name, inifit, forward);
+@include animation(0s, 1s, my-animation-name, inifit, forward, ease-out);
 ```
 
 ***

@@ -1,33 +1,37 @@
-// Border Radius
-// **********************************************
-    
-    @mixin border-radius($value: $borderRadius) {
+/**
+ * border-radius prefixer
+ */
+@mixin border-radius($value: $borderRadius) {
+    @include p((border-radius: $value));
+}
 
-        -webkit-border-radius: $value;
-        -moz-border-radius: $value;
-        border-radius: $value;
+/**
+ * border-radius shorthand to prefixer
+ */
+@mixin br($value: $borderRadius) { @include border-radius($value) }
 
-    }
-    @mixin br($value: $borderRadius) { @include border-radius($value) }
+/**
+ * border-bottom-radius prefixer
+ */
+@mixin border-bottom-radius($value: $borderRadius) {
+    // no shorthand to prefixer due to inconsistancy
+    border-bottom-right-radius: $value;
+    -moz-border-radius-bottomright: $value;
+    -webkit-border-bottom-right-radius: $value;
+    border-bottom-left-radius: $value;
+    -moz-border-radius-bottomleft: $value;
+    -webkit-border-bottom-left-radius: $value;
+}
 
-    @mixin border-bottom-radius($value: $borderRadius) {
-
-        border-bottom-right-radius: $value;
-        -moz-border-radius-bottomright: $value;
-        -webkit-border-bottom-right-radius: $value;
-        border-bottom-left-radius: $value;
-        -moz-border-radius-bottomleft: $value;
-        -webkit-border-bottom-left-radius: $value;
-
-    }
-
-    @mixin border-top-radius($value: $borderRadius) {
-
-        border-top-right-radius: $value;
-        -moz-border-radius-topright: $value;
-        -webkit-border-top-right-radius: $value;
-        border-top-left-radius: $value;
-        -moz-border-radius-topleft: $value;
-        -webkit-border-top-left-radius: $value;
-
-    }
+/**
+ * border-top-radius prefixer
+ */
+@mixin border-top-radius($value: $borderRadius) {
+    // no shorthand to prefixer due to inconsistancy
+    border-top-right-radius: $value;
+    -moz-border-radius-topright: $value;
+    -webkit-border-top-right-radius: $value;
+    border-top-left-radius: $value;
+    -moz-border-radius-topleft: $value;
+    -webkit-border-top-left-radius: $value;
+}
