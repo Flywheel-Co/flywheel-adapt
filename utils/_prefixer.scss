@@ -1,6 +1,7 @@
-// Generates vendor prefixes
-// **********************************************
-
+/**
+ * Generate vendor prefixes for various browser support
+ * Based on $browserPrefixes setting
+ */
 @mixin prefix($map, $vendors: $browserPrefixes) {
     @each $prop, $value in $map {
         @if $vendors {
