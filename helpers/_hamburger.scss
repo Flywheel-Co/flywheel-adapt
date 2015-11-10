@@ -9,9 +9,8 @@
  *     <div class="hamburber"><span>menu</span></div>
  */
 @mixin hamburger($color: #333333, $width: 24px, $height:18px, $barSize : 5) {
-
     $barHeight: $height / $barSize;
-
+    
     position: relative;
     height: $height;
     padding-left: $width + 5px;

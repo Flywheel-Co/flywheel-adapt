@@ -21,15 +21,30 @@
 }
 
 /**
+ * Rotate X
+ */
+@mixin rotateX($degrees) {
+    @include p((transform: rotateX($degrees + deg)));
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+/**
+ * Rotate Y
+ */
+@mixin rotateY($degrees) {
+    @include p((transform: rotateY($degrees + deg)));
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+/**
  * Skew
  *
- * @param int x X value to skew
- * @param int y Y value to skey
+ * @param int x X degree value to skew
+ * @param int y Y degree value to skey
  */
 @mixin skew($x, $y)
 {
-    @include skewX($x);
-    @include skewY($y);
+    @include p((transform: skewX($x) skewY($y)));
 }
 
 /**

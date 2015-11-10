@@ -1,28 +1,38 @@
-// Media Breakpoints
-// **********************************************
+/**
+ * Default settings
+ *
+ * All default settings can be overwritten by including a settings file
+ * with these variables before including adapt.
+ */
 
-// mobile
-$mobilePortraitSize:  320px !default;
-$mobileLandscapeSize: 480px !default;
+/**
+ * Mobile sizes
+ */
+$mobilePortraitSize : 320px !default;
+$mobileLandscapeSize : 480px !default;
 
-// tablet
-$tabletPortraitSize:  768px !default;
-$tabletLandscapeSize: 1028px !default;
+/**
+ * Tablet sizes
+ */
+$tabletPortraitSize : 768px !default;
+$tabletLandscapeSize : 1028px !default;
 
-// desktop
-$desktopSize:         1224px !default;
+/**
+ * Desktop sizes
+ */
+$desktopSize : 1224px !default;
 
-// Borders
-// **********************************************
-
+/**
+ * Default border radius
+ */
 $borderRadius : 3px !default;
 
-// Browser Prefixes
-// **********************************************
-
+/**
+ * Browser prefixes SASS list
+ */
 $browserPrefixes : webkit moz ms o !default;
 
-// CSS Reset
-// **********************************************
-
-$includeReset: true !default;
+/**
+ * Include the default css reset BOOL
+ */
+$includeReset : true !default;
