@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+$fontFamily: 'Open Sans Condensed', sans-serif;
+
+body {
+	font-size: 85%;
+}
+
+.headline-type {
+	margin: 12px 0;
+	padding: 0;
+	font: normal 2em/1.4 $fontFamily;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@extend .headline-type;
+}
+h1 {
+	font-weight: bold;
+}
+h2 {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+h3 {
+	font-weight: bold;
+}
+
+p {
+	margin: 10px 0;
+	padding: 0;
+	font: normal 1.2em/1.4 $fontFamily;
+}

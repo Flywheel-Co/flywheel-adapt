@@ -1,11 +1,9 @@
-// Keyframes
-// **********************************************
-
-    @mixin keyframes($name) {
-
-        @-webkit-keyframes #{$name} { @content; }
-        @-moz-keyframes #{$name} { @content; }
-        @-ms-keyframes #{$name} { @content; }
-        @keyframes #{$name} { @content; }
-
-    }
+/**
+ * Keyframes to build
+ */
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} { @content; }
+    @-moz-keyframes #{$name} { @content; }
+    @-ms-keyframes #{$name} { @content; }
+    @keyframes #{$name} { @content; }
+}

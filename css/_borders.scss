@@ -1,5 +1,7 @@
 /**
  * border-radius prefixer
+ *
+ * @param string $value Value of the border radius.  Defaults to $borderRadius settings
  */
 @mixin border-radius($value: $borderRadius) {
     @include p((border-radius: $value));
@@ -7,11 +9,15 @@
 
 /**
  * border-radius shorthand to prefixer
+ *
+ * @param string $value Value of the border radius.  Defaults to $borderRadius settings
  */
 @mixin br($value: $borderRadius) { @include border-radius($value) }
 
 /**
  * border-bottom-radius prefixer
+ *
+ * @param string $value Value of the border radius.  Defaults to $borderRadius settings
  */
 @mixin border-bottom-radius($value: $borderRadius) {
     // no shorthand to prefixer due to inconsistancy
@@ -25,6 +31,8 @@
 
 /**
  * border-top-radius prefixer
+ *
+ * @param string $value Value of the border radius.  Defaults to $borderRadius settings
  */
 @mixin border-top-radius($value: $borderRadius) {
     // no shorthand to prefixer due to inconsistancy
