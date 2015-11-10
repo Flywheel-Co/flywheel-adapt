@@ -1,8 +1,37 @@
 @import "../../adapt";
-
-// some defaults
-@import "defaults";
 @import "typography";
+
+html {
+	overflow: scroll;
+}
+#container {
+	position: relative;
+	margin: 40px auto;
+	max-width: 1028px;
+}
+.wrapper {
+	position: relative;
+	margin: 0 auto 20px;
+	padding: 0 0 20px;
+	border-bottom: 1px solid #CACACA;
+	@include transition(all, .1s, ease-in);
+	@include d(mobile) {
+		width: 95%;
+	}
+	@include d(tablet) {
+		width: 98%;
+	}
+	&:last-child {
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+}
+section {
+	margin: 50px 0;
+	padding: 30px;
+}
+
 
 // inline defaults
 .bg-color {
@@ -12,6 +41,33 @@
 	width: 50%;
 	margin: 0 auto;
 }
+
+
+$mobileColor : #CA2124;
+$tabletColor : #34A1CA;
+$desktopColor : #22D73B;
+$largeColor : #CCD7D1;
+
+/**
+ * Responsive
+ */
+.device {
+	position: relative;
+	padding: 10px;
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #E0E0E0;
+	@include border-radius(5px);
+	@include transition(all, .4s, linear);
+}
+.mobile { @include d(mobile) { background-color: $mobileColor } }
+.mobile-landscape { @include d(mobileLandscape) { background-color: rgba($mobileColor, .8) } }
+.mobile-portrait { @include d(mobilePortrait) { background-color: rgba($mobileColor, .6) } }
+.tablet { @include d(tablet) { background-color: rgba($tabletColor, 1); } }
+.tablet-landscape { @include d(tabletLandscape) { background-color: rgba($tabletColor, .8); } }
+.tablet-portrait { @include d(tabletPortrait) { background-color: rgba($tabletColor, .6); } }
+.desktop { @include d(desktop) { background-color: rgba($desktopColor, 1); } }
+.large { @include d(large) { background-color: rgba($largeColor, 1); } }
+
 
 /**
  * Background

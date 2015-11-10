@@ -6,33 +6,22 @@
  */
 
 /**
- * Mobile sizes
+ * SASS MAP for responsive keywords and document sizes.  
+ * 
+ * To-Do : 
+ * Merge with user defined $responsiveMap ... somehow
  */
-$mobilePortraitSize : 320px !default;
-$mobileLandscapeSize : 480px !default;
+$responsiveMap : (
+	mobile : (max : 667px),
+	mobilePortrait : (max : 375px),
+	mobileLandscape : (max : 667px),
+	tablet : (min : 667px, max : 1028px),
+	tabletPortrait : (min: 667px, max : 768px),
+	tabletLandscape : (min : 667px, max : 1028px),
+	desktop : (min : 1028px, max : 2200px),
+	large : (min : 2200px)
+);
 
-/**
- * Tablet sizes
- */
-$tabletPortraitSize : 768px !default;
-$tabletLandscapeSize : 1028px !default;
-
-/**
- * Desktop sizes
- */
-$desktopSize : 1224px !default;
-
-/**
- * Default border radius
- */
 $borderRadius : 3px !default;
-
-/**
- * Browser prefixes SASS list
- */
 $browserPrefixes : webkit moz ms o !default;
-
-/**
- * Include the default css reset BOOL
- */
 $includeReset : true !default;

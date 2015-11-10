@@ -1,127 +1,103 @@
 /**
-*   Device mixin to be used for media queries
-*
-*   Options are :
-*   mobile, mobile-portrait, monbile-landscape, tablet, tablet-portrait, tablet-landscape, desktop
-*
-*   @include device(mobile) { content }
-**/
-
-/**
- * Device break points based on default settings
+ * Responsive device media queries based on 
+ * the $responseiveMap default setting.
  */
-$mediaMobilePortrait: $mobilePortraitSize;
-$mediaMobileLandscape: $mobileLandscapeSize;
-$mediaTabletPortrait: $tabletPortraitSize;
-$mediaTabletLandscape: $tabletLandscapeSize;
-$mediaDesktop: $desktopSize;
-
-/**
- * Device mixin SASS if/else tree
- *
- * Set media queries based on keyword 
- * and default sizes in settings.
- *
- * Keyword options ------
- * mobile
- * mobile-landscape
- * mobile-portrait
- * tablet
- * tablet-landscape
- * tablet-portrait
- * desktop
- */
-@mixin device($media) {
-    @if $media == mobile { 
-        @media only screen and (max-width: $mediaMobileLandscape) { @content; }
-    } @else if $media == tablet { 
-        @media only screen and (min-width : $mediaMobileLandscape+1) and (max-width : $mediaTabletLandscape) { @content; }
-    } @else if $media == mobile-portrait { 
-        @media only screen and (max-width: $mediaMobilePortrait) { @content; }
-    } @else if $media == mobile-landscape { 
-        @media only screen and (min-width: $mediaMobilePortrait+1) and (max-width : $mediaMobileLandscape) { @content; }
-    }@else if $media == tablet-portrait { 
-        @media only screen and (min-width : $mediaMobileLandscape+1) and (max-width : $mediaTabletPortrait) { @content; }
-    } @else if $media == tablet-landscape { 
-        @media only screen and (min-width: $mediaTabletPortrait+1) and (max-width : $mediaTabletLandscape) { @content; }
-    } @else if $media == desktop {
-        @media only screen and (min-width: $mediaDesktop+1) { @content; }
+@mixin d($device) {
+    @if map-has-key($responsiveMap, $device) {
+        $sizes : map-get($responsiveMap, $device);
+        $min : map-get($sizes, min);
+        $max : map-get($sizes, max);
+        
+        @if map-has-key($sizes, min) and map-has-key($sizes, max) {
+            @media only screen and (min-width : $min+1) and (max-width : $max) { @content; }    
+        } @else if map-has-key($sizes, max) {
+            @media only screen and (max-width: $max) { @content; }
+        } @else if map-has-key($sizes, min) {
+            @media only screen and (min-width: $min) { @content; }
+        }
     }
 }
 
+// --------------------- DEPRICATED >>>> 
 /**
- * Aliases to media query keywords
+ * Device mixin SASS if/else tree
+ *
+ * DEPRICATED
+ * ----------- Backwards compatibility for device() mixin
  */
-@mixin mobile-portrait() { @include device(mobile-portrait) { @content; } }
-@mixin mobile() { @include device(mobile) { @content; } }
-@mixin tablet-portrait() { @include device(tablet-portrait) { @content; } }
-@mixin tablet() { @include device(tablet) { @content; } }
-@mixin desktop() { @include device(desktop) { @content; } }
+@mixin device($device) {
+    @if $device == mobile { 
+        @include d(mobile) { @content; }
+    } @else if $device == tablet { 
+       @include d(tablet) { @content; }
+    } @else if $device == mobile-portrait { 
+        @include d(mobilePortrait) { @content; }
+    } @else if $device == mobile-landscape { 
+        @include d(mobileLandscape) { @content; }
+    }@else if $device == tablet-portrait { 
+        @include d(tabletPortrait) { @content; }
+    } @else if $device == tablet-landscape { 
+        @include d(tabletLandscape) { @content; }
+    } @else if $device == desktop {
+        @include d(desktop) { @content; }
+    } @else {
+        @include d($device) 
+    }
+}
+@mixin mobile() { @include d(mobile) { @content; } }
+@mixin mobile-portrait() { @include d(mobilePortrait) { @content; } }
+@mixin mobile-landscape() { @include d(mobileLandscape) { @content; } }
+@mixin tablet() { @include d(tablet) { @content; } }
+@mixin tablet-portrait() { @include d(tabletPortrait) { @content; } }
+@mixin tablet-landscape() { @include d(tabletLandscape) { @content; } }
+@mixin desktop() { @include d(desktop) { @content; } }
+@mixin largeDevice() { @include d(large) { @content; } }
+// --------------------- DEPRICATED <<<<<<< 
 
+// 
 /**
  * Helper classes for mobile devices
  */
 .showOnlyMobile {
     display:none !important;
-    @include device(mobile) { display:block !important; }
+    @include d(mobile) { display:block !important; }
 }
-.hideOnlyMobile {
-    @include device(mobile) { display:none; }
-}
-.showMobile {
-    @include device(mobile) { display:block !important; }
-}
-.hideMobile {
-    @include device(mobile) { display:none; }
-}
+.hideOnlyMobile { @include d(mobile) { display:none; } }
+.showMobile { @include d(mobile) { display:block !important; } }
+.hideMobile { @include d(mobile) { display:none; } }
 
 /**
- * Helper classes for mobile devices
+ * Helper classes for tablet devices
  */
 .showOnlyTablet {
     display:none !important;
-    @include device(tablet) { display:block !important; }
+    @include d(tablet) { display:block !important; }
 }
-.hideOnlyTablet {
-    @include device(tablet) { display:none; }
-}
-.showTablet {
-    @include device(tablet) { display:block; }
-}
-.hideTablet {
-    @include device(tablet) { display:none; }
-}
+.hideOnlyTablet { @include d(tablet) { display:none; } }
+.showTablet { @include d(tablet) { display:block; } }
+.hideTablet { @include d(tablet) { display:none; } }
+
 .showOnlyTabletPortrait {
     display:none !important;
-    @include device(tablet-portrait) { display:block !important; }
+    @include d(tabletPortrait) { display:block !important; }
 }
-.hideOnlyTabletPortrait {
-    @include device(tablet-portrait) { display:none; }
-}
-.showTabletPortrait {
-    @include device(tablet-portrait) { display:block !important; }
-}
-.hideTabletPortrait {
-    @include device(tablet-portrait) { display:none; }
-}
+.hideOnlyTabletPortrait { @include d(tabletPortrait) { display:none; } }
+.showTabletPortrait { @include d(tabletPortrait) { display:block !important; } }
+.hideTabletPortrait { @include d(tabletPortrait) { display:none; } }
 
 /**
  * Helper classes for desktop devices
  */
 .showOnlyDesktop {
     display:block;
-    @include device(mobile) { display:none; }
-    @include device(tablet) { display:none; }
-    @include device(desktop) { display:block; }
+    @include d(mobile) { display:none; }
+    @include d(tablet) { display:none; }
+    @include d(desktop) { display:block; }
 }
 .hideOnlyDesktop {
     display:none;
-    @include device(mobile) { display:block; }
-    @include device(tablet) { display:block; }
+    @include d(mobile) { display:block; }
+    @include d(tablet) { display:block; }
 }
-.showDesktop {
-    @include device(desktop) { display:block; }
-}
-.hideDesktop {
-    @include device(desktop) { display:none; }
-}
+.showDesktop { @include d(desktop) { display:block; } }
+.hideDesktop { @include d(desktop) { display:none; } }
