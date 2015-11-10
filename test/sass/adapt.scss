@@ -1,0 +1,155 @@
+@import "../../adapt";
+
+// some defaults
+@import "defaults";
+@import "typography";
+
+// inline defaults
+.bg-color {
+	background-color: #A9A9A9;
+}
+.small {
+	width: 50%;
+	margin: 0 auto;
+}
+
+/**
+ * Background
+ */
+#background-gradient {
+	@include background-gradient(#EBD32B, #EB2F17);
+}
+
+/**
+ * Border Radius
+ */
+#border-radius {
+	@extend .bg-color;
+	@include border-radius(20px);
+}
+#border-top-radius {
+	@extend .bg-color;
+	@include border-top-radius(20px);
+}
+#border-bottom-radius {
+	@extend .bg-color;
+	@include border-bottom-radius(20px);
+}
+
+/**
+ * Box Shadow
+ */
+#box-shadow {
+	@include box-shadow(3px, 3px, 5px, #333);
+}
+#box-shadow-inset {
+	@include box-shadow-inset(3px, 3px, 5px, #333);
+}
+
+/**
+ * Box Sizing
+ */
+#box-sizing {
+	@include bs;
+}
+
+/**
+ * Forms
+ */
+#forms {
+	input {
+		width: 100%;
+		padding: 10px;
+		margin: 20px 0;
+		font-size: 1em;
+		@include placeholder {
+			font-weight: bold;
+			color: red;
+		}
+		&:focus {
+			@include placeholder {
+				font-weight: normal;
+				color: green;
+			}
+		}
+	}
+}
+
+/**
+ * Perspective
+ */
+#perspective {
+	@include perspective(700px);
+	@extend .small;
+	.child {
+		@extend .bg-color;
+		padding: 30px;
+		&.x-axis {
+			@include rotateX(20);	
+		}
+		&.y-axis {
+			margin-left: 80px;
+			@include rotateY(20);	
+		}
+	}
+}
+
+/**
+ * Rotate
+ */
+#rotate {
+	@extend .small;
+	@extend .bg-color;
+	@include rotate(20);
+}
+
+/**
+ * Skew
+ */
+#skewX {
+	@extend .small;
+	@extend .bg-color;
+	@include skewX(20deg);
+}
+#skewY {
+	@extend .small;
+	@extend .bg-color;
+	@include skewY(-5deg);
+}
+#skew {
+	@extend .small;
+	@extend .bg-color;
+	@include skew(15deg, 5deg);
+}
+#transform-origin {
+	@extend .small;
+	@extend .bg-color;
+	@include transform-origin(top right);
+	@include rotate(-15);
+}
+#translate3d-wrapper {
+	height: 400px;
+}
+#translate3d {
+	position: absolute;
+	left: 50%;
+	margin-left: -25%; 
+	padding: 40px;
+	@extend .small;
+	@extend .bg-color;
+	@include translate3d(100px, 120px, 30px);
+}
+
+/**
+ * Transition
+ */
+#transition {
+	@include transition(all, .2s, linear);
+	&:hover {
+		background-color: #000;
+		@include br(100px);
+		h2, p {
+			color: white;
+		}
+	}
+}

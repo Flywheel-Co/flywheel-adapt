@@ -1,6 +1,10 @@
-// Background Gradient
-// **********************************************
-
+/**
+ * background-gradient
+ *
+ * @param string $startColor Beginning color of the gradient
+ * @param string $endColor End color of the gradient
+ * @param string $direction Optional direction of the gradient.  Defaults top.
+ */
 @mixin background-gradient($startColor, $endColor, $direction:top) {
     background-color: $startColor;
     background: -webkit-gradient(linear, left $direction, left $direction, from($startColor), to($endColor));
@@ -11,3 +15,6 @@
     background: linear-gradient(to $direction, $startColor, $endColor);
 }
 
+@mixin gradient($startColor, $endColor, $direction:top) {
+	@include background-gradient($startColor, $endColor, $direction);
+}
