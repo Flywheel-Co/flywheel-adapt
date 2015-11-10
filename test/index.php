@@ -3,11 +3,41 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>Flywheel Adapt</title>
-	<link rel="stylesheet" href="adapt.css">
+	<link rel="stylesheet" href="testing.css">
 </head>
 <body>
 	<div id="container">
+
+		<div class="wrapper">
+			<h1>Responsive</h1>
+			<div class="mobile device">
+				<p>Mobile</p>
+			</div>
+			<div class="mobile-landscape device">
+				<p>Mobile Landscape</p>
+			</div>
+			<div class="mobile-portrait device">
+				<p>Mobile Portrait</p>
+			</div>
+			<div class="tablet device">
+				<p>Tablet</p>
+			</div>
+			<div class="tablet-landscape device">
+				<p>Tablet Landscape</p>
+			</div>
+			<div class="tablet-portrait device">
+				<p>Tablet Portrait</p>
+			</div>
+			<div class="desktop device">
+				<p>Desktop</p>
+			</div>
+			<div class="large device">
+				<p>Large Format</p>
+			</div>
+		</div>
+
 		<div class="wrapper">
 			<h1>Backgrounds</h1>
 			<section id="background-gradient">
