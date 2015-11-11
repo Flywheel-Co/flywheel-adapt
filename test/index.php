@@ -15,25 +15,80 @@
 			<div class="mobile device">
 				<p>Mobile</p>
 			</div>
-			<div class="mobile-landscape device">
-				<p>Mobile Landscape</p>
-			</div>
 			<div class="mobile-portrait device">
 				<p>Mobile Portrait</p>
+			</div>
+			<div class="mobile-landscape device">
+				<p>Mobile Landscape</p>
 			</div>
 			<div class="tablet device">
 				<p>Tablet</p>
 			</div>
-			<div class="tablet-landscape device">
-				<p>Tablet Landscape</p>
-			</div>
 			<div class="tablet-portrait device">
 				<p>Tablet Portrait</p>
+			</div>
+			<div class="tablet-landscape device">
+				<p>Tablet Landscape</p>
 			</div>
 			<div class="desktop device">
 				<p>Desktop</p>
 			</div>
 			<div class="large device">
+				<p>Large Format</p>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<h1>Responsive Less Than Defined Size</h1>
+			<div class="mobile-lt device">
+				<p>Mobile</p>
+			</div>
+			<div class="mobile-portrait-lt device">
+				<p>Mobile Portrait</p>
+			</div>
+			<div class="mobile-landscape-lt device">
+				<p>Mobile Landscape</p>
+			</div>
+			<div class="tablet-lt device">
+				<p>Tablet</p>
+			</div>
+			<div class="tablet-portrait-lt device">
+				<p>Tablet Portrait</p>
+			</div>
+			<div class="tablet-landscape-lt device">
+				<p>Tablet Landscape</p>
+			</div>
+			<div class="desktop-lt device">
+				<p>Desktop</p>
+			</div>
+			<div class="large-lt device">
+				<p>Large Format</p>
+			</div>
+		</div>
+		<div class="wrapper">
+			<h1>Responsive Greater Than Defined Size</h1>
+			<div class="mobile-gt device">
+				<p>Mobile</p>
+			</div>
+			<div class="mobile-portrait-gt device">
+				<p>Mobile Portrait</p>
+			</div>
+			<div class="mobile-landscape-gt device">
+				<p>Mobile Landscape</p>
+			</div>
+			<div class="tablet-gt device">
+				<p>Tablet</p>
+			</div>
+			<div class="tablet-portrait-gt device">
+				<p>Tablet Portrait</p>
+			</div>
+			<div class="tablet-landscape-gt device">
+				<p>Tablet Landscape</p>
+			</div>
+			<div class="desktop-gt device">
+				<p>Desktop</p>
+			</div>
+			<div class="large-gt device">
 				<p>Large Format</p>
 			</div>
 		</div>

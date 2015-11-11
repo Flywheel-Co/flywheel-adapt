@@ -14,10 +14,10 @@
 $responsiveMap : (
 	mobile : (max : 667px),
 	mobilePortrait : (max : 375px),
-	mobileLandscape : (max : 667px),
+	mobileLandscape : (min : 375px, max : 667px),
 	tablet : (min : 667px, max : 1028px),
 	tabletPortrait : (min: 667px, max : 768px),
-	tabletLandscape : (min : 667px, max : 1028px),
+	tabletLandscape : (min : 768px, max : 1028px),
 	desktop : (min : 1028px, max : 2200px),
 	large : (min : 2200px)
 );
