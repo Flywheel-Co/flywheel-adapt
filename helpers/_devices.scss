@@ -3,20 +3,51 @@
  * the $responseiveMap default setting.
  */
 @mixin d($device) {
-    @if map-has-key($responsiveMap, $device) {
-        $sizes : map-get($responsiveMap, $device);
-        $min : map-get($sizes, min);
-        $max : map-get($sizes, max);
-        
-        @if map-has-key($sizes, min) and map-has-key($sizes, max) {
-            @media only screen and (min-width : $min+1) and (max-width : $max) { @content; }    
-        } @else if map-has-key($sizes, max) {
-            @media only screen and (max-width: $max) { @content; }
-        } @else if map-has-key($sizes, min) {
-            @media only screen and (min-width: $min) { @content; }
+    // If the key exists then let's move along.
+    // @if map-has-key($responsiveMap, $device) {
+        $prefix : str-slice($device, 0, 3);
+        $strippedDevice : $device;
+        $targetIndex : 0;
+        $targetPass : 0;
+        @if($prefix == 'lt-' or $prefix == 'gt-')
+        {
+            $strippedDevice : str-slice($device, 4);
         }
-    }
+
+        @for $i from 1 to length($responsiveMap) {
+            $deviceMap : nth($responsiveMap, $i);
+            $key : nth($deviceMap, 1);
+            $sizes : nth($deviceMap, 2);
+            $min : map-get($sizes, min);
+            $max : map-get($sizes, max);
+
+            @if $key == $strippedDevice {
+                $targetIndex : $i;
+            }
+
+            @if($targetIndex > 0) {
+                $targetPass : $targetPass + 1;
+            }
+
+            
+            @if ($prefix == "lt-" and ($i > $targetIndex - 1) and ($targetIndex > 0)) 
+                or ($prefix == "gt-" and ($i - 1 > $targetPass + $targetIndex - 1)) 
+                or ($key == $device) {
+    
+                    @debug $prefix, $key, $i, $targetIndex, $targetPass;
+        
+                    @if map-has-key($sizes, min) and map-has-key($sizes, max) {
+                        @media only screen and (min-width : $min+1) and (max-width : $max) { @content; }    
+                    } @else if map-has-key($sizes, max) {
+                        @media only screen and (max-width: $max) { @content; }
+                    } @else if map-has-key($sizes, min) {
+                        @media only screen and (min-width: $min) { @content; }
+                    }
+            }          
+        }
+    // }
 }
+
 
 // --------------------- DEPRICATED >>>> 
 /**
@@ -54,50 +85,42 @@
 @mixin largeDevice() { @include d(large) { @content; } }
 // --------------------- DEPRICATED <<<<<<< 
 
-// 
-/**
- * Helper classes for mobile devices
- */
-.showOnlyMobile {
-    display:none !important;
-    @include d(mobile) { display:block !important; }
-}
-.hideOnlyMobile { @include d(mobile) { display:none; } }
-.showMobile { @include d(mobile) { display:block !important; } }
-.hideMobile { @include d(mobile) { display:none; } }
+// Mobile
+// .showOnlyMobile {
+//     display:none !important;
+//     @include d(mobile) { display:block !important; }
+// }
+// .hideOnlyMobile { @include d(mobile) { display:none; } }
+// .showMobile { @include d(mobile) { display:block !important; } }
+// .hideMobile { @include d(mobile) { display:none; } }
 
-/**
- * Helper classes for tablet devices
- */
-.showOnlyTablet {
-    display:none !important;
-    @include d(tablet) { display:block !important; }
-}
-.hideOnlyTablet { @include d(tablet) { display:none; } }
-.showTablet { @include d(tablet) { display:block; } }
-.hideTablet { @include d(tablet) { display:none; } }
+// // tablet
+// .showOnlyTablet {
+//     display:none !important;
+//     @include d(tablet) { display:block !important; }
+// }
+// .hideOnlyTablet { @include d(tablet) { display:none; } }
+// .showTablet { @include d(tablet) { display:block; } }
+// .hideTablet { @include d(tablet) { display:none; } }
+// .showOnlyTabletPortrait {
+//     display:none !important;
+//     @include d(tabletPortrait) { display:block !important; }
+// }
+// .hideOnlyTabletPortrait { @include d(tabletPortrait) { display:none; } }
+// .showTabletPortrait { @include d(tabletPortrait) { display:block !important; } }
+// .hideTabletPortrait { @include d(tabletPortrait) { display:none; } }
 
-.showOnlyTabletPortrait {
-    display:none !important;
-    @include d(tabletPortrait) { display:block !important; }
-}
-.hideOnlyTabletPortrait { @include d(tabletPortrait) { display:none; } }
-.showTabletPortrait { @include d(tabletPortrait) { display:block !important; } }
-.hideTabletPortrait { @include d(tabletPortrait) { display:none; } }
-
-/**
- * Helper classes for desktop devices
- */
-.showOnlyDesktop {
-    display:block;
-    @include d(mobile) { display:none; }
-    @include d(tablet) { display:none; }
-    @include d(desktop) { display:block; }
-}
-.hideOnlyDesktop {
-    display:none;
-    @include d(mobile) { display:block; }
-    @include d(tablet) { display:block; }
-}
-.showDesktop { @include d(desktop) { display:block; } }
-.hideDesktop { @include d(desktop) { display:none; } }
+// // desktop
+// .showOnlyDesktop {
+//     display:block;
+//     @include d(mobile) { display:none; }
+//     @include d(tablet) { display:none; }
+//     @include d(desktop) { display:block; }
+// }
+// .hideOnlyDesktop {
+//     display:none;
+//     @include d(mobile) { display:block; }
+//     @include d(tablet) { display:block; }
+// }
+// .showDesktop { @include d(desktop) { display:block; } }
+// .hideDesktop { @include d(desktop) { display:none; } }
