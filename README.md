@@ -285,37 +285,57 @@ _note_ : this HTML element must include a span.buns element
 
 ## Media Sizes
 
-These are the default media break points shipped with Adapt.  These can be modified in your own settings.
+The default media sizes are stored in a sass map in the settings file.  
+The settings must remain in this order.
 
-##### $mobilePortraitSize : `320px`
-##### $mobileLandscapeSize : `480px`
-##### $tabletPortraitSize : `768px`
-##### $tabletLandscapeSize : `1028px`
-##### $desktopSize : `1224px`
-
-## Media Queries
-
-##### device( `media` ) { @content }
 ```sass
-@include device(mobile) {
+$responsiveMap : (
+    mobile : (max : 667px),
+    mobilePortrait : (max : 375px),
+    mobileLandscape : (min : 375px, max : 667px),
+    tablet : (min : 667px, max : 1028px),
+    tabletPortrait : (min: 667px, max : 768px),
+    tabletLandscape : (min : 768px, max : 1028px),
+    desktop : (min : 1028px, max : 2200px),
+    large : (min : 2200px)
+);
+```
+
+## Responsive Media Queries
+
+#### For a specific device
+##### d( `deviceType` ) { @content } 
+```sass
+// mobile devices including mobilePortrait and mobileLandscape
+@include d(mobile) {
     width : 100%
 }
-@include device(tablet-portrait) {
+
+// only tablet devices in portrait mode
+@include d(tabletPortrait) {
     width : 100%
     height : auto;
 }
 ```
-> You can also include the media query using the device name as the function
 
+#### For all devices smaller than the specified device, including the given device
+To provide for all devices smaller than and including the device provided you just need to add the `lt-` prefix.
+##### d( `lt-deviceType` ) { @content } 
 ```sass
-@include mobile {
-    width : 100%;
+
+// all tablets and mobile devices
+@include d(lt-tablet) {
+    width : 100%
 }
-@include tablet-portrait {
-    width : 100%;
+
+// all mobile devices in landscape and potrait mode
+@include d(lt-mobileLandscape) {
+    width : 100%
     height : auto;
 }
 ```
+
+
 
 ## Browser Prefixes
 ##### $browserPrefixes `webkit moz ms o`
