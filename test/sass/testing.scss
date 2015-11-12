@@ -46,7 +46,7 @@ section {
 $mobileColor : #CA2124;
 $tabletColor : #34A1CA;
 $desktopColor : #22D73B;
-$largeColor : #CCD7D1;
+$largeColor : #FCE622;
 
 /**
  * Responsive
@@ -59,28 +59,28 @@ $largeColor : #CCD7D1;
 	@include border-radius(5px);
 	@include transition(all, .4s, linear); 
 }  
-.mobile { @include d(mobile) { background-color: $mobileColor } }
+.mobile { @include d(mobile) { background-color: rgba($mobileColor, .2) } }
 .mobile-landscape { @include d(mobileLandscape) { background-color: rgba($mobileColor, .8) } }
 .mobile-portrait { @include d(mobilePortrait) { background-color: rgba($mobileColor, .6) } }
-.tablet { @include d(tablet) { background-color: rgba($tabletColor, 1); } }
+.tablet { @include d(tablet) { background-color: rgba($tabletColor, .2); } }
 .tablet-landscape { @include d(tabletLandscape) { background-color: rgba($tabletColor, .8); } }
 .tablet-portrait { @include d(tabletPortrait) { background-color: rgba($tabletColor, .6); } }
 .desktop { @include d(desktop) { background-color: rgba($desktopColor, 1); } }
 .large { @include d(large) { background-color: rgba($largeColor, 1); } }
 
-.mobile-lt { @include d(lt-mobile) { background-color: $mobileColor } }
+.mobile-lt { @include d(lt-mobile) { background-color: rgba($mobileColor, .2) } }
 .mobile-landscape-lt { @include d(lt-mobileLandscape) { background-color: rgba($mobileColor, .8) } }
 .mobile-portrait-lt { @include d(lt-mobilePortrait) { background-color: rgba($mobileColor, .6) } }
-.tablet-lt { @include d(lt-tablet) { background-color: rgba($tabletColor, 1); } }
+.tablet-lt { @include d(lt-tablet) { background-color: rgba($tabletColor, .2); } }
 .tablet-landscape-lt { @include d(lt-tabletLandscape) { background-color: rgba($tabletColor, .8); } }
 .tablet-portrait-lt { @include d(lt-tabletPortrait) { background-color: rgba($tabletColor, .6); } }
 .desktop-lt { @include d(lt-desktop) { background-color: rgba($desktopColor, 1); } }
 .large-lt { @include d(lt-large) { background-color: rgba($largeColor, 1); } }
 
-.mobile-gt { @include d(gt-mobile) { background-color: $mobileColor } }
+.mobile-gt { @include d(gt-mobile) { background-color: rgba($mobileColor, .2) } }
 .mobile-landscape-gt { @include d(gt-mobileLandscape) { background-color: rgba($mobileColor, .8) } }
 .mobile-portrait-gt { @include d(gt-mobilePortrait) { background-color: rgba($mobileColor, .6) } }
-.tablet-gt { @include d(gt-tablet) { background-color: rgba($tabletColor, 1); } }
+.tablet-gt { @include d(gt-tablet) { background-color: rgba($tabletColor, .2); } }
 .tablet-landscape-gt { @include d(gt-tabletLandscape) { background-color: rgba($tabletColor, .8); } }
 .tablet-portrait-gt { @include d(gt-tabletPortrait) { background-color: rgba($tabletColor, .6); } }
 .desktop-gt { @include d(gt-desktop) { background-color: rgba($desktopColor, 1); } }

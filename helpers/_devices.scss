@@ -3,49 +3,65 @@
  * the $responseiveMap default setting.
  */
 @mixin d($device) {
-    // If the key exists then let's move along.
-    // @if map-has-key($responsiveMap, $device) {
-        $prefix : str-slice($device, 0, 3);
-        $strippedDevice : $device;
-        $targetIndex : 0;
-        $targetPass : 0;
-        @if($prefix == 'lt-' or $prefix == 'gt-')
-        {
-            $strippedDevice : str-slice($device, 4);
-        }
+    // get the first three letters of the device. 
+    $prefix : str-slice($device, 0, 3);
 
-        @for $i from 1 to length($responsiveMap) {
-            $deviceMap : nth($responsiveMap, $i);
-            $key : nth($deviceMap, 1);
-            $sizes : nth($deviceMap, 2);
-            $min : map-get($sizes, min);
-            $max : map-get($sizes, max);
+    // the stripped device name = the original device name passed in the param
+    $strippedDevice : $device;
 
-            @if $key == $strippedDevice {
-                $targetIndex : $i;
-            }
+    // the target index for the device in the device map
+    $targetIndex : 0;
 
-            @if($targetIndex > 0) {
-                $targetPass : $targetPass + 1;
-            }
+    // how many times the target has passed.
+    $targetPass : 0;
 
-            
-            @if ($prefix == "lt-" and ($i > $targetIndex - 1) and ($targetIndex > 0)) 
-                or ($prefix == "gt-" and ($i - 1 > $targetPass + $targetIndex - 1)) 
-                or ($key == $device) {
-    
-                    @debug $prefix, $key, $i, $targetIndex, $targetPass;
+    // is there a less than or greater than prefix?  Strip the device name.
+    @if($prefix == 'lt-' or $prefix == 'gt-') {
+        $strippedDevice : str-slice($device, 4);
+    }
+
+    @for $i from 1 to length($responsiveMap) + 1 {
+
+        // get the device map at this index.
+        $deviceMap : nth($responsiveMap, $i);
+
+        // get the device key by using the first index.
+        $deviceKey : nth($deviceMap, 1);
+
+        // get the device sizes using the second index.
+        $sizes : nth($deviceMap, 2);
+
+        // get the min and max sizes for this index.
+        $min : map-get($sizes, min);
+        $max : map-get($sizes, max);
         
-                    @if map-has-key($sizes, min) and map-has-key($sizes, max) {
-                        @media only screen and (min-width : $min+1) and (max-width : $max) { @content; }    
-                    } @else if map-has-key($sizes, max) {
-                        @media only screen and (max-width: $max) { @content; }
-                    } @else if map-has-key($sizes, min) {
-                        @media only screen and (min-width: $min) { @content; }
-                    }
-            }          
+        // is there a device key available for the device name passed?
+        @if $deviceKey == $strippedDevice {
+            // If the device keey and the passed device 
+            // name match then let's get the index.
+            $targetIndex : $i;
         }
-    // }
+    
+        // if the targetIndex has been assigned
+        // then let's show that a cycle has passed.
+        @if($targetIndex != 0) {
+            $targetPass : $targetPass + 1;
+        }
+        
+        // check for a less than, greater than or device match        
+        @if ($prefix == "lt-" and ($targetIndex > 0)) 
+            or ($prefix == "gt-" and ($targetIndex == 0)) 
+            or ($deviceKey == $device) {
+    
+                @if map-has-key($sizes, min) and map-has-key($sizes, max) {
+                    @media only screen and (min-width : $min+1) and (max-width : $max) { @content; }    
+                } @else if map-has-key($sizes, max) {
+                    @media only screen and (max-width: $max) { @content; }
+                } @else if map-has-key($sizes, min) {
+                    @media only screen and (min-width: $min) { @content; }
+                }
+        }          
+    }
 }
 
 
