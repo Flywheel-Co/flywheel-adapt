@@ -1,6 +1,10 @@
 /**
  * Responsive device media queries based on 
  * the $responseiveMap default setting.
+ *
+ * NOTE : I had to do it this way because you cannot pass the 
+ * doc block @content around through mixins.  It has to
+ * created from this mixin
  */
 @mixin d($device) {
     // get the first three letters of the device. 
