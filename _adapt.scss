@@ -1,6 +1,5 @@
 // Initial Utilities
 // **********************************************
-
 @import 'utils/settings';               //  Import default settings.  They can be overwritten by the user
 @import 'utils/prefixer';
 @import 'utils/reset';
@@ -9,7 +8,6 @@
 
 // Helpers
 // **********************************************
-
 @import 'helpers/backgrounds';
 @import 'helpers/blur';
 @import 'helpers/clearfix';
@@ -22,7 +20,6 @@
 
 // CSS Mixins
 // **********************************************
-
 @import 'css/animation';
 @import 'css/background-gradient';
 @import 'css/borders';
@@ -36,7 +33,5 @@
 
 // Backwards Compatibility
 // **********************************************
-
 @import 'utils/compatibility';
 @import 'utils/base';
-

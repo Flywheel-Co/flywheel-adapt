@@ -7,5 +7,5 @@ elixir.config.css.outputFolder = 'test/';
 elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
-    mix.sass('adapt.scss', 'test/adapt.css');
+    mix.sass('testing.scss', 'test/testing.css');
 });
