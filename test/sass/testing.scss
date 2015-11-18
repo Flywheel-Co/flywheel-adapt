@@ -1,3 +1,8 @@
+
+$responsiveMap : (
+	mobile : (max : 900)
+);
+
 @import "../../adapt";
 @import "typography";
 
@@ -15,12 +20,9 @@ html {
 	padding: 0 0 20px;
 	border-bottom: 1px solid #CACACA;
 	@include transition(all, .1s, ease-in);
-	// @include d(mobile) {
-	// 	width: 95%;
-	// }
-	// @include d(tablet) {
-	// 	width: 98%;
-	// }
+	@include d(mobile) {
+		width: 95%;
+	}
 	&:last-child {
 		padding: 0;
 		margin: 0;
@@ -57,8 +59,8 @@ $largeColor : #FCE622;
 	background-color: #F5F5F5;
 	border-bottom: 1px solid #E0E0E0;
 	@include border-radius(5px);
-	@include transition(all, .4s, linear); 
-}  
+	@include transition(all, .4s, linear);
+}
 .mobile { @include d(mobile) { background-color: rgba($mobileColor, .2) } }
 .mobile-landscape { @include d(mobileLandscape) { background-color: rgba($mobileColor, .8) } }
 .mobile-portrait { @include d(mobilePortrait) { background-color: rgba($mobileColor, .6) } }
@@ -85,7 +87,7 @@ $largeColor : #FCE622;
 .tablet-portrait-gt { @include d(gt-tabletPortrait) { background-color: rgba($tabletColor, .6); } }
 .desktop-gt { @include d(gt-desktop) { background-color: rgba($desktopColor, 1); } }
 .large-gt { @include d(gt-large) { background-color: rgba($largeColor, 1); } }
- 
+
 /**
  * Background
  */
@@ -95,7 +97,7 @@ $largeColor : #FCE622;
 
 /**
  * Border Radius
- */ 
+ */
 #border-radius {
 	@extend .bg-color;
 	@include border-radius(20px);
@@ -158,11 +160,11 @@ $largeColor : #FCE622;
 		@extend .bg-color;
 		padding: 30px;
 		&.x-axis {
-			@include rotateX(20);	
+			@include rotateX(20);
 		}
 		&.y-axis {
 			margin-left: 80px;
-			@include rotateY(20);	
+			@include rotateY(20);
 		}
 	}
 }
@@ -206,7 +208,7 @@ $largeColor : #FCE622;
 #translate3d {
 	position: absolute;
 	left: 50%;
-	margin-left: -25%; 
+	margin-left: -25%;
 	padding: 40px;
 	@extend .small;
 	@extend .bg-color;
