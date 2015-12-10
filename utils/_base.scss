@@ -6,14 +6,15 @@ html, body { height:100%; }
 /**
  * Form inputs
  */
-input {
+input:not('[type="checkbox"]'),
+input:not('[type="radio"]') {
     -webkit-appearance:none;
     -webkit-border-radius:0;
 }
 
 /**
- * input submit
+ * Form Submit
  */
-input[type="submit"] { 
-	cursor:pointer; 
-	}
+input[type="submit"] {
+	cursor:pointer;
+}

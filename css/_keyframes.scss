@@ -1,5 +1,6 @@
 /**
- * Keyframes to build
+ * Keyframes
+ * @param  string $name keyframe name
  */
 @mixin keyframes($name) {
     @-webkit-keyframes #{$name} { @content; }

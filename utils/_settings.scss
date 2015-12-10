@@ -6,12 +6,10 @@
  */
 
 /**
- * SASS MAP for responsive keywords and document sizes.  
- * 
- * To-Do : 
- * Merge with user defined $responsiveMap ... somehow
+ * SASS MAP for responsive keywords and document sizes.
  */
-$responsiveMap : (
+
+$defaultResponsiveMap : (
 	mobile : (max : 667px),
 	mobilePortrait : (max : 375px),
 	mobileLandscape : (min : 375px, max : 667px),
@@ -21,6 +19,8 @@ $responsiveMap : (
 	desktop : (min : 1028px, max : 2200px),
 	large : (min : 2200px)
 );
+
+$responsiveMap: map-merge( $defaultResponsiveMap, $responsiveMap );
 
 $borderRadius : 3px !default;
 $browserPrefixes : webkit moz ms o !default;
