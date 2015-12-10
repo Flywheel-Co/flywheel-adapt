@@ -1,3 +1,7 @@
+/**
+ * Backwards compatability because even humans
+ * make mistakes sometimes.
+ */
 @mixin boxSize($value:border-box) {
     @warn "Deprecated Mixin: boxSize\r\nThe 'boxSize' mixin has been moved to 'box-sizing' for consistency-sake.";
     @include box-sizing($value);

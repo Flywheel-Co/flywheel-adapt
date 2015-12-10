@@ -1,9 +1,8 @@
 /**
  * Add box shadow vendor prefixes
- *
- * @param string $x X axis value of the shadow
- * @param string $y Y axis value of the shadow
- * @param string $blur Blur size
+ * @param string $x     X axis value of the shadow
+ * @param string $y     Y axis value of the shadow
+ * @param string $blur  Blur size
  * @param string $color Color of the shadow
  */
 @mixin box-shadow($x, $y, $blur, $color) {
@@ -12,10 +11,9 @@
 
 /**
  * Box shadow inset with vendor prefixes
- *
- * @param string $x X axis value of the shadow
- * @param string $y Y axis value of the shadow
- * @param string $blur Blur size
+ * @param string $x     X axis value of the shadow
+ * @param string $y     Y axis value of the shadow
+ * @param string $blur  Blur size
  * @param string $color Color of the shadow
  */
 @mixin box-shadow-inset($x, $y, $blur, $color) {

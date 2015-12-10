@@ -1,9 +1,9 @@
 /**
- * background-gradient
+ * Background Gradients
  *
  * @param string $startColor Beginning color of the gradient
- * @param string $endColor End color of the gradient
- * @param string $direction Optional direction of the gradient.  Defaults top.
+ * @param string $endColor   End color of the gradient
+ * @param string $direction  Optional direction of the gradient.  Defaults top.
  */
 @mixin background-gradient($startColor, $endColor, $direction:top) {
     background-color: $startColor;

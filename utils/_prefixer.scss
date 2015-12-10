@@ -2,6 +2,7 @@
  * Generate vendor prefixes for various browser support
  * Based on $browserPrefixes setting
  */
+
 @mixin prefix($map, $vendors: $browserPrefixes) {
     @each $prop, $value in $map {
         @if $vendors {
@@ -9,7 +10,7 @@
                 #{"-" + $vendor + "-" + $prop}: #{$value};
             }
         }
-        
+
         // Dump regular property anyway
         #{$prop}: #{$value};
     }

@@ -1,6 +1,5 @@
 /**
- * border-radius prefixer
- *
+ * Border Radius
  * @param string $value Value of the border radius.  Defaults to $borderRadius settings
  */
 @mixin border-radius($value: $borderRadius) {
@@ -8,15 +7,13 @@
 }
 
 /**
- * border-radius shorthand to prefixer
- *
+ * Border radius alias
  * @param string $value Value of the border radius.  Defaults to $borderRadius settings
  */
 @mixin br($value: $borderRadius) { @include border-radius($value) }
 
 /**
- * border-bottom-radius prefixer
- *
+ * Border Radius : Bottom
  * @param string $value Value of the border radius.  Defaults to $borderRadius settings
  */
 @mixin border-bottom-radius($value: $borderRadius) {
@@ -30,8 +27,7 @@
 }
 
 /**
- * border-top-radius prefixer
- *
+ * Border Radius : Top
  * @param string $value Value of the border radius.  Defaults to $borderRadius settings
  */
 @mixin border-top-radius($value: $borderRadius) {
