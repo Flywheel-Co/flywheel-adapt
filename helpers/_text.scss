@@ -4,8 +4,6 @@
 @mixin break-word() {
 
     /* Be VERY careful with this, breaks normal words wh_erever */
-    // word-break: break-all;
-
     -ms-word-break: break-all;
     word-break: break-word;
 
