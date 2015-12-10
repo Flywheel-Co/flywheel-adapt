@@ -1,13 +1,13 @@
 /**
- * Responsive device media queries based on 
+ * Responsive device media queries based on
  * the $responseiveMap default setting.
  *
- * NOTE : I had to do it this way because you cannot pass the 
+ * NOTE : I had to do it this way because you cannot pass the
  * doc block @content around through mixins.  It has to
  * created from this mixin
  */
 @mixin d($device) {
-    // get the first three letters of the device. 
+    // get the first three letters of the device.
     $prefix : str-slice($device, 0, 3);
 
     // the stripped device name = the original device name passed in the param
@@ -38,61 +38,61 @@
         // get the min and max sizes for this index.
         $min : map-get($sizes, min);
         $max : map-get($sizes, max);
-        
+
         // is there a device key available for the device name passed?
         @if $deviceKey == $strippedDevice {
-            // If the device keey and the passed device 
+            // If the device keey and the passed device
             // name match then let's get the index.
             $targetIndex : $i;
         }
-    
+
         // if the targetIndex has been assigned
         // then let's show that a cycle has passed.
         @if($targetIndex != 0) {
             $targetPass : $targetPass + 1;
         }
-        
-        // check for a less than, greater than or device match        
-        @if ($prefix == "lt-" and ($targetIndex > 0)) 
-            or ($prefix == "gt-" and ($targetIndex == 0)) 
+
+        // check for a less than, greater than or device match
+        @if ($prefix == "lt-" and ($targetIndex > 0))
+            or ($prefix == "gt-" and ($targetIndex == 0))
             or ($deviceKey == $device) {
-    
+
                 @if map-has-key($sizes, min) and map-has-key($sizes, max) {
-                    @media only screen and (min-width : $min+1) and (max-width : $max) { @content; }    
+                    @media only screen and (min-width : $min+1) and (max-width : $max) { @content; }
                 } @else if map-has-key($sizes, max) {
                     @media only screen and (max-width: $max) { @content; }
                 } @else if map-has-key($sizes, min) {
                     @media only screen and (min-width: $min) { @content; }
                 }
-        }          
+        }
     }
 }
 
 
-// --------------------- DEPRICATED >>>> 
+// --------------------- DEPRICATED >>>>
 /**
  * Device mixin SASS if/else tree
  *
- * DEPRICATED
+ * DEPRECATED
  * ----------- Backwards compatibility for device() mixin
  */
 @mixin device($device) {
-    @if $device == mobile { 
+    @if $device == mobile {
         @include d(mobile) { @content; }
-    } @else if $device == tablet { 
+    } @else if $device == tablet {
        @include d(tablet) { @content; }
-    } @else if $device == mobile-portrait { 
+    } @else if $device == mobile-portrait {
         @include d(mobilePortrait) { @content; }
-    } @else if $device == mobile-landscape { 
+    } @else if $device == mobile-landscape {
         @include d(mobileLandscape) { @content; }
-    }@else if $device == tablet-portrait { 
+    }@else if $device == tablet-portrait {
         @include d(tabletPortrait) { @content; }
-    } @else if $device == tablet-landscape { 
+    } @else if $device == tablet-landscape {
         @include d(tabletLandscape) { @content; }
     } @else if $device == desktop {
         @include d(desktop) { @content; }
     } @else {
-        @include d($device) 
+        @include d($device)
     }
 }
 @mixin mobile() { @include d(mobile) { @content; } }
@@ -103,44 +103,20 @@
 @mixin tablet-landscape() { @include d(tabletLandscape) { @content; } }
 @mixin desktop() { @include d(desktop) { @content; } }
 @mixin largeDevice() { @include d(large) { @content; } }
-// --------------------- DEPRICATED <<<<<<< 
+// --------------------- DEPRICATED <<<<<<<
 
-// Mobile
-// .showOnlyMobile {
-//     display:none !important;
-//     @include d(mobile) { display:block !important; }
-// }
-// .hideOnlyMobile { @include d(mobile) { display:none; } }
-// .showMobile { @include d(mobile) { display:block !important; } }
-// .hideMobile { @include d(mobile) { display:none; } }
+// --------------------- DEPRICATED >>>>
+/**
+ * Device mixin variables
+ *
+ * DEPRECATED
+ * ----------- Backwards compatibility for media vars
+ */
 
-// // tablet
-// .showOnlyTablet {
-//     display:none !important;
-//     @include d(tablet) { display:block !important; }
-// }
-// .hideOnlyTablet { @include d(tablet) { display:none; } }
-// .showTablet { @include d(tablet) { display:block; } }
-// .hideTablet { @include d(tablet) { display:none; } }
-// .showOnlyTabletPortrait {
-//     display:none !important;
-//     @include d(tabletPortrait) { display:block !important; }
-// }
-// .hideOnlyTabletPortrait { @include d(tabletPortrait) { display:none; } }
-// .showTabletPortrait { @include d(tabletPortrait) { display:block !important; } }
-// .hideTabletPortrait { @include d(tabletPortrait) { display:none; } }
+$mediaMobilePortrait:  320px;
+$mediaMobileLandscape: 480px;
+$mediaTabletPortrait:  768px;
+$mediaTabletLandscape: 1028px;
+$mediaDesktop:         1224px;
 
-// // desktop
-// .showOnlyDesktop {
-//     display:block;
-//     @include d(mobile) { display:none; }
-//     @include d(tablet) { display:none; }
-//     @include d(desktop) { display:block; }
-// }
-// .hideOnlyDesktop {
-//     display:none;
-//     @include d(mobile) { display:block; }
-//     @include d(tablet) { display:block; }
-// }
-// .showDesktop { @include d(desktop) { display:block; } }
-// .hideDesktop { @include d(desktop) { display:none; } }
+// --------------------- DEPRICATED <<<<<<<
