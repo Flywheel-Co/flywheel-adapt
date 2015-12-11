@@ -95,6 +95,10 @@ $largeColor : #FCE622;
 	@include background-gradient(#EBD32B, #EB2F17);
 }
 
+#linear-gradient {
+	@include linear-gradient(to left, #E0E0E0 0%, #A5B5EE 50%, #E0E0E0 100% );
+} 
+
 /**
  * Border Radius
  */
