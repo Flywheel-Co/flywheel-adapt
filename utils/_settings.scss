@@ -20,6 +20,8 @@ $defaultResponsiveMap : (
 	large : (min : 2200px)
 );
 
+$responsiveMap : () !default;
+
 $responsiveMap: map-merge( $defaultResponsiveMap, $responsiveMap );
 
 $borderRadius : 3px !default;

@@ -99,6 +99,10 @@
 				<h2>Background Gradient</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus numquam nam veniam autem minus maiores, nulla pariatur quibusdam recusandae? Similique vero unde odit magni tenetur, dicta optio rem voluptas architecto!</p>
 			</section>
+			<section id="linear-gradient">
+				<h2>Linear Gradient</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus numquam nam veniam autem minus maiores, nulla pariatur quibusdam recusandae? Similique vero unde odit magni tenetur, dicta optio rem voluptas architecto!</p>
+			</section>
 			<section id="border-radius">
 				<h2>Border Radius</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus numquam nam veniam autem minus maiores, nulla pariatur quibusdam recusandae? Similique vero unde odit magni tenetur, dicta optio rem voluptas architecto!</p>
