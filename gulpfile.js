@@ -1,11 +1,34 @@
-var gulp = require('gulp'),
-    elixir = require('laravel-elixir'),
-    Task = elixir.Task;
+var gulp   = require( 'gulp' ),
+	sass   = require( 'gulp-sass' ),
+	notify = require( 'gulp-notify' );
 
-elixir.config.assetsPath = 'test/';
-elixir.config.css.outputFolder = 'test/';
-elixir.config.sourcemaps = false;
+var paths  = {
+	source: './test/sass',
+	dest:   './test'
+};
 
-elixir(function(mix) {
-    mix.sass('testing.scss', 'test/testing.css');
-});
+/**
+ * Build Sass
+ */
+
+gulp.task( 'sass', function() {
+
+	return gulp.src( paths.source + '/**/*.scss' )
+			   .pipe( sass().on( 'error', sass.logError ) )
+			   .pipe( gulp.dest( paths.dest ) )
+			   .pipe( notify( 'sass compiled' ) );
+} );
+
+/**
+ * Watch for events
+ */
+
+gulp.task( 'watch', function() {
+	gulp.watch( paths.source + '/**/*.scss', ['sass'] );
+} );
+
+/**
+ * Run
+ */
+
+gulp.task( 'default', ['watch', 'sass'] );
