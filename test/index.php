@@ -38,7 +38,7 @@
 			</div>
 		</div>
 
-		<div class="wrapper">
+		<div class="wrapper responsive-lt">
 			<h1>Responsive Less Than Defined Size</h1>
 			<div class="mobile-portrait-lt device">
 				<p>Mobile Portrait</p>
@@ -116,7 +116,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus numquam nam veniam autem minus maiores, nulla pariatur quibusdam recusandae? Similique vero unde odit magni tenetur, dicta optio rem voluptas architecto!</p>
 			</section>
 		</div>
-	
+
 		<div class="wrapper">
 			<h1>Box Shadow</h1>
 			<section id="box-shadow">
@@ -182,7 +182,7 @@
 				<h2>Transform Origin</h2>
 				<p>Rotate from top right by -15 degrees</p>
 			</section>
-			
+
 			<section id="translate3d-wrapper">
 				<div id="translate3d">
 					<h2>Translate 3D</h2>
