@@ -24,3 +24,12 @@
 .preload * {
     @include p((transition: none !important));
 }
+
+/**
+ * Hide from mobile
+ */
+.hideMobile {
+	@include d(mobile) {
+		display: none;
+	}
+}
