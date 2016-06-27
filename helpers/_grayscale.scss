@@ -2,5 +2,5 @@
  * grayscale prefixer
  */
 @mixin grayscale($percent:100) {
-    @include p((filter: grayscale($perfenct)));
+    @include p((filter: grayscale($percent)));
 }
