@@ -1,122 +1,106 @@
 /**
- * Responsive device media queries based on
- * the $responseiveMap default setting.
+ * Device
  *
- * NOTE : I had to do it this way because you cannot pass the
- * doc block @content around through mixins.  It has to
- * created from this mixin
+ * Generate a media query targetted at a particular device or devices greater than or less than
+ * a given device.
  */
-@mixin d($device) {
-    // get the first three letters of the device.
-    $prefix : str-slice($device, 0, 3);
+@mixin device( $device ) {
 
-    // the stripped device name = the original device name passed in the param
-    $strippedDevice : $device;
+    $device:   deprecated-devices( $device );
+    $operator: null;
 
-    // the target index for the device in the device map
-    $targetIndex : 0;
 
-    // how many times the target has passed.
-    $targetPass : 0;
-
-    // is there a less than or greater than prefix?  Strip the device name.
-    @if($prefix == 'lt-' or $prefix == 'gt-') {
-        $strippedDevice : str-slice($device, 4);
+    @if str-index( $device, 'lt-' ) or str-index( $device, 'gt-' )  {
+        $operator: str-slice( $device, 0, 2 );
+        $device:   str-slice( $device, 4, str-length( $device ) );
     }
 
-    @for $i from 1 to length($responsiveMap) + 1 {
+    $sizes: map-get( $responsiveMap, $device );
+    $query: '';
 
-        // get the device map at this index.
-        $deviceMap : nth($responsiveMap, $i);
-
-        // get the device key by using the first index.
-        $deviceKey : nth($deviceMap, 1);
-
-        // get the device sizes using the second index.
-        $sizes : nth($deviceMap, 2);
-
-        // get the min and max sizes for this index.
-        $min : map-get($sizes, min);
-        $max : map-get($sizes, max);
-
-        // is there a device key available for the device name passed?
-        @if $deviceKey == $strippedDevice {
-            // If the device keey and the passed device
-            // name match then let's get the index.
-            $targetIndex : $i;
+    @if $operator == null {
+        @each $key, $value in $sizes {
+            $query: $query + ' and (' + $key + '-width:' + $value + ')';
         }
-
-        // if the targetIndex has been assigned
-        // then let's show that a cycle has passed.
-        @if($targetIndex != 0) {
-            $targetPass : $targetPass + 1;
-        }
-
-        // check for a less than, greater than or device match
-        @if ($prefix == "lt-" and ($targetIndex > 0))
-            or ($prefix == "gt-" and ($targetIndex == 0))
-            or ($deviceKey == $device) {
-
-                @if map-has-key($sizes, min) and map-has-key($sizes, max) {
-                    @media only screen and (min-width : $min+1) and (max-width : $max) { @content; }
-                } @else if map-has-key($sizes, max) {
-                    @media only screen and (max-width: $max) { @content; }
-                } @else if map-has-key($sizes, min) {
-                    @media only screen and (min-width: $min) { @content; }
-                }
-        }
-    }
-}
-
-
-// --------------------- DEPRICATED >>>>
-/**
- * Device mixin SASS if/else tree
- *
- * DEPRECATED
- * ----------- Backwards compatibility for device() mixin
- */
-@mixin device($device) {
-    @if $device == mobile {
-        @include d(mobile) { @content; }
-    } @else if $device == tablet {
-       @include d(tablet) { @content; }
-    } @else if $device == mobile-portrait {
-        @include d(mobilePortrait) { @content; }
-    } @else if $device == mobile-landscape {
-        @include d(mobileLandscape) { @content; }
-    }@else if $device == tablet-portrait {
-        @include d(tabletPortrait) { @content; }
-    } @else if $device == tablet-landscape {
-        @include d(tabletLandscape) { @content; }
-    } @else if $device == desktop {
-        @include d(desktop) { @content; }
     } @else {
-        @include d($device)
+
+        // Less than
+        @if $operator == 'lt'  {
+            $query: $query + ' and ( max-width:' + if( map-has-key( $sizes, min ), map-get( $sizes, min ), 0 ) + ')';
+        }
+
+        // Greater than
+        @if $operator == 'gt'  {
+            $query: $query + ' and ( min-width:' + if(map-has-key( $sizes, max ), map-get($sizes, max), 9999999px) + ')';
+        }
+    }
+
+
+    @media only screen #{$query} {
+        @content;
     }
 }
-@mixin mobile() { @include d(mobile) { @content; } }
-@mixin mobile-portrait() { @include d(mobilePortrait) { @content; } }
-@mixin mobile-landscape() { @include d(mobileLandscape) { @content; } }
-@mixin tablet() { @include d(tablet) { @content; } }
-@mixin tablet-portrait() { @include d(tabletPortrait) { @content; } }
-@mixin tablet-landscape() { @include d(tabletLandscape) { @content; } }
-@mixin desktop() { @include d(desktop) { @content; } }
-@mixin largeDevice() { @include d(large) { @content; } }
-// --------------------- DEPRICATED <<<<<<<
 
-// --------------------- DEPRICATED >>>>
 /**
- * Device mixin variables
- *
- * DEPRECATED
- * ----------- Backwards compatibility for media vars
+ * Device mixin alias
  */
+@mixin d( $device ) { @include device( $device ) { @content } }
 
-$mediaMobilePortrait:  320px;
-$mediaMobileLandscape: 480px;
-$mediaTabletPortrait:  768px;
-$mediaTabletLandscape: 1028px;
-$mediaDesktop:         1224px;
+/** Aliases */
+@mixin mobile           { @include d(mobile) { @content; } }
+@mixin mobile-portrait  { @include d(mobile-portrait) { @content; } }
+@mixin mobile-landscape { @include d(mobile-landscape) { @content; } }
+@mixin tablet           { @include d(tablet) { @content; } }
+@mixin tablet-portrait  { @include d(tablet-portrait) { @content; } }
+@mixin tablet-landscape { @include d(tablet-landscape) { @content; } }
+@mixin desktop          { @include d(desktop) { @content; } }
+@mixin large-device     { @include d(large) { @content; } }
 
-// --------------------- DEPRICATED <<<<<<<
+@mixin lt-mobile           { @include d(lt-mobile) { @content; } }
+@mixin lt-mobile-portrait  { @include d(lt-mobile-portrait) { @content; } }
+@mixin lt-mobile-landscape { @include d(lt-mobile-landscape) { @content; } }
+@mixin lt-tablet           { @include d(lt-tablet) { @content; } }
+@mixin lt-tablet-portrait  { @include d(lt-tablet-portrait) { @content; } }
+@mixin lt-tablet-landscape { @include d(lt-tablet-landscape) { @content; } }
+@mixin lt-desktop          { @include d(lt-desktop) { @content; } }
+@mixin lt-large-device     { @include d(lt-large) { @content; } }
+
+@mixin gt-mobile           { @include d(gt-mobile) { @content; } }
+@mixin gt-mobile-portrait  { @include d(gt-mobile-portrait) { @content; } }
+@mixin gt-mobile-landscape { @include d(gt-mobile-landscape) { @content; } }
+@mixin gt-tablet           { @include d(gt-tablet) { @content; } }
+@mixin gt-tablet-portrait  { @include d(gt-tablet-portrait) { @content; } }
+@mixin gt-tablet-landscape { @include d(gt-tablet-landscape) { @content; } }
+@mixin gt-desktop          { @include d(gt-desktop) { @content; } }
+@mixin gt-large-device     { @include d(gt-large) { @content; } }
+
+/**
+ * Deprecation notices and backwards compatibility implementation for previous device names
+ *
+ * @param  {string} $device device identifier
+ * @return {string}         device identifier
+ */
+@function deprecated-devices( $device ) {
+
+    @if str-index( $device, 'tabletPortrait' ) {
+        @warn "Using deprecated device identifier 'tabletPortrait'. Use 'tablet-portrait' instead.";
+        $device: str-slice( $device, 1, str-index( $device, 'tabletPortrait' ) - 1 ) + 'tablet-portrait';
+    }
+
+    @if str-index( $device, 'tabletLandscape' ) {
+        @warn "Using deprecated device identifier 'tabletLandscape'. Use 'tablet-landscape' instead.";
+        $device: str-slice( $device, 1, str-index( $device, 'tabletPortrait' ) - 1 ) + 'tablet-portrait';
+    }
+
+    @if str-index( $device, 'mobilePortrait' ) {
+        @warn "Using deprecated device identifier 'mobilePortrait'. Use 'mobile-portrait' instead.";
+        $device: str-slice( $device, 1, str-index( $device, 'mobilePortrait' ) - 1 ) + 'mobile-portrait';
+    }
+
+    @if str-index( $device, 'mobileLandscape' ) {
+        @warn "Using deprecated device identifier 'mobileLandscape'. Use 'mobile-landscape' instead.";
+        $device: str-slice( $device, 1, str-index( $device, 'mobilePortrait' ) - 1 ) + 'mobile-portrait';
+    }
+
+    @return $device;
+}
