@@ -5,93 +5,95 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>Flywheel Adapt</title>
-	<link rel="stylesheet" href="testing.css">
+	<link rel="stylesheet" href="/test/testing.css">
 </head>
 <body>
 	<div id="container">
 
-		<div class="wrapper">
+		<div class="wrapper devices" id="devices">
 			<h1>Responsive</h1>
-			<div class="mobile-portrait device">
+			<div class="mobile-portrait">
 				<p>Mobile Portrait</p>
 			</div>
-			<div class="mobile-landscape device">
+			<div class="mobile-landscape">
 				<p>Mobile Landscape</p>
 			</div>
-			<div class="mobile device">
+			<div class="mobile">
 				<p>Mobile</p>
 			</div>
-			<div class="tablet-portrait device">
+			<div class="tablet-portrait">
 				<p>Tablet Portrait</p>
 			</div>
-			<div class="tablet-landscape device">
+			<div class="tablet-landscape">
 				<p>Tablet Landscape</p>
 			</div>
-			<div class="tablet device">
+			<div class="tablet">
 				<p>Tablet</p>
 			</div>
-			<div class="desktop device">
+			<div class="desktop">
 				<p>Desktop</p>
 			</div>
-			<div class="large device">
+			<div class="large">
 				<p>Large Format</p>
 			</div>
 		</div>
 
-		<div class="wrapper responsive-lt">
-			<h1>Responsive Less Than Defined Size</h1>
-			<div class="mobile-portrait-lt device">
+		<div class="wrapper devices" id="lt-devices">
+			<h1>Responsive: Less Than Defined Size</h1>
+			<div class="lt-mobile-portrait">
 				<p>Mobile Portrait</p>
 			</div>
-			<div class="mobile-landscape-lt device">
+			<div class="lt-mobile-landscape">
 				<p>Mobile Landscape</p>
 			</div>
-			<div class="mobile-lt device">
+			<div class="lt-mobile">
 				<p>Mobile</p>
 			</div>
-			<div class="tablet-portrait-lt device">
+			<div class="lt-tablet-portrait">
 				<p>Tablet Portrait</p>
 			</div>
-			<div class="tablet-landscape-lt device">
+			<div class="lt-tablet-landscape">
 				<p>Tablet Landscape</p>
 			</div>
-			<div class="tablet-lt device">
+			<div class="lt-tablet">
 				<p>Tablet</p>
 			</div>
-			<div class="desktop-lt device">
+			<div class="lt-desktop">
 				<p>Desktop</p>
 			</div>
-			<div class="large-lt device">
+			<div class="lt-large">
 				<p>Large Format</p>
 			</div>
 		</div>
-		<div class="wrapper">
-			<h1>Responsive Greater Than Defined Size</h1>
-			<div class="mobile-portrait-gt device">
+
+		<div class="wrapper devices" id="gt-devices">
+			<h1>Responsive: Greater Than Defined Size</h1>
+			<div class="gt-mobile-portrait">
 				<p>Mobile Portrait</p>
 			</div>
-			<div class="mobile-landscape-gt device">
+			<div class="gt-mobile-landscape">
 				<p>Mobile Landscape</p>
 			</div>
-			<div class="mobile-gt device">
+			<div class="gt-mobile">
 				<p>Mobile</p>
 			</div>
-			<div class="tablet-portrait-gt device">
+			<div class="gt-tablet-portrait">
 				<p>Tablet Portrait</p>
 			</div>
-			<div class="tablet-landscape-gt device">
+			<div class="gt-tablet-landscape">
 				<p>Tablet Landscape</p>
 			</div>
-			<div class="tablet-gt device">
+			<div class="gt-tablet">
 				<p>Tablet</p>
 			</div>
-			<div class="desktop-gt device">
+			<div class="gt-desktop">
 				<p>Desktop</p>
 			</div>
-			<div class="large-gt device">
+			<div class="gt-large">
 				<p>Large Format</p>
 			</div>
 		</div>
+
 
 		<div class="wrapper">
 			<h1>Backgrounds</h1>
