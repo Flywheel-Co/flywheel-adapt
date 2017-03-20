@@ -11,11 +11,11 @@
 
 $defaultResponsiveMap : (
 	mobile : (max : 667px),
-	mobilePortrait : (max : 375px),
-	mobileLandscape : (min : 375px, max : 667px),
+	mobile-portrait : (max : 375px),
+	mobile-landscape : (min : 375px, max : 667px),
 	tablet : (min : 667px, max : 1028px),
-	tabletPortrait : (min: 667px, max : 768px),
-	tabletLandscape : (min : 768px, max : 1028px),
+	tablet-portrait : (min: 667px, max : 768px),
+	tablet-landscape : (min : 768px, max : 1028px),
 	desktop : (min : 1028px, max : 2200px),
 	large : (min : 2200px)
 );
