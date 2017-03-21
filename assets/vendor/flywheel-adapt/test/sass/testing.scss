@@ -1,0 +1,235 @@
+
+$responsiveMap : (
+	mobile : (max : 900)
+);
+
+@import "../../adapt";
+@import "typography";
+
+html {
+	overflow: scroll;
+}
+#container {
+	position: relative;
+	margin: 40px auto;
+	max-width: 1028px;
+}
+.wrapper {
+	position: relative;
+	margin: 0 auto 20px;
+	padding: 0 0 20px;
+	border-bottom: 1px solid #CACACA;
+	@include transition(all, .1s, ease-in);
+	@include d(mobile) {
+		width: 95%;
+	}
+	&:last-child {
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+}
+section {
+	margin: 50px 0;
+	padding: 30px;
+}
+
+
+// inline defaults
+.bg-color {
+	background-color: #A9A9A9;
+}
+.small {
+	width: 50%;
+	margin: 0 auto;
+}
+
+
+$mobileColor : #CA2124;
+$tabletColor : #34A1CA;
+$desktopColor : #22D73B;
+$largeColor : #FCE622;
+
+/**
+ * Responsive
+ */
+.device {
+	position: relative;
+	padding: 10px;
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #E0E0E0;
+	@include border-radius(5px);
+	@include transition(all, .4s, linear);
+}
+.mobile { @include d(mobile) { background-color: rgba($mobileColor, .2) } }
+.mobile-landscape { @include d(mobileLandscape) { background-color: rgba($mobileColor, .8) } }
+.mobile-portrait { @include d(mobilePortrait) { background-color: rgba($mobileColor, .6) } }
+.tablet { @include d(tablet) { background-color: rgba($tabletColor, .2); } }
+.tablet-landscape { @include d(tabletLandscape) { background-color: rgba($tabletColor, .8); } }
+.tablet-portrait { @include d(tabletPortrait) { background-color: rgba($tabletColor, .6); } }
+.desktop { @include d(desktop) { background-color: rgba($desktopColor, 1); } }
+.large { @include d(large) { background-color: rgba($largeColor, 1); } }
+
+.mobile-lt { @include d(lt-mobile) { background-color: rgba($mobileColor, .2) } }
+.mobile-landscape-lt { @include d(lt-mobileLandscape) { background-color: rgba($mobileColor, .8) } }
+.mobile-portrait-lt { @include d(lt-mobilePortrait) { background-color: rgba($mobileColor, .6) } }
+.tablet-lt { @include d(lt-tablet) { background-color: rgba($tabletColor, .2); } }
+.tablet-landscape-lt { @include d(lt-tabletLandscape) { background-color: rgba($tabletColor, .8); } }
+.tablet-portrait-lt { @include d(lt-tabletPortrait) { background-color: rgba($tabletColor, .6); } }
+.desktop-lt { @include d(lt-desktop) { background-color: rgba($desktopColor, 1); } }
+.large-lt { @include d(lt-large) { background-color: rgba($largeColor, 1); } }
+
+.mobile-gt { @include d(gt-mobile) { background-color: rgba($mobileColor, .2) } }
+.mobile-landscape-gt { @include d(gt-mobileLandscape) { background-color: rgba($mobileColor, .8) } }
+.mobile-portrait-gt { @include d(gt-mobilePortrait) { background-color: rgba($mobileColor, .6) } }
+.tablet-gt { @include d(gt-tablet) { background-color: rgba($tabletColor, .2); } }
+.tablet-landscape-gt { @include d(gt-tabletLandscape) { background-color: rgba($tabletColor, .8); } }
+.tablet-portrait-gt { @include d(gt-tabletPortrait) { background-color: rgba($tabletColor, .6); } }
+.desktop-gt { @include d(gt-desktop) { background-color: rgba($desktopColor, 1); } }
+.large-gt { @include d(gt-large) { background-color: rgba($largeColor, 1); } }
+
+
+/**
+ * Background
+ */
+#background-gradient {
+	@include background-gradient(#EBD32B, #EB2F17);
+}
+
+#linear-gradient {
+	@include linear-gradient(to left, #E0E0E0 0%, #EE3B43 50%, #E0E0E0 100% );
+}
+
+/**
+ * Border Radius
+ */
+#border-radius {
+	@extend .bg-color;
+	@include border-radius(20px);
+}
+#border-top-radius {
+	@extend .bg-color;
+	@include border-top-radius(20px);
+}
+#border-bottom-radius {
+	@extend .bg-color;
+	@include border-bottom-radius(20px);
+}
+
+/**
+ * Box Shadow
+ */
+#box-shadow {
+	@include box-shadow(3px, 3px, 5px, #333);
+}
+#box-shadow-inset {
+	@include box-shadow-inset(3px, 3px, 5px, #333);
+}
+
+/**
+ * Box Sizing
+ */
+#box-sizing {
+	@include bs;
+}
+
+/**
+ * Forms
+ */
+#forms {
+	input {
+		width: 100%;
+		padding: 10px;
+		margin: 20px 0;
+		font-size: 1em;
+		@include placeholder {
+			font-weight: bold;
+			color: red;
+		}
+		&:focus {
+			@include placeholder {
+				font-weight: normal;
+				color: green;
+			}
+		}
+	}
+}
+
+/**
+ * Perspective
+ */
+#perspective {
+	@include perspective(700px);
+	@extend .small;
+	.child {
+		@extend .bg-color;
+		padding: 30px;
+		&.x-axis {
+			@include rotateX(20);
+		}
+		&.y-axis {
+			margin-left: 80px;
+			@include rotateY(20);
+		}
+	}
+}
+
+/**
+ * Rotate
+ */
+#rotate {
+	@extend .small;
+	@extend .bg-color;
+	@include rotate(20);
+}
+
+/**
+ * Skew
+ */
+#skewX {
+	@extend .small;
+	@extend .bg-color;
+	@include skewX(20deg);
+}
+#skewY {
+	@extend .small;
+	@extend .bg-color;
+	@include skewY(-5deg);
+}
+#skew {
+	@extend .small;
+	@extend .bg-color;
+	@include skew(15deg, 5deg);
+}
+#transform-origin {
+	@extend .small;
+	@extend .bg-color;
+	@include transform-origin(top right);
+	@include rotate(-15);
+}
+#translate3d-wrapper {
+	height: 400px;
+}
+#translate3d {
+	position: absolute;
+	left: 50%;
+	margin-left: -25%;
+	padding: 40px;
+	@extend .small;
+	@extend .bg-color;
+	@include translate3d(-100px, 120px, 30px);
+}
+
+/**
+ * Transition
+ */
+#transition {
+	@include transition(all, .2s, linear);
+	&:hover {
+		background-color: #000;
+		@include br(100px);
+		h2, p {
+			color: white;
+		}
+	}
+}

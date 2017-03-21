@@ -1,0 +1,31 @@
+{
+  "name": "flywheel/adapt",
+  "description": "Flywheel Co. Sass mixins, responsive development mixins and common classes",
+  "keywords": [],
+  "homepage": "http://flywheel.co",
+  "dependencies": {},
+  "devDependencies": {},
+  "license": [
+    "OFL-1.1",
+    "MIT",
+    "CC-BY-3.0"
+  ],
+  "main": [
+    "./_adapt.scss"
+  ],
+  "private": "true",
+  "ignore": [
+    "*/.*",
+    "*.json",
+    "*.md"
+  ],
+  "_release": "9f53d3d890",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9f53d3d890dba357d59e622fbea246d98b88e750"
+  },
+  "_source": "git@github.com:Flywheel-Co/flywheel-adapt.git",
+  "_target": "master",
+  "_originalSource": "git@github.com:Flywheel-Co/flywheel-adapt.git"
+}

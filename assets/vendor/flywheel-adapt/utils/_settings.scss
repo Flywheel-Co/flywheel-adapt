@@ -1,0 +1,29 @@
+/**
+ * Default settings
+ *
+ * All default settings can be overwritten by including a settings file
+ * with these variables before including adapt.
+ */
+
+/**
+ * SASS MAP for responsive keywords and document sizes.
+ */
+
+$defaultResponsiveMap : (
+	mobile : (max : 667px),
+	mobilePortrait : (max : 375px),
+	mobileLandscape : (min : 375px, max : 667px),
+	tablet : (min : 667px, max : 1028px),
+	tabletPortrait : (min: 667px, max : 768px),
+	tabletLandscape : (min : 768px, max : 1028px),
+	desktop : (min : 1028px, max : 2200px),
+	large : (min : 2200px)
+);
+
+$responsiveMap : () !default;
+
+$responsiveMap: map-merge( $defaultResponsiveMap, $responsiveMap );
+
+$borderRadius : 3px !default;
+$browserPrefixes : webkit moz ms o !default;
+$includeReset : true !default;

@@ -1,0 +1,28 @@
+/**
+ * set the size in a single call
+ *
+ * @param int $width Element width
+ * @param int $height Element height
+ * @param string|bool $display Display value for the element
+ */
+@mixin size($width, $height: $width, $display:false) {
+
+    width:$width;
+    height:$height;
+
+    @if $display {
+        display:$display;
+    }
+}
+
+/**
+ * Set Mobile Box Ratio
+ */
+@mixin setBoxRatio($width, $height, $ratio : 2) {
+    @include device(mobile) {
+        width:           $width / $ratio;
+        height:          $height / $ratio;
+        margin-left:     ($width / ($ratio * 2)) * -1;
+        background-size: 100% 100%;
+    }
+}

@@ -1,0 +1,46 @@
+/**
+ * Hamburger button
+ * 
+ * USAGE :
+ *     .hamburger {
+ *         @include hamburger();
+ *         
+ *     }
+ *     <div class="hamburber"><span>menu</span></div>
+ */
+@mixin hamburger($color: #333333, $width: 24px, $height:18px, $barSize : 5) {
+    $barHeight: $height / $barSize;
+    
+    position: relative;
+    height: $height;
+    padding-left: $width + 5px;
+    color: $color;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    .buns {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -($barHeight / 2);
+        height: $barHeight;
+        width: $width;
+        color: $color;
+        background-color: $color;
+    }
+    span {
+        @extend .buns;
+        &:before {
+            @extend .buns;
+            top: -($barHeight * 1.5);
+            content: '';
+        }
+        &:after {
+            @extend .buns;
+            top: ($barHeight * 2.5);
+            content: '';
+        }
+    }
+}

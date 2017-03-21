@@ -1,0 +1,8 @@
+/**
+ * Blur an element
+ *
+ * @param string $value Blur value for the element
+ */
+@mixin blur($value) {
+	@include p((filter: blur($value)));
+}

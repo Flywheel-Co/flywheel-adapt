@@ -1,0 +1,16 @@
+{
+  "name": "Flywheel Adapt",
+  "authors": [
+    "Flywheel Co."
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor"
+  ],
+  "dependencies": {
+    "flywheel-adapt": "git@github.com:Flywheel-Co/flywheel-adapt.git#master",
+    "components-font-awesome": "~4.5.0"
+  }
+}

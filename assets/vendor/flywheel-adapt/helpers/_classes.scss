@@ -1,0 +1,35 @@
+/**
+ * General classes to be used in HTML or extended via SASS
+ */
+
+/**
+ * Clearfix
+ *
+ * Uses the clearfix mixin
+ */
+.clearfix {
+    @include cf;
+}
+
+/**
+ * Float left and right
+ */
+.floatright { float:right; }
+.floatleft { float:left; }
+
+/**
+* To use, add the class preload to the body and remove
+* once the document is ready via JS
+*/
+.preload * {
+    @include p((transition: none !important));
+}
+
+/**
+ * Hide from mobile
+ */
+.hideMobile {
+	@include d(mobile) {
+		display: none;
+	}
+}

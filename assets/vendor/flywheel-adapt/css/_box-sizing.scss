@@ -1,0 +1,12 @@
+/**
+ * Box Sizing
+ * @param  string $value:border-box   box-sizing value
+ */
+@mixin box-sizing($value:border-box) {
+	@include p((box-sizing: $value));
+}
+
+/**
+ * Box Sizing Shorthand
+ */
+@mixin bs($value:border-box) { @include box-sizing($value); }
