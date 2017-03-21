@@ -306,3 +306,16 @@ $largeColor : #FCE622;
 		}
 	}
 }
+
+/**
+ * Hamburger
+ */
+#hamburger {
+
+	nav {
+
+		@include hamburger();
+
+	}
+
+}
