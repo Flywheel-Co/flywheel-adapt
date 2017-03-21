@@ -2,6 +2,29 @@
  * Wrapper
  */
 .wrapper {
-	max-width: 980px;
+	max-width: 1024px;
 	margin: 0 auto;
+	@include grid-container;
 }
+
+/**
+ * Column
+ */
+
+.col {
+
+	&-1  { @include grid-column( 1 ) }
+	&-2  { @include grid-column( 2 ) }
+	&-3  { @include grid-column( 3 ) }
+	&-4  { @include grid-column( 4 ) }
+	&-5  { @include grid-column( 5 ) }
+	&-6  { @include grid-column( 6 ) }
+	&-7  { @include grid-column( 7 ) }
+	&-8  { @include grid-column( 8 ) }
+	&-9  { @include grid-column( 9 ) }
+	&-10 { @include grid-column( 10 ) }
+	&-11 { @include grid-column( 11 ) }
+	&-12 { @include grid-column( 12 ) }
+
+}
+

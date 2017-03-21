@@ -5,8 +5,125 @@
 @import 'settings';
 @import 'neat/neat';
 @import 'layout';
+@import 'syntax';
+@import 'typography';
 @import 'header';
+@import 'footer';
 
 body {
 	background: $colorBackground;
+	color: $colorBlack;
+	font: 15px/1.4 $fontPrimary;
+}
+
+/**
+ * Masthead
+ */
+#masthead {
+	background: rgba( $colorBlack, .8 );
+	color: $colorBackground;
+	padding: 64px 0;
+
+	p {
+		font-family: $fontPrimary;
+		font-size: 32px;
+		font-weight: 100;
+	}
+}
+
+#content,
+#sidebar {
+	margin-top: 64px;
+}
+
+#sidebar {
+}
+
+#content {
+	background: #fff;
+	padding: 26px;
+	@include bs;
+}
+
+.section-nav {
+	margin-bottom: 28px;
+
+	a {
+		text-decoration: none;
+	}
+
+	&-title {
+		margin-bottom: 4px;
+
+		a {
+			color: $colorBlack;
+			font: 14px/1 $fontSecondary;
+			text-transform: uppercase;
+		}
+	}
+
+}
+
+
+/**
+ * Tables
+ */
+table.code {
+	font-size: 13px;
+	font-family: $fontPrimary;
+
+	tr {
+
+		th, td {
+			padding: 10px 14px;
+			border: 1px solid #dfe2e5;
+		}
+
+		th {
+			text-align: left;
+			font: 600 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+		}
+
+		&:nth-child(even) {
+			th, td {
+				background: #f6f8fa;
+			}
+		}
+
+	}
+
+
+}
+
+
+
+/**
+ * Mixin
+ */
+.mixin {
+	margin-top: 42px;
+	padding-top: 42px;
+	border-top: 1px solid #ccc;
+	// margin-bottom: 42px;
+	// padding-bottom: 42px;
+	// border-bottom: 1px solid #ccc;
+
+	h5 {
+		font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+		font-size: 16px;
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+
+	h6 {
+		margin-top: 32px;
+		font-size: 12px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-bottom: 4px;
+		font-family: $fontSecondary;
+	}
+
+	pre {
+	}
 }

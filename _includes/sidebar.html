@@ -1,0 +1,23 @@
+<ul class="section-nav">
+	<li class="section-nav-title"><a href="#get-started">Get Started</a></li>
+	<li><a href="#installation">Installation</a></li>
+	<li><a href="#usage">Usage</a></li>
+	<li><a href="#settings">Settings</a></li>
+</ul>
+
+<ul class="section-nav">
+	<li class="section-nav-title"><a href="#">Mixins</a></li>
+	{% assign mixins = site.mixins %}
+	{% for mixin in mixins %}
+		<li><a href="/mixins/#{{ mixin.title | slugify }}">{{ mixin.title }}</a></li>
+	{% endfor %}
+</ul>
+
+<ul class="section-nav">
+	<li class="section-nav-title"><a href="#">Responsive</a></li>
+	<li><a href="#">Devices</a></li>
+</ul>
+
+<ul class="section-nav">
+	<li class="section-nav-title"><a href="#">Classes</a></li>
+</ul>
