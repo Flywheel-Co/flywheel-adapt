@@ -203,6 +203,11 @@
 		</div>
 	</div>
 
+	<div class="wrapper" id="grayscale">
+		<h1>Grayscale</h1>
+		<img src="http://lorempixel.com/200/200">
+	</div>
+
 	<div class="wrapper" id="hamburger">
 		<h1>Hamburger</h1>
 		<nav class="active">
