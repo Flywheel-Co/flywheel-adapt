@@ -2,8 +2,21 @@
 	text-align: right;
 
 	@include mobile {
-		display: none;
+		position: absolute;
+		background: $colorBlack;
+		width: 100vw;
 		text-align: center;
+		margin-left: 0;
+		top: 0;
+		@include bs;
+		@include transform( translateY( -100% ) );
+		@include transition( all, .35s, ease );
+
+		&.active {
+			top: 100%;
+			@include transform( translateY( 0 ) );
+		}
+
 	}
 
 	a {
@@ -16,17 +29,22 @@
 		font-size: 13px;
 		letter-spacing: .02em;
 
+
+		@include mobile {
+			display: block;
+			font-size: 18px;
+			padding: 24px 24px;
+			border-top: 1px solid rgba( $colorWhite, .1 );
+			margin-left: 0;
+			@include bs;
+		}
+
 		&.active {
 			color: $colorBlue;
 		}
 
 		&:hover {
 			@extend .active
-		}
-
-		@include mobile {
-			font-size: 12px;
-			margin-left: 12px;
 		}
 
 	}

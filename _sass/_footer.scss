@@ -4,22 +4,21 @@
 	color: $colorWhite;
 	padding: 20px 0;
 
+	.main-navigation {
+		@include mobile {
+			display: none;
+		}
+	}
+
 	.attribution {
 		@extend h2;
 		font-size: 16px;
 		line-height: 20px;
 
-		span {
-			font-size: 12px;
-			display: inline-block;
-			margin: 0 3px;
-			line-height: 20px;
-			vertical-align: middle;
+		@include mobile {
+			text-align: center;
 		}
 
-		a {
-			line-height: 20px;
-		}
 
 		.fw-logo {
 			display: inline-block;

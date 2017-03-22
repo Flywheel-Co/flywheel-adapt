@@ -1,3 +1,16 @@
+/**
+ * Sidebar
+ */
+#sidebar {
+	@include mobile {
+		display: none;
+	}
+}
+
+
+/**
+ * Section Nav
+ */
 .section-nav {
 	margin-bottom: 28px;
 

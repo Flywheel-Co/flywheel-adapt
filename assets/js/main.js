@@ -1,5 +1,3 @@
-console.log( 'Yup' );
-
 var adapt = {
 
 	navigation: {
@@ -11,6 +9,11 @@ var adapt = {
 			var self = this;
 
 			self.items = $('a', self.selector);
+
+			$('#toggle-nav').on( 'click', function() {
+				$('.main-navigation').toggleClass( 'active' );
+				return false;
+			});
 
 			self.setActive();
 		},

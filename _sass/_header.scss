@@ -1,8 +1,8 @@
 #primary-header {
 	background: $colorBlack;
 	padding: 32px 0;
+	position: relative;
 	@include box-shadow( 0, 1px, 1px, $colorBlack );
-
 
 	h2 {
 		@include cf;
@@ -13,13 +13,8 @@
 		}
 
 		#toggle-nav {
-			// float: right;
-			@include hamburger( $colorWhite, 24px, 18px, 2px );
-		}
-
-		@include mobile {
-			padding: 24px 0;
-			margin-bottom: 24px;
+			float: right;
+			@include hamburger( $colorWhite, 24px, 18px, 6 );
 		}
 	}
 }

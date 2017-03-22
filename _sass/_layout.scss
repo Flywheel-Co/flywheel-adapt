@@ -25,7 +25,7 @@
 	&-11 { @include grid-column( 11 ) }
 	&-12 { @include grid-column( 12 ) }
 
-	@include mobile {
+	@media( max-width: 620px ) {
 		&-1, &-2, &-3, &-4, &-5, &-6,
 		&-7, &-8, &-9, &-10, &-11, &-12 {
 			@include grid-column( 12 );

@@ -21,6 +21,31 @@ body {
 	font: 15px/1.4 $fontPrimary;
 }
 
+
+#content,
+#sidebar {
+	margin-top: 64px;
+
+	@include mobile {
+		margin-top: 32px;
+	}
+}
+
+/**
+ * Content Area
+ */
+#content {
+	background: #fff;
+	padding: 26px;
+	@include bs;
+
+	@include mobile {
+		padding: 0;
+		background: transparent;
+	}
+}
+
+
 /**
  * Masthead
  */
@@ -29,27 +54,20 @@ body {
 	color: $colorBackground;
 	padding: 64px 0;
 
+	@include mobile {
+		padding: 32px 0;
+	}
+
 	p {
 		font-family: $fontPrimary;
 		font-size: 32px;
 		font-weight: 100;
+
+		@include mobile {
+			font-size: 24px;
+		}
 	}
 }
-
-#content,
-#sidebar {
-	margin-top: 64px;
-}
-
-#sidebar {
-}
-
-#content {
-	background: #fff;
-	padding: 26px;
-	@include bs;
-}
-
 
 
 
@@ -60,16 +78,28 @@ table.code {
 	font-size: 13px;
 	font-family: $fontPrimary;
 
+	@include mobile {
+		p { font-size: 12px; }
+	}
+
 	tr {
 
 		th, td {
 			padding: 10px 14px;
 			border: 1px solid #dfe2e5;
+
+			@include mobile {
+				padding: 4px 6px;
+			}
 		}
 
 		th {
 			text-align: left;
 			font: 600 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+			@include mobile {
+				padding: 4px 6px;
+			}
 		}
 
 		&:nth-child(even) {
