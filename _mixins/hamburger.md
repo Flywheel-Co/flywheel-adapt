@@ -6,7 +6,8 @@ alias:
 
 Generate a hamburger button.
 
-This mixin also requires you have a `span.buns` element in the DOM.
+This mixin requires you have a child `span` element in the DOM. Additionally, you can toggle an `.active`
+class with javascript to switch the state of the hamburger button.
 
 ###### SCSS
 ```scss
@@ -18,6 +19,6 @@ This mixin also requires you have a `span.buns` element in the DOM.
 ###### HTML
 ```html
 <div id="menu">
-    <span class="buns">Menu</span>
+    <span>Menu</span>
 </div>
 ```
