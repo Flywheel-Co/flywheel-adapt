@@ -20,12 +20,25 @@ a {
 /**
  * Syntax
  */
-.highlighter-rouge {
-}
-pre {
-	padding: 10px;
+.highlighter-rouge, .highlight {
+	padding: 2px 4px;
+	background: #f6f8fa;
 	font: 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+	color: $colorBlue;
+	font-weight: 600;
+
+	pre {
+		font: 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+		padding: 8px 6px;
+	}
+
+	// pre {
+	// 	// padding: 10px;
+	// 	// font: 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	// }
 }
+
 
 /**
  * Headings

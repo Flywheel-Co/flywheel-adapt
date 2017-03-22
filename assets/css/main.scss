@@ -101,8 +101,8 @@ table.code {
  * Mixin
  */
 .mixin {
-	margin-top: 42px;
-	padding-top: 42px;
+	margin-top: 64px;
+	padding-top: 64px;
 	border-top: 1px solid #ccc;
 	// margin-bottom: 42px;
 	// padding-bottom: 42px;
@@ -124,6 +124,64 @@ table.code {
 		font-family: $fontSecondary;
 	}
 
-	pre {
+	&-alias {
+		margin-top: 3px;
+		opacity: .9;
+
+		p {
+			margin: 0;
+			font-weight: bold;
+		}
+
+		strong {
+			font-weight: 600;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-family: $fontPrimary;
+		}
+	}
+
+	&-content {
+		.highlighter-rouge {
+			margin-top: 24px;
+		}
+	}
+
+	&-title {
+		margin-bottom: 20px;
+
+		.highlight {
+			background: $colorWhite;
+			font-weight: bold;
+			padding: 0;
+			margin: 0;
+
+			span {
+				font-weight: bold;
+			}
+
+			pre {
+				font-size: 16px;
+				padding: 0;
+			}
+
+			.err {
+				color: inherit;
+				border: 0;
+			}
+
+			.nt, .nl, .na {
+				&:first-child {
+					color: $colorBlack;
+				}
+			}
+
+		}
+
+		// background: #cf0;
+		// font-size: 16px;
+
+
+
 	}
 }

@@ -12,8 +12,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <div class="mixin" id="{{ mixin.title | slugify }}" markdown="1">
 
-##### {{ mixin.title }}{% if mixin.params %}( {{ mixin.params }} ) {% endif %}
+
+<div class="mixin-title">
+{% highlight scss %}
+{{ mixin.title }}{% if mixin.params %}( {{ mixin.params }} ) {% endif %}
+{% endhighlight %}
+
+{% if mixin.alias %}
+<div class="mixin-alias" markdown="1">
+**Alias:** `{{ mixin.alias }}`
+</div>
+{% endif %}
+</div>
+
+
+<div class="mixin-content" markdown="1">
 {{ mixin.content }}
+</div>
 
 </div>
 {% endfor %}
