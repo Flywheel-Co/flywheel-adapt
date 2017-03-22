@@ -210,9 +210,14 @@
 
 	<div class="wrapper" id="hamburger">
 		<h1>Hamburger</h1>
-		<nav class="active">
+		<nav>
 			<span></span>
 		</nav>
+	</div>
+
+	<div class="wrapper" id="close">
+		<h1>X (Close)</h1>
+		<div></div>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

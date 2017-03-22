@@ -324,3 +324,14 @@ $largeColor : #FCE622;
 		@include greyscale;
 	}
 }
+
+/**
+ * Close
+ */
+#close {
+	div {
+
+		@include x;
+
+	}
+}
