@@ -2,7 +2,7 @@
 	<li class="section-nav-title"><a href="{{ site.baseurl }}/">Get Started</a></li>
 	{% assign sections = site.sections | where:"type","getstarted" | sort:"order" %}
 	{% for section in sections %}
-		<li><a href="{{ site.baseurl }}#{{ section.title | slugify }}">{{ section.title }}</a></li>
+		<li><a href="{{ site.baseurl }}/#{{ section.title | slugify }}">{{ section.title }}</a></li>
 	{% endfor %}
 </ul>
 
