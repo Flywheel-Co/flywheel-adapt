@@ -4,21 +4,9 @@
 	@include box-shadow( 0, 1px, 1px, $colorBlack );
 
 	h2 {
-		// @include grid-column( 4 );
-	}
-
-	nav {
-		text-align: right;
-		// @include grid-column( 8 );
-
 		a {
-			display: inline-block;
-			text-transform: uppercase;
 			text-decoration: none;
 			color: $colorWhite;
-			font-family: $fontSecondary;
-			margin-left: 20px;
-			font-size: 13px;
 		}
 	}
 }

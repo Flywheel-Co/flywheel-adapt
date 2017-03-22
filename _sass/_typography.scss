@@ -15,6 +15,11 @@ strong {
  */
 a {
 	color: $colorBlue;
+	@include transition( all, .25s, ease );
+
+	&:hover {
+		color: darken( $colorBlue, 15 );
+	}
 }
 
 /**
@@ -32,21 +37,12 @@ a {
 		font: 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 		padding: 8px 6px;
 	}
-
-	// pre {
-	// 	// padding: 10px;
-	// 	// font: 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-	// }
 }
 
 
 /**
  * Headings
  */
-h1 {
-
-}
-
 h2 {
 	font: 20px/1 $fontPrimary;
 	text-transform: uppercase;

@@ -3,5 +3,29 @@
 	margin-top: 72px;
 	color: $colorWhite;
 	padding: 20px 0;
-	text-align: center;
+
+	.attribution {
+		@extend h2;
+		font-size: 16px;
+		line-height: 20px;
+
+		span {
+			font-size: 12px;
+			display: inline-block;
+			margin: 0 3px;
+			line-height: 20px;
+			vertical-align: middle;
+		}
+
+		a {
+			line-height: 20px;
+		}
+
+		.fw-logo {
+			display: inline-block;
+			vertical-align: middle;
+			@include size( auto, 11px );
+		}
+	}
+
 }

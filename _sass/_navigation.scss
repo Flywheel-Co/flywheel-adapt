@@ -1,0 +1,18 @@
+.main-navigation {
+		text-align: right;
+
+		a {
+			display: inline-block;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $colorWhite;
+			font-family: $fontSecondary;
+			margin-left: 20px;
+			font-size: 13px;
+			letter-spacing: .02em;
+
+			&:hover {
+				color: $colorBlue;
+			}
+		}
+	}

@@ -1,12 +1,9 @@
 <header id="primary-header">
 	<div class="wrapper">
-		<h2 class="white col-4">Flywheel <strong>Adapt</strong></h2>
+		<h2 class="white col-4">
+			<a href="{{ site.baseurl }}/">Flywheel <strong>Adapt</strong></a>
+		</h2>
 
-		<nav class="col-8">
-			<a href="{{ site.baseurl }}/">Get Started</a>
-			<a href="{{ site.baseurl }}/mixins">Mixins</a>
-			<a href="{{ site.baseurl }}/responsive">Responsive</a>
-			<a href="{{ site.baseurl }}/classes">Classes</a>
-		</nav>
+		{% include navigation.html %}
 	</div>
 </header>
