@@ -1,8 +1,9 @@
 <ul class="section-nav">
 	<li class="section-nav-title"><a href="#get-started">Get Started</a></li>
-	<li><a href="{{ site.baseurl }}/#installation">Installation</a></li>
-	<li><a href="{{ site.baseurl }}/#usage">Usage</a></li>
-	<li><a href="{{ site.baseurl }}/#settings">Settings</a></li>
+	{% assign sections = site.sections | where:"type","getstarted" | sort:"order" %}
+	{% for section in sections %}
+		<li><a href="{{ site.baseurl }}/#{{ section.title | slugify }}">{{ section.title }}</a></li>
+	{% endfor %}
 </ul>
 
 <ul class="section-nav">
@@ -15,9 +16,16 @@
 
 <ul class="section-nav">
 	<li class="section-nav-title"><a href="{{ site.baseurl }}/responsive">Responsive</a></li>
-	<li><a href="{{ site.baseurl }}/responsive">Devices</a></li>
+	{% assign sections = site.sections | where:"type","responsive" | sort:"order" %}
+	{% for section in sections %}
+		<li><a href="{{ site.baseurl }}/responsive/#{{ section.title | slugify }}">{{ section.title }}</a></li>
+	{% endfor %}
 </ul>
 
 <ul class="section-nav">
 	<li class="section-nav-title"><a href="{{ site.baseurl }}/classes/">Classes</a></li>
+	{% assign sections = site.sections | where:"type","classes" | sort:"order" %}
+	{% for section in sections %}
+		<li><a href="{{ site.baseurl }}/classes/#{{ section.title | slugify }}">{{ section.title }}</a></li>
+	{% endfor %}
 </ul>

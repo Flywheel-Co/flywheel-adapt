@@ -1,6 +1,6 @@
 ---
 title: Usage
-group: getstarted
+type: getstarted
 order: 20
 ---
 

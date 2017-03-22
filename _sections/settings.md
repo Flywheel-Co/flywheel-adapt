@@ -1,6 +1,6 @@
 ---
 title: Settings
-group: getstarted
+type: getstarted
 order: 30
 ---
 
