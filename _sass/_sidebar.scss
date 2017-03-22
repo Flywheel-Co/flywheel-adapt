@@ -1,0 +1,25 @@
+.section-nav {
+	margin-bottom: 28px;
+
+	a {
+		text-decoration: none;
+	}
+
+	&-title {
+		margin-bottom: 4px;
+
+		a {
+			color: $colorBlack;
+			font: 14px/1 $fontSecondary;
+			text-transform: uppercase;
+
+			&.active {
+				padding-bottom: 2px;
+				font-weight: 600;
+				letter-spacing: 0.02em;
+				border-bottom: 1px solid $colorBlack;
+			}
+		}
+	}
+
+}

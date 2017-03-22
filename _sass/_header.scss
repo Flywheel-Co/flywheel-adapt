@@ -3,10 +3,23 @@
 	padding: 32px 0;
 	@include box-shadow( 0, 1px, 1px, $colorBlack );
 
+
 	h2 {
-		a {
+		@include cf;
+
+		a:first-child {
 			text-decoration: none;
 			color: $colorWhite;
+		}
+
+		#toggle-nav {
+			// float: right;
+			@include hamburger( $colorWhite, 24px, 18px, 2px );
+		}
+
+		@include mobile {
+			padding: 24px 0;
+			margin-bottom: 24px;
 		}
 	}
 }

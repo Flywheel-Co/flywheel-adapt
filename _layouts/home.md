@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="https://use.typekit.net/yoq1nsx.js"></script>
-		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+		<title>{{ page.title }}</title>
+		{% include head.html %}
 	</head>
 	<body>
 

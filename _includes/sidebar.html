@@ -1,5 +1,5 @@
 <ul class="section-nav">
-	<li class="section-nav-title"><a href="#get-started">Get Started</a></li>
+	<li class="section-nav-title"><a href="{{ site.baseurl }}/">Get Started</a></li>
 	{% assign sections = site.sections | where:"type","getstarted" | sort:"order" %}
 	{% for section in sections %}
 		<li><a href="{{ site.baseurl }}/#{{ section.title | slugify }}">{{ section.title }}</a></li>
@@ -7,7 +7,7 @@
 </ul>
 
 <ul class="section-nav">
-	<li class="section-nav-title"><a href="{{ site.baseurl }}/mixins/">Mixins</a></li>
+	<li class="section-nav-title"><a href="{{ site.baseurl }}/mixins">Mixins</a></li>
 	{% assign mixins = site.mixins %}
 	{% for mixin in mixins %}
 		<li><a href="{{ site.baseurl }}/mixins/#{{ mixin.title | slugify }}">{{ mixin.title }}</a></li>
@@ -23,7 +23,7 @@
 </ul>
 
 <ul class="section-nav">
-	<li class="section-nav-title"><a href="{{ site.baseurl }}/classes/">Classes</a></li>
+	<li class="section-nav-title"><a href="{{ site.baseurl }}/classes">Classes</a></li>
 	{% assign sections = site.sections | where:"type","classes" | sort:"order" %}
 	{% for section in sections %}
 		<li><a href="{{ site.baseurl }}/classes/#{{ section.title | slugify }}">{{ section.title }}</a></li>

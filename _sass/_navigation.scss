@@ -1,18 +1,33 @@
 .main-navigation {
-		text-align: right;
+	text-align: right;
 
-		a {
-			display: inline-block;
-			text-transform: uppercase;
-			text-decoration: none;
-			color: $colorWhite;
-			font-family: $fontSecondary;
-			margin-left: 20px;
-			font-size: 13px;
-			letter-spacing: .02em;
-
-			&:hover {
-				color: $colorBlue;
-			}
-		}
+	@include mobile {
+		display: none;
+		text-align: center;
 	}
+
+	a {
+		display: inline-block;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $colorWhite;
+		font-family: $fontSecondary;
+		margin-left: 20px;
+		font-size: 13px;
+		letter-spacing: .02em;
+
+		&.active {
+			color: $colorBlue;
+		}
+
+		&:hover {
+			@extend .active
+		}
+
+		@include mobile {
+			font-size: 12px;
+			margin-left: 12px;
+		}
+
+	}
+}
