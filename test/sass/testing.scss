@@ -306,3 +306,32 @@ $largeColor : #FCE622;
 		}
 	}
 }
+
+/**
+ * Hamburger
+ */
+#hamburger {
+	nav {
+		@include hamburger();
+	}
+}
+
+/**
+ * Grayscale
+ */
+#grayscale {
+	img {
+		@include greyscale;
+	}
+}
+
+/**
+ * Close
+ */
+#close {
+	div {
+
+		@include x;
+
+	}
+}
