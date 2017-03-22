@@ -1,0 +1,28 @@
+/**
+ * X (close) button
+ */
+
+@mixin x( $color: #333, $width: 24px, $height: $width, $barWidth: 2px ) {
+    position: relative;
+    @include size( $width, $height );
+
+    &:before,
+    &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        background: $color;
+        width: 125%;
+        height: $barWidth;
+        top: 50%;
+    }
+
+    &:before {
+        @include rotate( -45 );
+    }
+
+    &:after {
+        @include rotate( 45 );
+    }
+
+}
