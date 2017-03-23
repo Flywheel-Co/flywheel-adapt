@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+////
+/// Responsive CSS classes to be used in HTML or extended via Sass
+///
+/// @since 1.0.0
+/// @todo  This functionality can likely be cleaned up quite a bit as it's super repetitive.
+////
+
+////
+/// Display on a given device
+///
+/// @since 1.0.0
+/// @see   $adapt-devices
+///
+/// @example html
+/// 	<div class="show-mobile">...</div>
+/// 	<div class="show-tablet-inline-block">...</div>
+////
+@each $device in $adapt-devices {
+
+	// without display suffix
+	.show-#{ $device } {
+		@include device( $device ) {
+			display: block;
+		}
+	}
+
+	// with display suffix
+	@each $display in $adapt-display-types {
+		.show-#{ $device }-#{ $display } {
+			@include device( $device ) {
+				display: $display;
+			}
+		}
+	}
+
+}
+
+////
+/// Display only on a given device
+///
+/// @since 1.0.0
+/// @see   $adapt-devices
+///
+/// @example html
+/// 	<div class="show-only-mobile">...</div>
+/// 	<div class="show-only-tablet-inline-block">...</div>
+////
+@each $device in $adapt-devices {
+
+	// without display suffix
+	.show-only-#{ $device } {
+		display: none;
+
+		@include device( $device ) {
+			display: block;
+		}
+	}
+
+	// with display suffix
+	@each $display in $adapt-display-types {
+		.show-only-#{ $device }-#{ $display } {
+			display: none;
+
+			@include device( $device ) {
+				display: $display;
+			}
+		}
+	}
+
+}
+
+////
+/// Hide on a given device
+///
+/// @since 1.0.0
+/// @see   $adapt-devices
+///
+/// @example html
+/// 	<div class="hide-mobile">...</div>
+////
+@each $device in $adapt-devices {
+
+	.hide-#{ $device } {
+		@include device( $device ) {
+			display: none;
+		}
+	}
+
+}
