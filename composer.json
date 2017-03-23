@@ -2,7 +2,7 @@
     "name": "flywheel-co/adapt",
     "description": "This is a group of frequently used and re-used Sass mixins, and other helpers to assist in rapid development.",
     "type": "sass",
-    "keywords": [ "Sass", "framework", "CSS", "mixins", "responsive", "Flywheel Co"],
+    "keywords": ["Sass", "SCSS", "framework", "CSS", "mixins", "responsive", "Flywheel Co"],
     "homepage": "https://adapt.flywheel.co",
     "license": "MIT",
     "support": {
