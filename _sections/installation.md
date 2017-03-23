@@ -7,36 +7,17 @@ order: 10
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
 
 ##### Composer
-```json
-{
-    "repositories": [
-        {
-            "type": "git",
-            "url":  "git@github.com:Flywheel-Co/flywheel-adapt.git"
-        }
-    ],
-    "require": {
-        "flywheel/flywheel-adapt": "~1.0"
-    },
-    "extra": {
-        "installer-paths": {
-            "assets/sass/{$name}": ["flywheel/flywheel-adapt"]
-        }
-    }
-}
+```shell
+composer require flywheel-co/adapt
 ```
 
 ##### Bower
 This is currently a private package and can only be included by permitted projects.
 
-```json
-{
-    "dependencies": {
-        "flywheel-adapt": "git@github.com:Flywheel-Co/flywheel-adapt.git"
-    }
-}
+```shell
+bower install --save flywheel-adapt
 ```
 
 ##### Other
-You can download Flywheel Adapt directly from the <a href="#">releases page</a>.
+You can download Flywheel Adapt directly from the <a href="https://github.com/Flywheel-Co/flywheel-adapt/releases">releases page</a>.
 
