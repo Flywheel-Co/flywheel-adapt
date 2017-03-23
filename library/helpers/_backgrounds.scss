@@ -1,16 +1,26 @@
-/**
- * Background Image
- *
- * @param string $width Width of the element
- * @param string $height Height of the element
- * @param string $bgoptions Background property options
- * @param bool $cover background-size: cover (bool to turn on and off)
- */
-@mixin bgimg($width, $height, $bgoptions, $cover:false) {
+@charset "UTF-8";
+
+////
+/// Background Helpers
+///
+/// @since 1.0.0
+////
+
+////
+/// Define a background image and hide child text
+///
+/// @since 1.0.0
+///
+/// @param {length}  $width   width of the element
+/// @param {length}  $height  height of the element
+/// @param {list}    $options background property options
+/// @param {boolean} $cover   [false] toggle background-size:cover
+////
+@mixin bgimg( $width, $height, $options, $cover:false ) {
     display:     block;
     width:       $width;
     height:      $height;
-    background:  $bgoptions;
+    background:  $options;
     text-indent: -9999px;
     overflow:    hidden;
     @if $cover == true {

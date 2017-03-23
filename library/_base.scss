@@ -1,20 +1,47 @@
-/**
- * Global html and body settings
- */
-html, body { height:100%; }
+@charset "UTF-8";
 
-/**
- * Form inputs
- */
-input:not([type="checkbox"]),
-input:not([type="radio"]) {
-    -webkit-appearance:none;
-    -webkit-border-radius:0;
-}
+////
+/// Base CSS styles
+///
+/// These base styles are conditionally applied via the $adapt-base-styles setting
+///
+/// @since 1.0.0
+///
+/// @require $adapt-base-styles
+////
+@if $adapt-base-styles {
 
-/**
- * Form Submit
- */
-input[type="submit"] {
-	cursor:pointer;
+	////
+	/// Document to 100% height
+	///
+	/// @since 1.0.0
+	////
+	html, body {
+		height: 100%;
+	}
+
+	////
+	/// Remove webkit styles on text-based inputs
+	///
+	/// @since 1.0.0
+	////
+	@each $type in $adapt-text-inputs {
+		input#{$type} {
+			-webkit-appearance: none;
+			-webkit-border-radius: 0;
+		}
+	}
+
+	////
+	/// Submit button style updates
+	///
+	/// @since 1.0.0
+	////
+	input[type="submit"],
+	button[type="submit"] {
+		cursor: pointer;
+		-webkit-appearance: none;
+		-webkit-border-radius: 0;
+	}
+
 }

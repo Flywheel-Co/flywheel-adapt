@@ -1,12 +1,23 @@
-/**
- * Animation
- * @param  float    $delay            animation delay in seconds
- * @param  float    $duration         animation duration in seconds
- * @param  string   $animation        animation name (keyframe)
- * @param  integer  $repeat:0         number of times to repeat
- * @param  string   $direction:normal animation direction
- * @param  sstring  $easing:linear    easing
- */
-@mixin animation ($delay, $duration, $animation, $repeat:0, $direction:normal, $easing:linear) {
+@charset "UTF-8";
+
+////
+/// Animations
+///
+/// @since 1.0.0
+////
+
+////
+/// Define an animation and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {unit}    $delay     animation delay in seconds
+/// @param {unit}    $duration  animation duration in seconds
+/// @param {string}  $animation animation name (keyframe)
+/// @param {integer} $repeat    [0] - number of times to repeat the animation
+/// @param {string}  $direction [normal] - animation direction
+/// @param {string}  $easing    [linear] - animation timing function
+////
+@mixin animation ( $delay, $duration, $animation, $repeat: 0, $direction: normal, $easing: linear ) {
 	@include p((animation: $animation $duration $easing $delay $repeat $direction));
 }

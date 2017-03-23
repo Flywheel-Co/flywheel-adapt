@@ -1,8 +1,12 @@
-/**
- * Blur an element
- *
- * @param string $value Blur value for the element
- */
-@mixin blur($value) {
+@charset "UTF-8";
+
+////
+/// Define a blur amount and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {length} $value blur value for the element
+////
+@mixin blur( $value ) {
 	@include p((filter: blur($value)));
 }
