@@ -1,9 +1,18 @@
-/**
- * break word mixin
- */
-@mixin break-word() {
+@charset "UTF-8";
 
-    /* Be VERY careful with this, breaks normal words wh_erever */
+////
+/// Text helpers
+///
+/// @since 1.0.0
+////
+
+////
+///	Break word mixin
+///
+///	@since 1.0.0
+///	@todo  needs documentation
+////
+@mixin break-word() {
     -ms-word-break: break-all;
     word-break: break-word;
 

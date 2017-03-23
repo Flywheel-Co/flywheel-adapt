@@ -1,22 +1,43 @@
-/**
- * Border Radius
- * @param string $value Value of the border radius.  Defaults to $borderRadius settings
- */
-@mixin border-radius($value: $borderRadius) {
+@charset "UTF-8";
+
+////
+/// Border mixins
+///
+/// @since 1.0.0
+////
+
+////
+/// Define a border radius and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+/// @alias {br}
+///
+/// @param   {unit} $value               [$adapt-border-radius] value of the border radius
+/// @require {var}  $adapt-border-radius
+////
+@mixin border-radius( $value: $adapt-border-radius ) {
     @include p((border-radius: $value));
 }
 
-/**
- * Border radius alias
- * @param string $value Value of the border radius.  Defaults to $borderRadius settings
- */
-@mixin br($value: $borderRadius) { @include border-radius($value) }
+////
+/// Border radius mixin alias
+///
+/// @since 1.0.0
+/// @see   {border-radius}
+////
+@mixin br( $value: $adapt-border-radius ) { @include border-radius($value) }
 
-/**
- * Border Radius : Bottom
- * @param string $value Value of the border radius.  Defaults to $borderRadius settings
- */
-@mixin border-bottom-radius($value: $borderRadius) {
+
+////
+/// Bottom border radius
+///
+/// @since 1.0.0
+///
+/// @param   {unit} $value               [$adapt-border-radius] value of the border radius
+/// @require {var}  $adapt-border-radius
+////
+@mixin border-bottom-radius( $value: $adapt-border-radius ) {
+
     // no shorthand to prefixer due to inconsistancy
     border-bottom-right-radius: $value;
     -moz-border-radius-bottomright: $value;
@@ -26,11 +47,16 @@
     -webkit-border-bottom-left-radius: $value;
 }
 
-/**
- * Border Radius : Top
- * @param string $value Value of the border radius.  Defaults to $borderRadius settings
- */
-@mixin border-top-radius($value: $borderRadius) {
+////
+/// Top border radius
+///
+/// @since 1.0.0
+///
+/// @param   {unit} $value               [$adapt-border-radius] value of the border radius
+/// @require {var}  $adapt-border-radius
+////
+@mixin border-top-radius( $value: $adapt-border-radius ) {
+
     // no shorthand to prefixer due to inconsistancy
     border-top-right-radius: $value;
     -moz-border-radius-topright: $value;

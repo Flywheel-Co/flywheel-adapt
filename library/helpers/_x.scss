@@ -1,8 +1,22 @@
-/**
- * X (close) button
- */
+@charset "UTF-8";
 
-@mixin x( $color: #333, $width: 24px, $height: $width, $barWidth: 2px ) {
+////
+/// Close button mixin
+///
+/// @since 1.0.0
+///
+/// @param {color}  $color    [#333] button color
+/// @param {length} $width    [24px] width of button
+/// @param {length} $height   [$width] height of button
+/// @param {length} $bar-size [2px] size (width) of cross bars
+///
+/// @example scss
+///     .close {
+///         @include x( #c00, 32px, 32px, 3px );
+///     }
+////
+
+@mixin x( $color: #333, $width: 24px, $height: $width, $bar-size: 2px ) {
     position: relative;
     @include size( $width, $height );
 
@@ -13,7 +27,7 @@
         content: '';
         background: $color;
         width: 125%;
-        height: $barWidth;
+        height: $bar-size;
         top: 50%;
     }
 
@@ -24,5 +38,4 @@
     &:after {
         @include rotate( 45 );
     }
-
 }

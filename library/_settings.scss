@@ -1,29 +1,49 @@
-/**
- * Default settings
- *
- * All default settings can be overwritten by including a settings file
- * with these variables before including adapt.
- */
+@charset "UTF-8";
 
-/**
- * SASS MAP for responsive keywords and document sizes.
- */
+////
+/// Adapt settings
+///
+/// @since 1.0.0
+////
 
-$defaultResponsiveMap : (
-	mobile : (max : 667px),
-	mobile-portrait : (max : 375px),
-	mobile-landscape : (min : 375px, max : 667px),
-	tablet : (min : 667px, max : 1028px),
-	tablet-portrait : (min: 667px, max : 768px),
-	tablet-landscape : (min : 768px, max : 1028px),
-	desktop : (min : 1028px, max : 2200px),
-	large : (min : 2200px)
-);
+////
+/// Whether or not to include the Eric Meyer css reset
+///
+/// @since 1.0.0
+/// @link  http://meyerweb.com/eric/tools/css/reset/
+/// @type  {boolean}
+////
+$adapt-include-reset: true !default;
 
-$responsiveMap : () !default;
+////
+/// Whether or not to include the base browser styles
+///
+/// @since 1.0.0
+/// @type  {boolean}
+////
+$adapt-base-styles: true !default;
 
-$responsiveMap: map-merge( $defaultResponsiveMap, $responsiveMap );
+////
+/// Default border radius size
+///
+/// @since 1.0.0
+/// @type  {length}
+////
+$adapt-border-radius: 3px !default;
 
-$borderRadius : 3px !default;
-$browserPrefixes : webkit moz ms o !default;
-$includeReset : true !default;
+////
+/// Default browser prefixes
+///
+/// @since 1.0.0
+/// @type  {list}
+////
+$adapt-browser-prefixes: webkit moz ms o !default;
+
+////
+/// Responsive device size mapping
+///
+/// @since 1.0.0
+/// @type  {map}
+////
+$adapt-device-map: () !default;
+$adapt-device-map: map-merge( $adapt-default-device-map, $adapt-device-map );
