@@ -11,10 +11,10 @@
 ///
 /// @since 1.0.0
 ///
-/// @param {unit}  $offset-x x-axis offset
-/// @param {unit}  $offset-y y-axis offset
-/// @param {unit}  $blur     blur radius
-/// @param {color} $color    shadow color
+/// @param {length} $offset-x x-axis offset
+/// @param {length} $offset-y y-axis offset
+/// @param {length} $blur     blur radius
+/// @param {color}  $color    shadow color
 ////
 @mixin box-shadow( $offset-x, $offset-y, $blur, $color ) {
     @include p((box-shadow: $offset-x $offset-y $blur $color));
@@ -25,10 +25,10 @@
 ///
 /// @since 1.0.0
 ///
-/// @param {unit}  $offset-x x-axis offset
-/// @param {unit}  $offset-y y-axis offset
-/// @param {unit}  $blur     blur radius
-/// @param {color} $color    shadow color
+/// @param {length} $offset-x x-axis offset
+/// @param {length} $offset-y y-axis offset
+/// @param {length} $blur     blur radius
+/// @param {color}  $color    shadow color
 ////
 @mixin box-shadow-inset( $offset-x, $offset-y, $blur, $color ) {
     @include p((box-shadow: inset $offset-x $offset-y $blur $color));
