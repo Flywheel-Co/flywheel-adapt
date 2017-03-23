@@ -12,7 +12,7 @@
 /// @since 1.0.0
 ///
 /// @param {string} $property        [all] - CSS property to apply transition to
-/// @param {unit}   $duration        [.25s] - duration of transition
+/// @param {time}   $duration        [.25s] - duration of transition
 /// @param {mixed}  $timing-function [ease] - timing function to use for transition
 ////
 @mixin transition( $property, $duration, $timing-function: ease ) {
@@ -24,7 +24,7 @@
 ///
 /// @since 1.0.0
 ///
-/// @param {unit} $value duration of delay before starting the transition
+/// @param {time} $value duration of delay before starting the transition
 ////
 @mixin transition-delay( $value ) {
     @include p((transition-delay: $value));
