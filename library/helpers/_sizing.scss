@@ -1,24 +1,40 @@
-/**
- * set the size in a single call
- *
- * @param int $width Element width
- * @param int $height Element height
- * @param string|bool $display Display value for the element
- */
-@mixin size($width, $height: $width, $display:false) {
+@charset "UTF-8";
 
+////
+/// Sizing helpers
+///
+/// @since 1.0.0
+////
+
+////
+/// Element size mixin
+///
+/// @since 1.0.0
+///
+/// @param {length} $width  element width
+/// @param {length} $height [$width] element height
+////
+@mixin size( $width, $height: $width ) {
     width:$width;
     height:$height;
-
-    @if $display {
-        display:$display;
-    }
 }
 
 /**
  * Set Mobile Box Ratio
  */
-@mixin setBoxRatio($width, $height, $ratio : 2) {
+
+////
+/// Set mobile box ratio
+///
+/// @since 1.0.0
+/// @todo  needs testing
+/// @todo  needs documentation
+///
+/// @param {length} $width  element width
+/// @param {length} $height element height
+/// @param {integer} $ratio [2] ratio
+////
+@mixin setBoxRatio( $width, $height, $ratio: 2 ) {
     @include device(mobile) {
         width:           $width / $ratio;
         height:          $height / $ratio;

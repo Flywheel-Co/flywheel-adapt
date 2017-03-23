@@ -6,13 +6,13 @@
 ////
 
 @import 'utils/devices';
+@import 'utils/directions';
 @import 'utils/display';
+@import 'utils/inputs';
 
 @import 'library/settings';
 @import 'library/prefixer';
 @import 'library/reset';
-
-@if $includeReset { @include reset; }   // Conditionally include reset styles
 
 @import 'library/helpers/backgrounds';
 @import 'library/helpers/blur';
@@ -37,5 +37,4 @@
 @import 'library/css/transform';
 @import 'library/css/transition';
 
-@import 'library/compatibility';
 @import 'library/base';

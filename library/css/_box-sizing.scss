@@ -1,12 +1,27 @@
-/**
- * Box Sizing
- * @param  string $value:border-box   box-sizing value
- */
-@mixin box-sizing($value:border-box) {
+@charset "UTF-8";
+
+////
+/// Box-sizing Mixins
+///
+/// @since 1.0.0
+////
+
+////
+/// Define a box-sizing value and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+/// @alias {bs}
+///
+/// @param {string} $value [border-box] - border-box value
+////
+@mixin box-sizing( $value: border-box ) {
 	@include p((box-sizing: $value));
 }
 
-/**
- * Box Sizing Shorthand
- */
-@mixin bs($value:border-box) { @include box-sizing($value); }
+////
+/// Box-sizing mixin alias
+///
+/// @since 1.0.0
+/// @see   {box-sizing}
+////
+@mixin bs( $value:border-box ) { @include box-sizing($value); }

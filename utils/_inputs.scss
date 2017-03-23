@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+////
+/// Input utlities
+///
+/// @since 1.0.0
+////
+
+////
+/// Text input types
+///
+/// @since 1.0.0
+/// @type  {list}
+////
+$adapt-text-inputs: (
+	"[type='color']",
+	"[type='date']",
+	"[type='datetime']",
+	"[type='datetime-local']",
+	"[type='email']",
+	"[type='month']",
+	"[type='number']",
+	"[type='password']",
+	"[type='search']",
+	"[type='tel']",
+	"[type='text']",
+	"[type='time']",
+	"[type='url']",
+	"[type='week']",
+	"input:not([type])",
+	"textarea"
+);
+
+////
+/// Toggle input types
+///
+/// @since 1.0.0
+/// @type  list
+////
+$adapt-toggle-inputs: (
+	"[type='checkbox']",
+	"[type='radio']"
+);
+
+////
+/// Submit input types
+///
+/// @since 1.0.0
+/// @type  list
+////
+$adapt-submit-inputs: (
+	"[type='submit']"
+);
