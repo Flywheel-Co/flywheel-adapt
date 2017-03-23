@@ -12,8 +12,8 @@
 /// @since 1.0.0
 /// @alias {br}
 ///
-/// @param   {unit} $value               [$adapt-border-radius] value of the border radius
-/// @require {var}  $adapt-border-radius
+/// @param   {length} $value               [$adapt-border-radius] value of the border radius
+/// @require {var}    $adapt-border-radius
 ////
 @mixin border-radius( $value: $adapt-border-radius ) {
     @include p((border-radius: $value));
@@ -33,8 +33,8 @@
 ///
 /// @since 1.0.0
 ///
-/// @param   {unit} $value               [$adapt-border-radius] value of the border radius
-/// @require {var}  $adapt-border-radius
+/// @param   {length} $value               [$adapt-border-radius] value of the border radius
+/// @require {var}    $adapt-border-radius
 ////
 @mixin border-bottom-radius( $value: $adapt-border-radius ) {
 
@@ -52,8 +52,8 @@
 ///
 /// @since 1.0.0
 ///
-/// @param   {unit} $value               [$adapt-border-radius] value of the border radius
-/// @require {var}  $adapt-border-radius
+/// @param   {length} $value               [$adapt-border-radius] value of the border radius
+/// @require {var}    $adapt-border-radius
 ////
 @mixin border-top-radius( $value: $adapt-border-radius ) {
 
