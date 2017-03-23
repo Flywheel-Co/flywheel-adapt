@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+////
+/// General CSS classes to be used in HTML or extended via Sass
+///
+/// @since 1.0.0
+////
+
+////
+/// Apply a clearfix to an element
+///
+/// @group helpers/classes
+/// @since 1.0.0
+/// @see   {clearfix}
+///
+/// @example html
+/// 	<div class="clearfix">...</div>
+////
+.clearfix {
+	@include cf;
+}
+
+////
+/// Apply a css float left to an element
+///
+/// @since 1.0.0
+///
+/// @example html
+/// 	<div class="floatleft">...</div>
+////
+.floatleft {
+	float: left;
+}
+
+////
+/// Apply a css float right to an element
+///
+/// @since 1.0.0
+///
+/// @example html
+/// 	<div class="floatright">...</div>
+////
+.floatright {
+	float: right;
+}
+
+////
+/// Preloader class
+/// This class can be used to identify when the page is loaded by removing it using JavaScript. It
+/// will disable all transitions until the page the class is removed.
+///
+/// @since 1.0.0
+///
+/// @example html
+/// 	<body class="preload">...</body>
+////
+.preload * {
+    @include p((transition: none !important));
+}
+
+////
+/// No scroll class
+/// This class will prevent the window from scrolling.
+///
+/// @since 1.0.0
+////
+body, html {
+	overflow: hidden !important;
+}

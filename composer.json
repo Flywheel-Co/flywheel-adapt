@@ -1,15 +1,12 @@
 {
-    "name": "flywheel/adapt",
-    "version": "1.1.4",
+    "name": "flywheel-co/adapt",
     "description": "This is a group of frequently used and re-used Sass mixins, and other helpers to assist in rapid development.",
     "type": "sass",
-    "repository": {
-        "name": "sass-tools",
-        "type": "git",
-        "url": "git@github.com:Flywheel-Co/sass-tools.git"
-    },
-    "author": "Flywheel Co",
-    "require": {
-        "composer/installers": "~1.0"
+    "keywords": ["Sass", "SCSS", "framework", "CSS", "mixins", "responsive", "Flywheel Co"],
+    "homepage": "https://adapt.flywheel.co",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/Flywheel-Co/flywheel-adapt/issues",
+        "docs": "https://adapt.flywheel.co"
     }
 }

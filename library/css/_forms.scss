@@ -1,6 +1,16 @@
-/**
- * Input placeholders
- */
+@charset "UTF-8";
+
+////
+/// Form mixins
+///
+/// @since 1.0.0
+////
+
+////
+/// Define input placeholder styles and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+////
 @mixin placeholder {
     &::-webkit-input-placeholder { @content; }
     &:-moz-placeholder { @content; }

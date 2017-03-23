@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+////
+/// Border mixins
+///
+/// @since 1.0.0
+////
+
+////
+/// Define a border radius and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+/// @alias {br}
+///
+/// @param   {length} $value               [$adapt-border-radius] value of the border radius
+/// @require {var}    $adapt-border-radius
+////
+@mixin border-radius( $value: $adapt-border-radius ) {
+    @include p((border-radius: $value));
+}
+
+////
+/// Border radius mixin alias
+///
+/// @since 1.0.0
+/// @see   {border-radius}
+////
+@mixin br( $value: $adapt-border-radius ) { @include border-radius($value) }
+
+
+////
+/// Bottom border radius
+///
+/// @since 1.0.0
+///
+/// @param   {length} $value               [$adapt-border-radius] value of the border radius
+/// @require {var}    $adapt-border-radius
+////
+@mixin border-bottom-radius( $value: $adapt-border-radius ) {
+
+    // no shorthand to prefixer due to inconsistancy
+    border-bottom-right-radius: $value;
+    -moz-border-radius-bottomright: $value;
+    -webkit-border-bottom-right-radius: $value;
+    border-bottom-left-radius: $value;
+    -moz-border-radius-bottomleft: $value;
+    -webkit-border-bottom-left-radius: $value;
+}
+
+////
+/// Top border radius
+///
+/// @since 1.0.0
+///
+/// @param   {length} $value               [$adapt-border-radius] value of the border radius
+/// @require {var}    $adapt-border-radius
+////
+@mixin border-top-radius( $value: $adapt-border-radius ) {
+
+    // no shorthand to prefixer due to inconsistancy
+    border-top-right-radius: $value;
+    -moz-border-radius-topright: $value;
+    -webkit-border-top-right-radius: $value;
+    border-top-left-radius: $value;
+    -moz-border-radius-topleft: $value;
+    -webkit-border-top-left-radius: $value;
+}
