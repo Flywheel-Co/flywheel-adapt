@@ -10,6 +10,7 @@
 <body>
 	<div id="container">
 
+
 		<div class="wrapper devices" id="devices">
 			<h1>Responsive</h1>
 			<div class="mobile-portrait">
@@ -62,6 +63,34 @@
 				<p>Desktop</p>
 			</div>
 			<div class="lt-large">
+				<p>Large Format</p>
+			</div>
+		</div>
+
+		<div class="wrapper devices" id="lte-devices">
+			<h1>Responsive: Less Than Defined Size</h1>
+			<div class="lte-mobile-portrait">
+				<p>Mobile Portrait</p>
+			</div>
+			<div class="lte-mobile-landscape">
+				<p>Mobile Landscape</p>
+			</div>
+			<div class="lte-mobile">
+				<p>Mobile</p>
+			</div>
+			<div class="lte-tablet-portrait">
+				<p>Tablet Portrait</p>
+			</div>
+			<div class="lte-tablet-landscape">
+				<p>Tablet Landscape</p>
+			</div>
+			<div class="lte-tablet">
+				<p>Tablet</p>
+			</div>
+			<div class="lte-desktop">
+				<p>Desktop</p>
+			</div>
+			<div class="lte-large">
 				<p>Large Format</p>
 			</div>
 		</div>
@@ -164,6 +193,10 @@
 				</div>
 			</section>
 			<section id="rotate">
+				<h2>Rotate 20 degrees</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis similique tempore dolore labore enim, magni error! Voluptatem, alias. Repellendus optio corporis vel blanditiis placeat porro ipsum eius molestiae reprehenderit fugiat!</p>
+			</section>
+			<section id="rotate-alt">
 				<h2>Rotate 20 degrees</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis similique tempore dolore labore enim, magni error! Voluptatem, alias. Repellendus optio corporis vel blanditiis placeat porro ipsum eius molestiae reprehenderit fugiat!</p>
 			</section>

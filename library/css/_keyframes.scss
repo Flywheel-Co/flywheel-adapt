@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+////
+/// Keyframes mixins
+///
+/// @since 1.0.0
+////
+
+////
+/// Define keyframes and output the vendor-prefixed result
+///
+/// @since 1.0.0
+///
+/// @param {string} $name keyframe name
+////
+@mixin keyframes( $name ) {
+    @-webkit-keyframes #{$name} { @content; }
+    @-moz-keyframes #{$name} { @content; }
+    @-ms-keyframes #{$name} { @content; }
+    @keyframes #{$name} { @content; }
+}

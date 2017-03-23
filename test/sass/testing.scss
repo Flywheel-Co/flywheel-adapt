@@ -89,9 +89,19 @@ $largeColor : #FCE622;
 		&.lt-mobile-portrait { @include d( lt-mobile-portrait ) { @include active-device; } }
 		&.lt-tablet { @include d( lt-tablet ) { @include active-device; } }
 		&.lt-tablet-landscape { @include d(lt-tablet-landscape) { @include active-device; } }
-		&.lt-tablet-portrait { @include d( lt-tabletPortrait ) { @include active-device; } }
+		&.lt-tablet-portrait { @include d( lt-tablet-portrait ) { @include active-device; } }
 		&.lt-desktop { @include d( lt-desktop ) { @include active-device; } }
 		&.lt-large { @include d( lt-large ) { @include active-device; } }
+
+		// Less than or equal to
+		&.lte-mobile { @include d( lte-mobile ) { @include active-device; } }
+		&.lte-mobile-landscape { @include d( lte-mobile-landscape ) { @include active-device; } }
+		&.lte-mobile-portrait { @include d( lte-mobile-portrait ) { @include active-device; } }
+		&.lte-tablet { @include d( lte-tablet ) { @include active-device; } }
+		&.lte-tablet-landscape { @include d(lte-tablet-landscape) { @include active-device; } }
+		&.lte-tablet-portrait { @include d( lte-tablet-portrait ) { @include active-device; } }
+		&.lte-desktop { @include d( lte-desktop ) { @include active-device; } }
+		&.lte-large { @include d( lte-large ) { @include active-device; } }
 
 		// Greater than
 		&.gt-mobile { @include device( gt-mobile ) { @include active-device; } }
@@ -254,6 +264,12 @@ $largeColor : #FCE622;
 	@extend .small;
 	@extend .bg-color;
 	@include rotate(20);
+}
+
+#rotate-alt {
+	@extend .small;
+	@extend .bg-color;
+	@include rotate(20deg);
 }
 
 /**
