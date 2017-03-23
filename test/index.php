@@ -10,6 +10,13 @@
 <body>
 	<div id="container">
 
+		<div class="wrapper" id="showOnly">
+			<h1>Show-only Classes</h1>
+
+			<div class="show-only-mobile-inline-block" style="background:#cf0">
+				Testing
+			</div>
+
 		<div class="wrapper devices" id="devices">
 			<h1>Responsive</h1>
 			<div class="mobile-portrait">
