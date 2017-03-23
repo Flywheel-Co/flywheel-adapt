@@ -22,4 +22,8 @@ order: 10
 		<th>.preload</th>
 		<td>Add class to body element and remove with JS on page load.</td>
 	</tr>
+	<tr>
+		<th>.no-scroll</th>
+		<td>Lock window scrolling</td>
+	</tr>
 </table>

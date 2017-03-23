@@ -1,6 +1,7 @@
 ---
 ---
 
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
 @import 'adapt';
 @import 'settings';
 @import 'neat/neat';
@@ -74,9 +75,15 @@ body {
 /**
  * Tables
  */
-table.code {
+table {
 	font-size: 13px;
 	font-family: $fontPrimary;
+
+	&.code {
+		th {
+			font: 600 12px/1.2 $fontMono;
+		}
+	}
 
 	@include mobile {
 		p { font-size: 12px; }
@@ -95,11 +102,15 @@ table.code {
 
 		th {
 			text-align: left;
-			font: 600 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+			font: 600 13px/1.2 $fontPrimary;
 
 			@include mobile {
 				padding: 4px 6px;
 			}
+		}
+
+		td {
+			font: $fontSecondary;
 		}
 
 		&:nth-child(even) {

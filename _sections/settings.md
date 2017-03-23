@@ -6,53 +6,25 @@ order: 30
 
 Adapt contains a few values for initial configuration to assist streamline and customize the library instance.
 
-<table class="code">
-	<tr>
-		<th>$borderRadius</th>
-<td markdown="1">
-**Default:** `3px`<br/>
-Standard border radius.
-</td>
-	</tr>
-	<tr>
-		<th>$browserPrefixes</th>
-<td markdown="1">
-**Default:** `webkit moz ms o`<br>
-Space-separated list of vendor prefixes applied throughout the Adapt library.
-</td>
-	</tr>
-	<tr>
-		<th>$includeReset</th>
-<td markdown="1">
-**Default:** `true`<br>
-Conditionally include the Eric Meyer CSS reset definitions.
-</td>
-	</tr>
-	<tr>
-		<th>$responsiveMap</th>
-<td markdown="1">
-See [Responsive Media Sizes]({{ site.basurl}}/responsive).
-</td>
-	</tr>
-	<tr>
-		<th>$mobilePortraitSize</th>
-<td markdown="1">
-**Default:** `320px`<br>
-Media breakpoint for mobile devices in portrait mode.
-</td>
-	</tr>
-	<tr>
-		<th>$tabletLandscapeSize</th>
-<td markdown="1">
-**Default:** `1028px`<br>
-Media breakpoint for tablet devices in landscape mode.
-</td>
-	</tr>
-	<tr>
-		<th>$tabletPortraitSize</th>
-<td markdown="1">
-**Default:** `768px`<br>
-Media breakpoint for tablet devices in portrait mode.
-</td>
-	</tr>
-</table>
+| Variable | Default | Description |
+| -------- |:-------:| ----------- |
+| `$adapt-include-reset` | `true` | Conditionally include the Eric Meyer CSS reset |
+| `$adapt-base-styles`   | `true` | Conditionally include the Flywheel Adapt base styles |
+| `$adapt-border-radius` | `3px`  | Default border radius for related mixins |
+| `$adapt-browser-prefixes` | `webkit moz ms o` | Default browser prefix list for prefixer |
+| `$adapt-device-map`       | See [default device map](#default-device-map). | Device map for responsive queries |
+
+
+##### Default Device Map
+```scss
+$adapt-device-map: (
+    mobile: (max : 667px),
+    mobile-portrait: (max : 375px),
+    mobile-landscape: (min : 375px, max : 667px),
+    tablet: (min : 667px, max : 1028px),
+    tablet-portrait: (min: 667px, max : 768px),
+    tablet-landscape: (min : 768px, max : 1028px),
+    desktop: (min : 1028px, max : 2200px),
+    large: (min : 2200px)
+);
+```

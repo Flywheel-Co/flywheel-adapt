@@ -12,13 +12,13 @@ class with javascript to switch the state of the hamburger button.
 ###### SCSS
 ```scss
 #menu {
-    @include hamburger(#333, 22px, 22px, 3px);
+    @include hamburger( #333, 22px, 22px, 3px );
 }
 ```
 
 ###### HTML
 ```html
-<div id="menu">
-    <span>Menu</span>
+<div id="menu-button">
+    <span></span>
 </div>
 ```

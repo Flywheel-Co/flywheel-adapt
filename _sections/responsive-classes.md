@@ -8,78 +8,61 @@ order: 20
 
 <table class="code">
 	<tr>
-		<th>.showOnlyMobile</th>
-		<td>Show this element only to mobile resolutions.</td>
+		<th>.show-only-mobile</th>
+		<td>Show the targetted element only at mobile resolutions.</td>
 	</tr>
 	<tr>
-		<th>.hideOnlyMobile</th>
-		<td>Hide this element only from mobile resolutions.</td>
+		<th>.show-mobile</th>
+		<td>Show the targetted element at mobile resolutions.</td>
 	</tr>
 	<tr>
-		<th>.showMobile</th>
-		<td>Show this element to mobile resolutions.</td>
-	</tr>
-	<tr>
-		<th>.hideMobile</th>
-		<td>Hide this element from mobile resolutions.</td>
+		<th>.hide-mobile</th>
+		<td>Hide the targetted element at mobile resolutions.</td>
 	</tr>
 </table>
 
-
 ##### Tablet
-
 <table class="code">
 	<tr>
-		<th>.showOnlyTablet</th>
-		<td>Show this element only to tablet resolutions.</td>
+		<th>.show-only-tablet</th>
+		<td>Show the targetted element only at tablet resolutions.</td>
 	</tr>
 	<tr>
-		<th>.hideOnlyTablet</th>
-		<td>Hide this element only from tablet resolutions.</td>
+		<th>.show-tablet</th>
+		<td>Show the targetted element at tablet resolutions.</td>
 	</tr>
 	<tr>
-		<th>.showTablet</th>
-		<td>Show this element to tablet resolutions.</td>
-	</tr>
-	<tr>
-		<th>.hideTablet</th>
-		<td>Show this element from tablet resolutions.</td>
-	</tr>
-	<tr>
-		<th>.showOnlyTabletPortrait</th>
-		<td>Show this element only to tablet-portrait resolutions</td>
-	</tr>
-	<tr>
-		<th>.hideOnlyTabletPortrait</th>
-		<td>Hide this element only from tablet-portrait resolutions</td>
-	</tr>
-	<tr>
-		<th>.showTabletPortrait</th>
-		<td>Show this element to tablet-portrait resolutions</td>
-	</tr>
-	<tr>
-		<th>.hideTabletPortrait</th>
-		<td>Hide this element from tablet-portrait resolutions</td>
+		<th>.hide-tablet</th>
+		<td>Hide the targetted element at tablet resolutions.</td>
 	</tr>
 </table>
 
 ##### Desktop
+<table class="code">
+	<tr>
+		<th>.show-only-desktop</th>
+		<td>Show the targetted element only at desktop resolutions.</td>
+	</tr>
+	<tr>
+		<th>.show-desktop</th>
+		<td>Show the targetted element at desktop resolutions.</td>
+	</tr>
+	<tr>
+		<th>.hide-desktop</th>
+		<td>Hide the targetted element at desktop resolutions.</td>
+	</tr>
+</table>
+
+##### Modifiers
+The mobile and landscape classes above can also be used with an orientational modifier suffix.
 
 <table class="code">
 	<tr>
-		<th>.showOnlyDesktop</th>
-		<td>Show this element only to desktop resolutions</td>
+		<th>-portrait</th>
+		<td>Target the given devices portrait orientation.</td>
 	</tr>
 	<tr>
-		<th>.hideOnlyDesktop</th>
-		<td>Hide this element only from desktop resolutions</td>
-	</tr>
-	<tr>
-		<th>.showDesktop</th>
-		<td>Show this element to desktop resolutions</td>
-	</tr>
-	<tr>
-		<th>.hideDesktop</th>
-		<td>Hide this element from desktop resolutions</td>
+		<th>-landscape</th>
+		<td>Target the given devices landscape orientation.</td>
 	</tr>
 </table>
