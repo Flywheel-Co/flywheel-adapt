@@ -1,21 +1,45 @@
-/**
- * Device
- *
- * Generate a media query targetted at a particular device or devices greater than or less than
- * a given device.
- */
+@charset "UTF-8";
+
+////
+/// Device-based responsive mixins
+///
+/// @since 1.0.0
+////
+
+////
+/// Generate a media query for a given device
+///
+/// Devices can be declared as-is in the devices array, or the can have a comparision identifier
+/// prefixed to perform greater than and less than commands.
+///
+/// @prefix lt-  less than
+/// @prefix gt-  greater than
+/// @prefix lte- less than or equal to
+/// @prefix gte- greater than or equal to
+///
+/// @since 1.0.0
+/// @todo  this functionality could certainly be cleaned up at this point
+/// @alias {d}, {mobile}, {mobile-portrait}...
+/// @type  mixin
+///
+/// @param {string} $device a valid device identifier with optional prefix
+////
 @mixin device( $device ) {
 
     $device:   deprecated-devices( $device );
     $operator: null;
-
 
     @if str-index( $device, 'lt-' ) or str-index( $device, 'gt-' )  {
         $operator: str-slice( $device, 0, 2 );
         $device:   str-slice( $device, 4, str-length( $device ) );
     }
 
-    $sizes: map-get( $responsiveMap, $device );
+    @if str-index( $device, 'lte-' ) or str-index( $device, 'gte-' ) {
+        $operator: str-slice( $device, 0, 3 );
+        $device:   str-slice( $device, 5, str-length( $device ) );
+    }
+
+    $sizes: map-get( $adapt-device-map, $device );
     $query: '';
 
     @if $operator == null {
@@ -26,27 +50,46 @@
 
         // Less than
         @if $operator == 'lt'  {
-            $query: $query + ' and ( max-width:' + if( map-has-key( $sizes, min ), map-get( $sizes, min ), 0 ) + ')';
+            $query: $query + 'and ( max-width:' + if( map-has-key( $sizes, min ), map-get( $sizes, min ), 0 ) + ')';
         }
 
         // Greater than
         @if $operator == 'gt'  {
-            $query: $query + ' and ( min-width:' + if(map-has-key( $sizes, max ), map-get($sizes, max), 9999999px) + ')';
+            $query: $query + 'and ( min-width:' + if(map-has-key( $sizes, max ), map-get($sizes, max), 9999999px) + ')';
+        }
+
+        // Less than or equal to
+        @if $operator == 'lte'  {
+            $query: $query + 'and ( max-width:' + if( map-has-key( $sizes, max ), map-get( $sizes, max ), 9999999px ) + ')';
+        }
+
+        // Greater than or equal to
+        @if $operator == 'gte'  {
+            $query: $query + 'and ( min-width:' + if(map-has-key( $sizes, min ), map-get($sizes, min), 9999999px) + ')';
         }
     }
-
 
     @media only screen #{$query} {
         @content;
     }
 }
 
-/**
- * Device mixin alias
- */
+////
+/// Device query mixin alias
+///
+/// @since 1.0.0
+/// @type  mixin
+/// @see   {device}
+////
 @mixin d( $device ) { @include device( $device ) { @content } }
 
-/** Aliases */
+////
+/// Device query mixin aliases
+///
+/// @since 1.0.0
+/// @type  mixin
+/// @see   {device}
+////
 @mixin mobile           { @include d(mobile) { @content; } }
 @mixin mobile-portrait  { @include d(mobile-portrait) { @content; } }
 @mixin mobile-landscape { @include d(mobile-landscape) { @content; } }
@@ -74,12 +117,33 @@
 @mixin gt-desktop          { @include d(gt-desktop) { @content; } }
 @mixin gt-large-device     { @include d(gt-large) { @content; } }
 
-/**
- * Deprecation notices and backwards compatibility implementation for previous device names
- *
- * @param  {string} $device device identifier
- * @return {string}         device identifier
- */
+@mixin lte-mobile           { @include d(lte-mobile) { @content; } }
+@mixin lte-mobile-portrait  { @include d(lte-mobile-portrait) { @content; } }
+@mixin lte-mobile-landscape { @include d(lte-mobile-landscape) { @content; } }
+@mixin lte-tablet           { @include d(lte-tablet) { @content; } }
+@mixin lte-tablete-portrait  { @include d(lte-tablete-portrait) { @content; } }
+@mixin lte-tablete-landscape { @include d(lte-tablete-landscape) { @content; } }
+@mixin lte-desktop          { @include d(lte-desktop) { @content; } }
+@mixin lte-large-device     { @include d(lte-large) { @content; } }
+
+@mixin gte-mobile           { @include d(gte-mobile) { @content; } }
+@mixin gte-mobile-portrait  { @include d(gte-mobile-portrait) { @content; } }
+@mixin gte-mobile-landscape { @include d(gte-mobile-landscape) { @content; } }
+@mixin gte-tablet           { @include d(gte-tablet) { @content; } }
+@mixin gte-tablete-portrait  { @include d(gte-tablete-portrait) { @content; } }
+@mixin gte-tablete-landscape { @include d(gte-tablete-landscape) { @content; } }
+@mixin gte-desktop          { @include d(gte-desktop) { @content; } }
+@mixin gte-large-device     { @include d(gte-large) { @content; } }
+
+////
+/// Display deprecation notices and provide backwards compatability for camelCase device
+/// identifiers that were previously used.
+///
+/// @since 1.0.0
+/// @type  function
+///
+/// @param {string} $device a valid device identifier with optional prefix
+////
 @function deprecated-devices( $device ) {
 
     @if str-index( $device, 'tabletPortrait' ) {

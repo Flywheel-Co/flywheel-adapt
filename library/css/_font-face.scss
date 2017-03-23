@@ -1,13 +1,25 @@
-/**
- * Font imports
- * @param  string $fontFamily   font family name
- * @param  string $fontFilename font file
- */
-@mixin font-face($fontFamily, $fontFilename) {
+@charset "UTF-8";
+
+////
+/// Font imports
+///
+/// @since 1.0.0
+////
+
+////
+/// Define a webfont import and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+/// @todo  This functionality needs a massive overhaul
+///
+/// @param {string} $font-family font family name
+/// @param {string} $font-file   font file
+////
+@mixin font-face($font-family, $font-file) {
     @font-face {
-      font-family: $fontFamily;
-      $prefix : $fontFamily + "/" + $fontFilename;
-      src:  url($prefix + ".otf") format('opentype');
+    	$prefix: $font-family + "/" + $font-file;
+	    font-family: $font-family;
+    	src:  url($prefix + ".otf") format('opentype');
     }
 }
 

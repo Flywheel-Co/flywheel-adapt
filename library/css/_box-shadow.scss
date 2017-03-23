@@ -1,21 +1,35 @@
-/**
- * Add box shadow vendor prefixes
- * @param string $x     X axis value of the shadow
- * @param string $y     Y axis value of the shadow
- * @param string $blur  Blur size
- * @param string $color Color of the shadow
- */
-@mixin box-shadow($x, $y, $blur, $color) {
-    @include p((box-shadow: $x $y $blur $color));
+@charset "UTF-8";
+
+////
+/// Box shadows
+///
+/// @since 1.0.0
+////
+
+////
+/// Define a box shadow and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {unit}  $offset-x x-axis offset
+/// @param {unit}  $offset-y y-axis offset
+/// @param {unit}  $blur     blur radius
+/// @param {color} $color    shadow color
+////
+@mixin box-shadow( $offset-x, $offset-y, $blur, $color ) {
+    @include p((box-shadow: $offset-x $offset-y $blur $color));
 }
 
-/**
- * Box shadow inset with vendor prefixes
- * @param string $x     X axis value of the shadow
- * @param string $y     Y axis value of the shadow
- * @param string $blur  Blur size
- * @param string $color Color of the shadow
- */
-@mixin box-shadow-inset($x, $y, $blur, $color) {
-    @include p((box-shadow: inset $x $y $blur $color));
+////
+/// Define an inset box shadow and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {unit}  $offset-x x-axis offset
+/// @param {unit}  $offset-y y-axis offset
+/// @param {unit}  $blur     blur radius
+/// @param {color} $color    shadow color
+////
+@mixin box-shadow-inset( $offset-x, $offset-y, $blur, $color ) {
+    @include p((box-shadow: inset $offset-x $offset-y $blur $color));
 }
