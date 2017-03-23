@@ -1,23 +1,20 @@
 {
-  "name": "flywheel/adapt",
-  "description": "Flywheel Co. Sass mixins, responsive development mixins and common classes",
-  "version": "1.2",
-  "keywords": [],
-  "homepage": "https://flywheel.co",
-  "dependencies": {},
-  "devDependencies": {},
-  "license": [
-    "OFL-1.1",
-    "MIT",
-    "CC-BY-3.0"
+  "name": "flywheel-adapt",
+  "version": "1.0.0",
+  "homepage": "https://adapt.flywheel.co",
+  "authors": [
+    "Flywheel Co. <dev@flywheel.co"
   ],
-  "main": [
-    "./_adapt.scss"
-  ],
-  "private": "true",
+  "description": "This is a group of frequently used and re-used Sass mixins, and other helpers to assist in rapid development.",
+  "main": "_adapt.scss",
+  "keywords": ["Sass", "SCSS", "framework", "CSS", "mixins", "responsive", "Flywheel Co"],
+  "license": "MIT",
   "ignore": [
-    "*/.*",
-    "*.json",
-    "*.md"
+    "../.*",
+    "node_modules",
+    "test",
+    "package.json",
+    "gulpfile.js",
+    "composer.json"
   ]
 }
