@@ -1,12 +1,37 @@
 {
-  "private": true,
+  "name": "flywheel-adapt",
+  "version": "1.0.1",
+  "homepage": "http://adapt.flywheel.co",
+  "author": "Flywheel Co. <dev@flywheel.co>",
+  "description": "A collection of Sass mixins and CSS helper classes to assist in generating cross-browser and cross-device styles.",
+  "main": "_adapt.scss",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flywheel-Co/flywheel-adapt"
+  },
+  "bugs": {
+    "url": "https://github.com/Flywheel-Co/flywheel-adapt/issues"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "mixins",
+    "responsive"
+  ],
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-notify": "^3.0.0",
-    "gulp-sass": "^3.1.0"
-  },
-  "dependencies": {
+    "gulp-sass": "^3.1.0",
     "del": "^2.2.2",
     "gulp-file-include": "^1.0.0"
-  }
+  },
+  "files": [
+    "library",
+    "utils",
+    "_adapt.scss",
+    "LICENSE",
+    "README.md"
+  ]
 }
