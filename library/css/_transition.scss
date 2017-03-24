@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+////
+/// Transition Mixins
+///
+/// @since 1.0.0
+////
+
+////
+/// Define a transition and ouput the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {string} $property        [all] - CSS property to apply transition to
+/// @param {time}   $duration        [.25s] - duration of transition
+/// @param {mixed}  $timing-function [ease] - timing function to use for transition
+////
+@mixin transition( $property, $duration, $timing-function: ease ) {
+    @include p((transition: $property $duration $timing-function ));
+}
+
+////
+/// Define a transition-delay and ouput the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {time} $value duration of delay before starting the transition
+////
+@mixin transition-delay( $value ) {
+    @include p((transition-delay: $value));
+}

@@ -5,93 +5,124 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>Flywheel Adapt</title>
-	<link rel="stylesheet" href="testing.css">
+	<link rel="stylesheet" href="/test/testing.css">
 </head>
 <body>
 	<div id="container">
 
-		<div class="wrapper">
+
+		<div class="wrapper devices" id="devices">
 			<h1>Responsive</h1>
-			<div class="mobile-portrait device">
+			<div class="mobile-portrait">
 				<p>Mobile Portrait</p>
 			</div>
-			<div class="mobile-landscape device">
+			<div class="mobile-landscape">
 				<p>Mobile Landscape</p>
 			</div>
-			<div class="mobile device">
+			<div class="mobile">
 				<p>Mobile</p>
 			</div>
-			<div class="tablet-portrait device">
+			<div class="tablet-portrait">
 				<p>Tablet Portrait</p>
 			</div>
-			<div class="tablet-landscape device">
+			<div class="tablet-landscape">
 				<p>Tablet Landscape</p>
 			</div>
-			<div class="tablet device">
+			<div class="tablet">
 				<p>Tablet</p>
 			</div>
-			<div class="desktop device">
+			<div class="desktop">
 				<p>Desktop</p>
 			</div>
-			<div class="large device">
+			<div class="large">
 				<p>Large Format</p>
 			</div>
 		</div>
 
-		<div class="wrapper">
-			<h1>Responsive Less Than Defined Size</h1>
-			<div class="mobile-portrait-lt device">
+		<div class="wrapper devices" id="lt-devices">
+			<h1>Responsive: Less Than Defined Size</h1>
+			<div class="lt-mobile-portrait">
 				<p>Mobile Portrait</p>
 			</div>
-			<div class="mobile-landscape-lt device">
+			<div class="lt-mobile-landscape">
 				<p>Mobile Landscape</p>
 			</div>
-			<div class="mobile-lt device">
+			<div class="lt-mobile">
 				<p>Mobile</p>
 			</div>
-			<div class="tablet-portrait-lt device">
+			<div class="lt-tablet-portrait">
 				<p>Tablet Portrait</p>
 			</div>
-			<div class="tablet-landscape-lt device">
+			<div class="lt-tablet-landscape">
 				<p>Tablet Landscape</p>
 			</div>
-			<div class="tablet-lt device">
+			<div class="lt-tablet">
 				<p>Tablet</p>
 			</div>
-			<div class="desktop-lt device">
+			<div class="lt-desktop">
 				<p>Desktop</p>
 			</div>
-			<div class="large-lt device">
+			<div class="lt-large">
 				<p>Large Format</p>
 			</div>
 		</div>
-		<div class="wrapper">
-			<h1>Responsive Greater Than Defined Size</h1>
-			<div class="mobile-portrait-gt device">
+
+		<div class="wrapper devices" id="lte-devices">
+			<h1>Responsive: Less Than Defined Size</h1>
+			<div class="lte-mobile-portrait">
 				<p>Mobile Portrait</p>
 			</div>
-			<div class="mobile-landscape-gt device">
+			<div class="lte-mobile-landscape">
 				<p>Mobile Landscape</p>
 			</div>
-			<div class="mobile-gt device">
+			<div class="lte-mobile">
 				<p>Mobile</p>
 			</div>
-			<div class="tablet-portrait-gt device">
+			<div class="lte-tablet-portrait">
 				<p>Tablet Portrait</p>
 			</div>
-			<div class="tablet-landscape-gt device">
+			<div class="lte-tablet-landscape">
 				<p>Tablet Landscape</p>
 			</div>
-			<div class="tablet-gt device">
+			<div class="lte-tablet">
 				<p>Tablet</p>
 			</div>
-			<div class="desktop-gt device">
+			<div class="lte-desktop">
 				<p>Desktop</p>
 			</div>
-			<div class="large-gt device">
+			<div class="lte-large">
 				<p>Large Format</p>
 			</div>
 		</div>
+
+		<div class="wrapper devices" id="gt-devices">
+			<h1>Responsive: Greater Than Defined Size</h1>
+			<div class="gt-mobile-portrait">
+				<p>Mobile Portrait</p>
+			</div>
+			<div class="gt-mobile-landscape">
+				<p>Mobile Landscape</p>
+			</div>
+			<div class="gt-mobile">
+				<p>Mobile</p>
+			</div>
+			<div class="gt-tablet-portrait">
+				<p>Tablet Portrait</p>
+			</div>
+			<div class="gt-tablet-landscape">
+				<p>Tablet Landscape</p>
+			</div>
+			<div class="gt-tablet">
+				<p>Tablet</p>
+			</div>
+			<div class="gt-desktop">
+				<p>Desktop</p>
+			</div>
+			<div class="gt-large">
+				<p>Large Format</p>
+			</div>
+		</div>
+
 
 		<div class="wrapper">
 			<h1>Backgrounds</h1>
@@ -116,7 +147,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus numquam nam veniam autem minus maiores, nulla pariatur quibusdam recusandae? Similique vero unde odit magni tenetur, dicta optio rem voluptas architecto!</p>
 			</section>
 		</div>
-	
+
 		<div class="wrapper">
 			<h1>Box Shadow</h1>
 			<section id="box-shadow">
@@ -165,6 +196,10 @@
 				<h2>Rotate 20 degrees</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis similique tempore dolore labore enim, magni error! Voluptatem, alias. Repellendus optio corporis vel blanditiis placeat porro ipsum eius molestiae reprehenderit fugiat!</p>
 			</section>
+			<section id="rotate-alt">
+				<h2>Rotate 20 degrees</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis similique tempore dolore labore enim, magni error! Voluptatem, alias. Repellendus optio corporis vel blanditiis placeat porro ipsum eius molestiae reprehenderit fugiat!</p>
+			</section>
 			<section id="skewX">
 				<h2>Skew X Axis</h2>
 				<p>Skew X by 20deg</p>
@@ -182,7 +217,7 @@
 				<h2>Transform Origin</h2>
 				<p>Rotate from top right by -15 degrees</p>
 			</section>
-			
+
 			<section id="translate3d-wrapper">
 				<div id="translate3d">
 					<h2>Translate 3D</h2>
@@ -200,5 +235,37 @@
 			</section>
 		</div>
 	</div>
+
+	<div class="wrapper" id="grayscale">
+		<h1>Grayscale</h1>
+		<img src="http://lorempixel.com/200/200">
+	</div>
+
+	<div class="wrapper" id="hamburger">
+		<h1>Hamburger</h1>
+		<nav>
+			<span></span>
+		</nav>
+	</div>
+
+	<div class="wrapper" id="close">
+		<h1>X (Close)</h1>
+		<div></div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			$('#hamburger nav').on('click', function() {
+				$(this).toggleClass('active');
+				return false;
+			});
+
+
+		});
+	</script>
+
+
 </body>
 </html>

@@ -1,37 +1,40 @@
-// Initial Utilities
-// **********************************************
-@import 'utils/settings';               //  Import default settings.  They can be overwritten by the user
-@import 'utils/prefixer';
-@import 'utils/reset';
+////
+/// Flywheel Adapt
+///
+/// @link    https://flywheel.co
+/// @version 1.0.0
+////
 
-@if $includeReset { @include reset; }   // Conditionally include reset styles
+@import 'utils/devices';
+@import 'utils/directions';
+@import 'utils/display';
+@import 'utils/inputs';
 
-// Helpers
-// **********************************************
-@import 'helpers/backgrounds';
-@import 'helpers/blur';
-@import 'helpers/clearfix';
-@import 'helpers/devices';
-@import 'helpers/grayscale';
-@import 'helpers/hamburger';
-@import 'helpers/sizing';
-@import 'helpers/text';
-@import 'helpers/classes';
+@import 'library/settings';
+@import 'library/prefixer';
+@import 'library/reset';
 
-// CSS Mixins
-// **********************************************
-@import 'css/animation';
-@import 'css/background-gradient';
-@import 'css/borders';
-@import 'css/box-shadow';
-@import 'css/box-sizing';
-@import 'css/font-face';
-@import 'css/forms';
-@import 'css/keyframes';
-@import 'css/transform';
-@import 'css/transition';
+@import 'library/helpers/backgrounds';
+@import 'library/helpers/blur';
+@import 'library/helpers/clearfix';
+@import 'library/helpers/devices';
+@import 'library/helpers/grayscale';
+@import 'library/helpers/hamburger';
+@import 'library/helpers/sizing';
+@import 'library/helpers/text';
+@import 'library/helpers/classes-general';
+@import 'library/helpers/classes-responsive';
+@import 'library/helpers/x';
 
-// Backwards Compatibility
-// **********************************************
-@import 'utils/compatibility';
-@import 'utils/base';
+@import 'library/css/animation';
+@import 'library/css/background-gradient';
+@import 'library/css/borders';
+@import 'library/css/box-shadow';
+@import 'library/css/box-sizing';
+@import 'library/css/font-face';
+@import 'library/css/forms';
+@import 'library/css/keyframes';
+@import 'library/css/transform';
+@import 'library/css/transition';
+
+@import 'library/base';

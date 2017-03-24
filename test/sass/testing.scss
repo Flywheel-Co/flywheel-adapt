@@ -1,7 +1,7 @@
 
-$responsiveMap : (
-	mobile : (max : 900)
-);
+// $responsiveMap : (
+// 	mobile : (max : 900)
+// );
 
 @import "../../adapt";
 @import "typography";
@@ -53,40 +53,124 @@ $largeColor : #FCE622;
 /**
  * Responsive
  */
-.device {
-	position: relative;
-	padding: 10px;
-	background-color: #F5F5F5;
-	border-bottom: 1px solid #E0E0E0;
-	@include border-radius(5px);
-	@include transition(all, .4s, linear);
+
+.devices {
+
+	@mixin active-device {
+		padding: 10px;
+		color: #444;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	&> div {
+		position: relative;
+		padding: 10px;
+		background-color: #F5F5F5;
+		border-bottom: 1px solid #E0E0E0;
+		color: #ccc;
+		padding: 2px 10px;
+		@include border-radius(5px);
+		@include transition(all, .3s, linear);
+
+		// Only
+		&.mobile { @include device( mobile ) { @include active-device; } }
+		&.mobile-landscape { @include device( mobile-landscape ) { @include active-device; } }
+		&.mobile-portrait { @include device( mobile-portrait ) { @include active-device; } }
+		&.tablet { @include device( tablet ) { @include active-device; } }
+		&.tablet-landscape { @include device( tablet-landscape ) { @include active-device; } }
+		&.tablet-portrait { @include device( tablet-portrait ) { @include active-device; } }
+		&.desktop { @include device( desktop ) { @include active-device; } }
+		&.large { @include device( large ) { @include active-device; } }
+
+		// Less than
+		&.lt-mobile { @include d( lt-mobile ) { @include active-device; } }
+		&.lt-mobile-landscape { @include d( lt-mobile-landscape ) { @include active-device; } }
+		&.lt-mobile-portrait { @include d( lt-mobile-portrait ) { @include active-device; } }
+		&.lt-tablet { @include d( lt-tablet ) { @include active-device; } }
+		&.lt-tablet-landscape { @include d(lt-tablet-landscape) { @include active-device; } }
+		&.lt-tablet-portrait { @include d( lt-tablet-portrait ) { @include active-device; } }
+		&.lt-desktop { @include d( lt-desktop ) { @include active-device; } }
+		&.lt-large { @include d( lt-large ) { @include active-device; } }
+
+		// Less than or equal to
+		&.lte-mobile { @include d( lte-mobile ) { @include active-device; } }
+		&.lte-mobile-landscape { @include d( lte-mobile-landscape ) { @include active-device; } }
+		&.lte-mobile-portrait { @include d( lte-mobile-portrait ) { @include active-device; } }
+		&.lte-tablet { @include d( lte-tablet ) { @include active-device; } }
+		&.lte-tablet-landscape { @include d(lte-tablet-landscape) { @include active-device; } }
+		&.lte-tablet-portrait { @include d( lte-tablet-portrait ) { @include active-device; } }
+		&.lte-desktop { @include d( lte-desktop ) { @include active-device; } }
+		&.lte-large { @include d( lte-large ) { @include active-device; } }
+
+		// Greater than
+		&.gt-mobile { @include device( gt-mobile ) { @include active-device; } }
+		&.gt-mobile-landscape { @include device( gt-mobile-landscape ) { @include active-device; } }
+		&.gt-mobile-portrait { @include device( gt-mobile-portrait ) { @include active-device; } }
+		&.gt-tablet { @include device( gt-tablet ) { @include active-device; } }
+		&.gt-tablet-landscape { @include device(gt-tablet-landscape) { @include active-device; } }
+		&.gt-tablet-portrait { @include device( gt-tablet-portrait ) { @include active-device; } }
+		&.gt-desktop { @include device( gt-desktop ) { @include active-device; } }
+		&.gt-large { @include device( gt-large ) { @include active-device; } }
+
+		// &.mobile-only { @include device( mobile-only ) { @include active-device; } }
+		// &.mobile-landscape-only { @include device( mobile-landscape-only ) { @include active-device; } }
+		// &.mobile-portrait-only { @include device( mobile-portrait-only ) { @include active-device; } }
+
+		// &.tablet-only { @include device( tablet-only ) { @include active-device; } }
+		// &.tablet-landscape-only { @include device( tablet-landscape-only ) { @include active-device; } }
+		// &.tablet-portrait-only { @include device( tablet-portrait-only ) { @include active-device; } }
+
+		// &.desktop-only { @include device( desktop-only ) { @include active-device; } }
+		// &.large-only { @include device( large-only ) { @include active-device; } }
+
+
+	}
 }
-.mobile { @include d(mobile) { background-color: rgba($mobileColor, .2) } }
-.mobile-landscape { @include d(mobileLandscape) { background-color: rgba($mobileColor, .8) } }
-.mobile-portrait { @include d(mobilePortrait) { background-color: rgba($mobileColor, .6) } }
-.tablet { @include d(tablet) { background-color: rgba($tabletColor, .2); } }
-.tablet-landscape { @include d(tabletLandscape) { background-color: rgba($tabletColor, .8); } }
-.tablet-portrait { @include d(tabletPortrait) { background-color: rgba($tabletColor, .6); } }
-.desktop { @include d(desktop) { background-color: rgba($desktopColor, 1); } }
-.large { @include d(large) { background-color: rgba($largeColor, 1); } }
 
-.mobile-lt { @include d(lt-mobile) { background-color: rgba($mobileColor, .2) } }
-.mobile-landscape-lt { @include d(lt-mobileLandscape) { background-color: rgba($mobileColor, .8) } }
-.mobile-portrait-lt { @include d(lt-mobilePortrait) { background-color: rgba($mobileColor, .6) } }
-.tablet-lt { @include d(lt-tablet) { background-color: rgba($tabletColor, .2); } }
-.tablet-landscape-lt { @include d(lt-tabletLandscape) { background-color: rgba($tabletColor, .8); } }
-.tablet-portrait-lt { @include d(lt-tabletPortrait) { background-color: rgba($tabletColor, .6); } }
-.desktop-lt { @include d(lt-desktop) { background-color: rgba($desktopColor, 1); } }
-.large-lt { @include d(lt-large) { background-color: rgba($largeColor, 1); } }
 
-.mobile-gt { @include d(gt-mobile) { background-color: rgba($mobileColor, .2) } }
-.mobile-landscape-gt { @include d(gt-mobileLandscape) { background-color: rgba($mobileColor, .8) } }
-.mobile-portrait-gt { @include d(gt-mobilePortrait) { background-color: rgba($mobileColor, .6) } }
-.tablet-gt { @include d(gt-tablet) { background-color: rgba($tabletColor, .2); } }
-.tablet-landscape-gt { @include d(gt-tabletLandscape) { background-color: rgba($tabletColor, .8); } }
-.tablet-portrait-gt { @include d(gt-tabletPortrait) { background-color: rgba($tabletColor, .6); } }
-.desktop-gt { @include d(gt-desktop) { background-color: rgba($desktopColor, 1); } }
-.large-gt { @include d(gt-large) { background-color: rgba($largeColor, 1); } }
+
+// .device {
+// 	position: relative;
+// 	padding: 10px;
+// 	background-color: #F5F5F5;
+// 	border-bottom: 1px solid #E0E0E0;
+// 	@include border-radius(5px);
+// 	@include transition(all, .4s, linear);
+// }
+// .mobile { @include d(mobile) { background-color: rgba($mobileColor, .2) } }
+// .mobile-landscape { @include d(mobileLandscape) { background-color: rgba($mobileColor, .8) } }
+// .mobile-portrait { @include d(mobilePortrait) { background-color: rgba($mobileColor, .6) } }
+// .tablet { @include d(tablet) { background-color: rgba($tabletColor, .2); } }
+// .tablet-landscape { @include d(tabletLandscape) { background-color: rgba($tabletColor, .8); } }
+// .tablet-portrait { @include d(tabletPortrait) { background-color: rgba($tabletColor, .6); } }
+// .desktop { @include d(desktop) { background-color: rgba($desktopColor, 1); } }
+// .large { @include d(large) { background-color: rgba($largeColor, 1); } }
+
+// .mobile-lt { @include d(lt-mobile) { background-color: rgba($mobileColor, .2) } }
+// .mobile-landscape-lt { @include d(lt-mobileLandscape) { background-color: rgba($mobileColor, .8) } }
+// .mobile-portrait-lt { @include d(lt-mobilePortrait) { background-color: rgba($mobileColor, .6) } }
+// .tablet-lt { @include d(lt-tablet) { background-color: rgba($tabletColor, .2); } }
+// .tablet-landscape-lt { @include d(lt-tabletLandscape) { background-color: rgba($tabletColor, .8); } }
+// .tablet-portrait-lt { @include d(lt-tabletPortrait) { background-color: rgba($tabletColor, .6); } }
+// .desktop-lt { @include d(lt-desktop) { background-color: rgba($desktopColor, 1); } }
+// .large-lt { @include d(lt-large) { background-color: rgba($largeColor, 1); } }
+
+// .mobile-gt { @include d(gt-mobile) { background-color: rgba($mobileColor, .2) } }
+// .mobile-landscape-gt { @include d(gt-mobileLandscape) { background-color: rgba($mobileColor, .8) } }
+// .mobile-portrait-gt { @include d(gt-mobilePortrait) { background-color: rgba($mobileColor, .6) } }
+// .tablet-gt { @include d(gt-tablet) { background-color: rgba($tabletColor, .2); } }
+// .tablet-landscape-gt { @include d(gt-tabletLandscape) { background-color: rgba($tabletColor, .8); } }
+// .tablet-portrait-gt { @include d(gt-tabletPortrait) { background-color: rgba($tabletColor, .6); } }
+// .desktop-gt { @include d(gt-desktop) { background-color: rgba($desktopColor, 1); } }
+// .large-gt { @include d(gt-large) { background-color: rgba($largeColor, 1); } }
+
+// .mobile {
+// 	@include device( mobile ) {
+// 		background-color: rgba( $mobileColor, .2 );
+// 	}
+// }
+
 
 /**
  * Background
@@ -97,7 +181,7 @@ $largeColor : #FCE622;
 
 #linear-gradient {
 	@include linear-gradient(to left, #E0E0E0 0%, #EE3B43 50%, #E0E0E0 100% );
-} 
+}
 
 /**
  * Border Radius
@@ -182,6 +266,12 @@ $largeColor : #FCE622;
 	@include rotate(20);
 }
 
+#rotate-alt {
+	@extend .small;
+	@extend .bg-color;
+	@include rotate(20deg);
+}
+
 /**
  * Skew
  */
@@ -230,5 +320,34 @@ $largeColor : #FCE622;
 		h2, p {
 			color: white;
 		}
+	}
+}
+
+/**
+ * Hamburger
+ */
+#hamburger {
+	nav {
+		@include hamburger();
+	}
+}
+
+/**
+ * Grayscale
+ */
+#grayscale {
+	img {
+		@include greyscale;
+	}
+}
+
+/**
+ * Close
+ */
+#close {
+	div {
+
+		@include x;
+
 	}
 }
