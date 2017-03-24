@@ -49,7 +49,7 @@ $adapt-default-device-map: (
 
     @if str-index( $device, 'tabletLandscape' ) {
         @warn "Using deprecated device identifier 'tabletLandscape'. Use 'tablet-landscape' instead.";
-        $device: str-slice( $device, 1, str-index( $device, 'tabletPortrait' ) - 1 ) + 'tablet-portrait';
+        $device: str-slice( $device, 1, str-index( $device, 'tabletLandscape' ) - 1 ) + 'tablet-landscape';
     }
 
     @if str-index( $device, 'mobilePortrait' ) {
@@ -59,7 +59,7 @@ $adapt-default-device-map: (
 
     @if str-index( $device, 'mobileLandscape' ) {
         @warn "Using deprecated device identifier 'mobileLandscape'. Use 'mobile-landscape' instead.";
-        $device: str-slice( $device, 1, str-index( $device, 'mobilePortrait' ) - 1 ) + 'mobile-portrait';
+        $device: str-slice( $device, 1, str-index( $device, 'mobileLandscape' ) - 1 ) + 'mobile-landscape';
     }
 
     @return $device;
