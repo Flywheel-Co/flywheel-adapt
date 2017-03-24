@@ -1,0 +1,13 @@
+/**
+ * Transition
+ */
+#transition {
+	background: #ccc;
+	text-align: center;
+	@include transition(all, .3s, linear);
+
+	&:hover {
+		background: #999;
+		@include br( 32px );
+	}
+}

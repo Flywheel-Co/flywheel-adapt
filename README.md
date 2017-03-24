@@ -2,6 +2,8 @@
 
 Flywheel Adapt is a collection of Sass mixins and CSS helper classes to assist in generating cross-browser and cross-device styles. 
 
+[View Website](http://adapt.flywheel.co)
+
 ## Installation
 
 #### Bower

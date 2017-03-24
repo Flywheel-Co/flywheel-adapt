@@ -1,0 +1,68 @@
+
+/**
+ * Responsive
+ */
+.devices {
+
+	@mixin active-device {
+		padding: 10px;
+		color: #444;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	&> div {
+		position: relative;
+		padding: 10px;
+		background-color: #F5F5F5;
+		border-bottom: 1px solid #E0E0E0;
+		color: #ccc;
+		padding: 2px 10px;
+
+		@include border-radius(5px);
+		@include transition(all, .3s, linear);
+
+		// Only
+		&.mobile { @include device( mobile ) { @include active-device; } }
+		&.mobile-landscape { @include device( mobileLandscape ) { @include active-device; } }
+		&.mobile-portrait { @include device( mobile-portrait ) { @include active-device; } }
+		&.tablet { @include device( tablet ) { @include active-device; } }
+		&.tablet-landscape { @include device( tabletLandscape ) { @include active-device; } }
+		&.tablet-portrait { @include device( tablet-portrait ) { @include active-device; } }
+		&.desktop { @include device( desktop ) { @include active-device; } }
+		&.large { @include device( large ) { @include active-device; } }
+
+		// Less than
+		&.lt-mobile { @include d( lt-mobile ) { @include active-device; } }
+		&.lt-mobile-landscape { @include d( lt-mobile-landscape ) { @include active-device; } }
+		&.lt-mobile-portrait { @include d( lt-mobile-portrait ) { @include active-device; } }
+		&.lt-tablet { @include d( lt-tablet ) { @include active-device; } }
+		&.lt-tablet-landscape { @include d(lt-tablet-landscape) { @include active-device; } }
+		&.lt-tablet-portrait { @include d( lt-tablet-portrait ) { @include active-device; } }
+		&.lt-desktop { @include d( lt-desktop ) { @include active-device; } }
+		&.lt-large { @include d( lt-large ) { @include active-device; } }
+
+		// Less than or equal to
+		&.lte-mobile { @include d( lte-mobile ) { @include active-device; } }
+		&.lte-mobile-landscape { @include d( lte-mobile-landscape ) { @include active-device; } }
+		&.lte-mobile-portrait { @include d( lte-mobile-portrait ) { @include active-device; } }
+		&.lte-tablet { @include d( lte-tablet ) { @include active-device; } }
+		&.lte-tablet-landscape { @include d(lte-tablet-landscape) { @include active-device; } }
+		&.lte-tablet-portrait { @include d( lte-tablet-portrait ) { @include active-device; } }
+		&.lte-desktop { @include d( lte-desktop ) { @include active-device; } }
+		&.lte-large { @include d( lte-large ) { @include active-device; } }
+
+		// Greater than
+		&.gt-mobile { @include device( gt-mobile ) { @include active-device; } }
+		&.gt-mobile-landscape { @include device( gt-mobile-landscape ) { @include active-device; } }
+		&.gt-mobile-portrait { @include device( gt-mobile-portrait ) { @include active-device; } }
+		&.gt-tablet { @include device( gt-tablet ) { @include active-device; } }
+		&.gt-tablet-landscape { @include device(gt-tablet-landscape) { @include active-device; } }
+		&.gt-tablet-portrait { @include device( gt-tablet-portrait ) { @include active-device; } }
+		&.gt-desktop { @include device( gt-desktop ) { @include active-device; } }
+		&.gt-large { @include device( gt-large ) { @include active-device; } }
+
+	}
+}
+
+

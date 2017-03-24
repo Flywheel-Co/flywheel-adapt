@@ -1,0 +1,23 @@
+.wrapper {
+	width: 90%;
+	max-width: 720px;
+	margin: 0 auto;
+	@include cf;
+}
+
+section {
+	margin: 50px 0 72px;
+}
+
+.padded {
+	padding: 64px 24px;
+}
+
+.block {
+	margin-bottom: 24px;
+}
+
+.align-center {
+	text-align: center;
+}
+
