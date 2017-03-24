@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Flywheel Adapt</title>
+		<link rel="stylesheet" href="/test/assets/css/adapt-test.css">
+	</head>
+	<body>
+
+		<header id="primary-header">
+			<div class="wrapper">
+				<h1>Flywheel Adapt Testing</h1>
+			</div>
+		</header>
+
+		<div class="wrapper">
+
+			@@include( 'responsive.html' )
+			@@include( 'responsive-gt.html' )
+			@@include( 'responsive-lt.html' )
+			@@include( 'responsive-gte.html' )
+			@@include( 'responsive-lte.html' )
+
+			@@include( 'backgrounds.html' )
+			@@include( 'borders.html' )
+			@@include( 'box-shadows.html' )
+			@@include( 'box-sizing.html' )
+			@@include( 'forms.html' )
+			@@include( 'transforms.html' )
+			@@include( 'transitions.html' )
+			@@include( 'grayscale.html' )
+			@@include( 'hamburger.html' )
+			@@include( 'x.html' )
+
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#hamburger nav').on('click', function() {
+					$(this).toggleClass('active');
+					return false;
+				});
+			});
+		</script>
+
+	</body>
+</html>

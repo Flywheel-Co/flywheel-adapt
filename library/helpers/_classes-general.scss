@@ -54,6 +54,6 @@
 /// This class will prevent the window from scrolling.
 ///
 /// @since 1.0.0
-body, html {
+body.no-scroll {
 	overflow: hidden !important;
 }
