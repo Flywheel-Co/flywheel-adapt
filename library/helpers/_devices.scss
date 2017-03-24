@@ -134,37 +134,3 @@
 @mixin gte-tablete-landscape { @include d(gte-tablete-landscape) { @content; } }
 @mixin gte-desktop          { @include d(gte-desktop) { @content; } }
 @mixin gte-large-device     { @include d(gte-large) { @content; } }
-
-////
-/// Display deprecation notices and provide backwards compatability for camelCase device
-/// identifiers that were previously used.
-///
-/// @since 1.0.0
-/// @type  function
-///
-/// @param {string} $device a valid device identifier with optional prefix
-////
-@function deprecated-devices( $device ) {
-
-    @if str-index( $device, 'tabletPortrait' ) {
-        @warn "Using deprecated device identifier 'tabletPortrait'. Use 'tablet-portrait' instead.";
-        $device: str-slice( $device, 1, str-index( $device, 'tabletPortrait' ) - 1 ) + 'tablet-portrait';
-    }
-
-    @if str-index( $device, 'tabletLandscape' ) {
-        @warn "Using deprecated device identifier 'tabletLandscape'. Use 'tablet-landscape' instead.";
-        $device: str-slice( $device, 1, str-index( $device, 'tabletPortrait' ) - 1 ) + 'tablet-portrait';
-    }
-
-    @if str-index( $device, 'mobilePortrait' ) {
-        @warn "Using deprecated device identifier 'mobilePortrait'. Use 'mobile-portrait' instead.";
-        $device: str-slice( $device, 1, str-index( $device, 'mobilePortrait' ) - 1 ) + 'mobile-portrait';
-    }
-
-    @if str-index( $device, 'mobileLandscape' ) {
-        @warn "Using deprecated device identifier 'mobileLandscape'. Use 'mobile-landscape' instead.";
-        $device: str-slice( $device, 1, str-index( $device, 'mobilePortrait' ) - 1 ) + 'mobile-portrait';
-    }
-
-    @return $device;
-}
