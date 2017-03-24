@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+////
+/// Transform mixins
+///
+/// @since 1.0.0
+////
+
+////
+/// Define a transform and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {list} $value definition value
+////
+@mixin transform( $value ) {
+    @include p((transform: $value));
+}
+
+////
+/// Define a transform origin and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {string} $value transform origin
+////
+@mixin transform-origin( $value ) {
+    @include p((transform-origin: $value));
+}
+
+////
+/// Define a 3d translation and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {string} $x x-axis value
+/// @param {string} $y y-axis value
+/// @param {string} $z z-axis value
+////
+@mixin translate3d( $x, $y, $z ) {
+    @include p((transform: translate3d($x,$y,$z)));
+}
+
+////
+/// Enable hardware acceleration
+///
+/// @since 1.0.0
+////
+@mixin accel() {
+    @include translate3d(0,0,0);
+}
+
+////
+/// Define a perspective and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {length} $length perspective value
+////
+@mixin perspective( $length ) {
+    @include p((perspective: $length));
+}
+
+////
+/// Define a rotation and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+/// @todo  the `@if unitless` statement is reused and should be included differently
+///
+/// @param {angle} $angle rotation angle
+////
+@mixin rotate( $angle ) {
+    @if unitless( $angle ) {
+        $angle: $angle + deg;
+    }
+
+    @include p((transform: rotate($angle)));
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+////
+/// Define a rotation on the x-axis and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+/// @todo  the `@if unitless` statement is reused and should be included differently
+///
+/// @param {angle} $angle rotation angle
+////
+@mixin rotateX( $angle ) {
+    @if unitless( $angle ) {
+        $angle: $angle + deg;
+    }
+
+    @include p((transform: rotateX($angle + deg)));
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+////
+/// Define a rotation on the y-axis and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+/// @todo  the `@if unitless` statement is reused and should be included differently
+///
+/// @param {angle} $angle rotation angle
+////
+@mixin rotateY( $angle ) {
+    @if unitless( $angle ) {
+        $angle: $angle + deg;
+    }
+
+    @include p((transform: rotateY($angle + deg)));
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+////
+/// Define a skew and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {integer} $x x degree value to skew
+/// @param {integer} $y y degree value to skey
+////
+@mixin skew( $x, $y ) {
+    @include p((transform: skewX($x) skewY($y)));
+}
+
+////
+/// Define a skew on the x-axis and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {integer} $x x degree value to skew
+////
+@mixin skewX( $x ) {
+    @include p((transform: skewX($x)));
+}
+
+////
+/// Define a skew on the y-axis and output the vendor-prefixed definition
+///
+/// @since 1.0.0
+///
+/// @param {integer} $y y degree value to skey
+////
+@mixin skewY( $y ) {
+    @include p((transform: skewY($y)));
+}
+
