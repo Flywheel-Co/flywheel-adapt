@@ -28,7 +28,7 @@ Once downloaded, import the Flywheel Adapt Sass library into your project.
 
 ## Links
 
- - [Documentation](https://adapt.flywheel.co)
+ - [Documentation](http://adapt.flywheel.co)
  - [Issues](https://github.com/Flywheel-Co/flywheel-adapt/issues)
  - [Releases](https://github.com/Flywheel-Co/flywheel-adapt/releases)
 
