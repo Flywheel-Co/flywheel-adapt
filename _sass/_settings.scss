@@ -1,13 +1,15 @@
+////
+/// Colors
+////
+$colorBlack:  #333;
+$colorMedium: rgba( $colorBlack, .6 );
+$colorWhite:  #fff;
+$colorBlue:   #5e98bc;
 
-$colorBackground: #f4f4ed;
-$colorBlack: #202326;
-$colorWhite: #fff;
-$colorBlue: #5e98bc;
-
-$fontPrimary: 'futura-pt', sans-serif;
-
-$fontSecondary: 'acumin-pro-semi-condensed', sans-serif;
-
-$fontCondensed: 'acumin-pro-extra-condensed', sans-serif;
-
-$fontMono: 'Inconsolata', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+////
+/// Font Families
+////
+$fontFamilyPrimary: 'futura-pt', sans-serif;;
+$fontFamilySecondary: 'freight-text-pro', serif;
+$fontFamilyHeadline: $fontFamilySecondary;
+$fontFamilyMono: 'Inconsolata', Consolas, 'Liberation Mono', Menlo, Courier, monospace;

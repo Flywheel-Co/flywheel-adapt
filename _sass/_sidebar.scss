@@ -12,7 +12,7 @@
  * Section Nav
  */
 .section-nav {
-	margin-bottom: 28px;
+	margin-bottom: 32px;
 
 	a {
 		text-decoration: none;
@@ -23,14 +23,23 @@
 
 		a {
 			color: $colorBlack;
-			font: 14px/1 $fontSecondary;
 			text-transform: uppercase;
+			position: relative;
+
 
 			&.active {
-				padding-bottom: 2px;
 				font-weight: 600;
-				letter-spacing: 0.02em;
-				border-bottom: 1px solid $colorBlack;
+
+				&:before {
+					content: '';
+					position: absolute;
+					background: $colorBlack;
+					top: 50%;
+					left: -20px;
+					margin-top: -2px;
+					@include size( 4px );
+					@include border-radius( 4px );
+				}
 			}
 		}
 	}

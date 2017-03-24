@@ -8,12 +8,10 @@
 
 		{% include header.html %}
 
-		<div id="masthead">
-			<div class="wrapper">
-				<p class="col-12">
-					{{ site.description }}
-				</p>
-			</div>
+		<div id="masthead" class="wrapper">
+			<p class="col-10">
+				{{ site.description }}
+			</p>
 		</div>
 
 		<div class="wrapper">

@@ -4,7 +4,7 @@ type: classes
 order: 20
 ---
 
-##### Mobile
+#### Mobile
 
 <table class="code">
 	<tr>
@@ -21,7 +21,7 @@ order: 20
 	</tr>
 </table>
 
-##### Tablet
+#### Tablet
 <table class="code">
 	<tr>
 		<th>.show-only-tablet</th>
@@ -37,7 +37,7 @@ order: 20
 	</tr>
 </table>
 
-##### Desktop
+#### Desktop
 <table class="code">
 	<tr>
 		<th>.show-only-desktop</th>
@@ -53,7 +53,7 @@ order: 20
 	</tr>
 </table>
 
-##### Modifiers
+#### Modifiers
 The mobile and landscape classes above can also be used with an orientational modifier suffix.
 
 <table class="code">

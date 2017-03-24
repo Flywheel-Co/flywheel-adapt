@@ -1,8 +1,8 @@
 #primary-footer {
-	background: $colorBlack;
 	margin-top: 72px;
 	color: $colorWhite;
-	padding: 20px 0;
+	padding: 42px 0;
+	border-top: 1px solid $colorBlack;
 
 	.main-navigation {
 		@include mobile {
@@ -11,14 +11,12 @@
 	}
 
 	.attribution {
-		@extend h2;
-		font-size: 16px;
+		@extend h1;
 		line-height: 20px;
 
 		@include mobile {
 			text-align: center;
 		}
-
 
 		.fw-logo {
 			display: inline-block;

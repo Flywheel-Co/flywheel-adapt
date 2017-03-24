@@ -21,14 +21,12 @@
 
 	a {
 		display: inline-block;
+		font: 600 14px/1 $fontFamilyPrimary;
 		text-transform: uppercase;
+		letter-spacing: 0.05em;
 		text-decoration: none;
-		color: $colorWhite;
-		font-family: $fontSecondary;
-		margin-left: 20px;
-		font-size: 13px;
-		letter-spacing: .02em;
-
+		color: $colorBlack;
+		margin: 0 2%;
 
 		@include mobile {
 			display: block;

@@ -4,7 +4,7 @@ type: responsive
 order: 20
 ---
 
-##### For a specific device
+#### For a specific device
 
 ```scss
 // target all mobile devices
@@ -19,7 +19,7 @@ order: 20
 }
 ```
 
-##### For devices larger or smaller than a specific device
+#### For devices larger or smaller than a specific device
 
 You can target all devices larger or smaller than a given device by prefixing the device using
 either `lt-` or `gt-`. In addition, to include the device in the results, the prefixes `lte-` and

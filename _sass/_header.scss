@@ -1,15 +1,14 @@
 #primary-header {
-	background: $colorBlack;
-	padding: 32px 0;
+	background: $colorWhite;
+	padding: 46px 0;
 	position: relative;
-	@include box-shadow( 0, 1px, 1px, $colorBlack );
+	border-bottom: 1px solid $colorBlack;
 
-	h2 {
-		@include cf;
+	h1 {
 
 		a:first-child {
 			text-decoration: none;
-			color: $colorWhite;
+			color: $colorBlack
 		}
 
 		#toggle-nav {

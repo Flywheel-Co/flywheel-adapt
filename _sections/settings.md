@@ -15,7 +15,7 @@ Adapt contains a few values for initial configuration to assist streamline and c
 | `$adapt-device-map`       | See [default device map](#default-device-map). | Device map for responsive queries |
 
 
-##### Default Device Map
+#### Default Device Map
 ```scss
 $adapt-device-map: (
     mobile: (max : 667px),

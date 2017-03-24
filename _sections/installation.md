@@ -4,20 +4,20 @@ type: getstarted
 order: 10
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-
-##### Composer
-```shell
-composer require flywheel-co/adapt
-```
-
-##### Bower
-This is currently a private package and can only be included by permitted projects.
-
+#### Bower
 ```shell
 bower install --save flywheel-adapt
 ```
 
-##### Other
-You can download Flywheel Adapt directly from the <a href="https://github.com/Flywheel-Co/flywheel-adapt/releases">releases page</a>.
+#### Composer
+```shell
+composer require flywheel-co/adapt
+```
 
+#### npm
+```shell
+npm install flywheel-adapt
+```
+
+#### Download
+Alternatively, the latest release can be downloaded as a ZIP archive.<br>[Download](https://github.com/Flywheel-Co/flywheel-adapt/archive/master.zip)
