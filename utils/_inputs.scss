@@ -6,12 +6,10 @@
 /// @since 1.0.0
 ////
 
-////
 /// Text input types
 ///
 /// @since 1.0.0
-/// @type  {list}
-////
+/// @type  {List}
 $adapt-text-inputs: (
 	"[type='color']",
 	"[type='date']",
@@ -31,23 +29,19 @@ $adapt-text-inputs: (
 	"textarea"
 );
 
-////
 /// Toggle input types
 ///
 /// @since 1.0.0
-/// @type  list
-////
+/// @type  {List}
 $adapt-toggle-inputs: (
 	"[type='checkbox']",
 	"[type='radio']"
 );
 
-////
 /// Submit input types
 ///
 /// @since 1.0.0
-/// @type  list
-////
+/// @type  {List}
 $adapt-submit-inputs: (
 	"[type='submit']"
 );

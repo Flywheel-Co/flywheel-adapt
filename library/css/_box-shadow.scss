@@ -6,30 +6,26 @@
 /// @since 1.0.0
 ////
 
-////
 /// Define a box shadow and output the vendor-prefixed definition
 ///
 /// @since 1.0.0
 ///
-/// @param {length} $offset-x x-axis offset
-/// @param {length} $offset-y y-axis offset
-/// @param {length} $blur     blur radius
-/// @param {color}  $color    shadow color
-////
+/// @param {Length} $offset-x - x-axis offset
+/// @param {Length} $offset-y - y-axis offset
+/// @param {Length} $blur     - blur radius
+/// @param {Color}  $color    - shadow color
 @mixin box-shadow( $offset-x, $offset-y, $blur, $color ) {
     @include p((box-shadow: $offset-x $offset-y $blur $color));
 }
 
-////
 /// Define an inset box shadow and output the vendor-prefixed definition
 ///
 /// @since 1.0.0
 ///
-/// @param {length} $offset-x x-axis offset
-/// @param {length} $offset-y y-axis offset
-/// @param {length} $blur     blur radius
-/// @param {color}  $color    shadow color
-////
+/// @param {Length} $offset-x - x-axis offset
+/// @param {Length} $offset-y - y-axis offset
+/// @param {Length} $blur     - blur radius
+/// @param {Color}  $color    - shadow color
 @mixin box-shadow-inset( $offset-x, $offset-y, $blur, $color ) {
     @include p((box-shadow: inset $offset-x $offset-y $blur $color));
 }

@@ -1,14 +1,12 @@
 @charset "UTF-8";
 
-////
 /// Conditionally display the Eric Meyer reset
 ///
 /// $includeReset is included for backwards compatibility
 ///
 /// @since 1.0.0
 ///
-/// @require {$adapt-include-reset}
-////
+/// @require {Bool} $adapt-include-reset
 @if $adapt-include-reset or $includeReset {
 
   /* http://meyerweb.com/eric/tools/css/reset/
