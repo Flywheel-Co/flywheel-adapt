@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-////
 /// Hamburger button mixin
 ///
 /// Generates a hamburger-style button.
@@ -10,19 +9,18 @@
 ///
 /// @since 1.0.0
 ///
-/// @param {color}  $color    [#333] hamburger bar color
-/// @param {length} $width    [24px] hamburger width
-/// @param {length} $height   [18px] hamburger height
-/// @param {length} $bar-size [4px] bar height
+/// @param {Color}  $color    [#333] - hamburger bar color
+/// @param {Length} $width    [24px] - hamburger width
+/// @param {Length} $height   [18px] - hamburger height
+/// @param {Length} $bar-size [4px] - bar height
 ///
 /// @example scss
 ///     #menu-button {
 ///         @include hamburger( #555, 32px, 20px, 3px );
 ///     }
 ///
-/// @example html
+/// @example markup
 ///     <div id="menu"><span></span></div>
-////
 @mixin hamburger( $color: #333, $width: 24px, $height: 18px, $bar-size: 4px ) {
     position: relative;
     height: $height;

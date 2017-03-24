@@ -6,14 +6,12 @@
 /// @since 1.0.0
 ////
 
-////
 /// Test if a passed value is a valid direction
 ///
 /// @since 1.0.0
 ///
-/// @param  {mixed}   $value value to test
-/// @return {boolean}
-////
+/// @param  {List} $value - value to test
+/// @return {Bool}
 @function is-direction( $value ) {
 	$is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
 	$is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
@@ -21,15 +19,13 @@
 	@return $is-keyword or $is-angle;
 }
 
-////
 /// Convert a direction to legacy syntax
 ///
 /// @since 1.0.0
 ///
-/// @param   {string}   $value       value to convert
-/// @require {function} is-direction
-/// @return  {string}                legacy direction syntax
-////
+/// @param   {String}   $value        - value to convert
+/// @require {Function} is-direction
+/// @return  {String}                 - legacy direction syntax
 @function legacy-direction( $value ) {
 	@if is-direction($value) == false {
 		@error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.";

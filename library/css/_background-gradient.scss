@@ -6,16 +6,13 @@
 /// @since 1.0.0
 ////
 
-////
 /// Define a background gradient and ouput the vendor prefixed result
 ///
 /// @since 1.0.0
-/// @alias {gradient}
 ///
-/// @param {string} $start-color beginning color of the gradient
-/// @param {string} $end-color   end color of the gradient
-/// @param {string} $direction   [top] direction of the gradient
-////
+/// @param {String} $start-color - beginning color of the gradient
+/// @param {String} $end-color   - end color of the gradient
+/// @param {String} $direction   - [top] direction of the gradient
 @mixin background-gradient( $start-color, $end-color, $direction: top ) {
     background-color: $start-color;
     background: -webkit-gradient(linear, left $direction, left $direction, from($start-color), to($end-color));
@@ -26,25 +23,20 @@
     background: linear-gradient(to $direction, $start-color, $end-color);
 }
 
-////
 /// Background gradient alias
 ///
 /// @since 1.0.0
-/// @see   {background-gradient}
-////
+/// @alias background-gradient
 @mixin gradient( $start-color, $end-color, $direction: top ) {
 	@include background-gradient($start-color, $end-color, $direction);
 }
 
-////
 /// Define a linear gradient and ouput the vendor prefixed result
 ///
 /// @since 1.0.0
-/// @alias {gradient}
 ///
-/// @param {string} $direction   direction of the gradient
-/// @param {list}   $color-stops number of colors and stops
-////
+/// @param {String} $direction   - direction of the gradient
+/// @param {List}   $color-stops - number of colors and stops
 @mixin linear-gradient( $direction, $color-stops... ) {
 
 	// Direction has been omitted and happens to be a color-stop
