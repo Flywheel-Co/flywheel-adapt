@@ -1,4 +1,4 @@
 *.css
 *.log
 node_modules
-./index.html
+/index.html
