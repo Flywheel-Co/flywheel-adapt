@@ -14,7 +14,7 @@
 		#toggle-nav {
 			display: none;
 			float: right;
-			@include hamburger( $colorWhite, 24px, 18px, 6 );
+			@include hamburger( $colorBlack, 24px, 18px, 6 );
 
 			@include mobile {
 				display: block;
