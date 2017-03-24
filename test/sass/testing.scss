@@ -75,11 +75,11 @@ $largeColor : #FCE622;
 
 		// Only
 		&.mobile { @include device( mobile ) { @include active-device; } }
-		&.mobile-landscape { @include device( mobile-landscape ) { @include active-device; } }
+		&.mobile-landscape { @include device( mobileLandscape ) { @include active-device; } }
 		&.mobile-portrait { @include device( mobile-portrait ) { @include active-device; } }
 		&.tablet { @include device( tablet ) { @include active-device; } }
-		&.tablet-landscape { @include device( tablet-landscape ) { @include active-device; } }
-		&.tablet-portrait { @include device( tablet-portrait ) { @include active-device; } }
+		&.tablet-landscape { @include device( tabletLandscape ) { @include active-device; } }
+		&.tablet-portrait { @include device( tabletPortrait ) { @include active-device; } }
 		&.desktop { @include device( desktop ) { @include active-device; } }
 		&.large { @include device( large ) { @include active-device; } }
 
