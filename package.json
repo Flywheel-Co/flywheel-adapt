@@ -4,5 +4,9 @@
     "gulp": "^3.9.0",
     "gulp-notify": "^3.0.0",
     "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "del": "^2.2.2",
+    "gulp-file-include": "^1.0.0"
   }
 }
