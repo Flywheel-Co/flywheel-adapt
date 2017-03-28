@@ -1,11 +1,11 @@
 {
   "name": "flywheel-adapt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://adapt.flywheel.co",
   "authors": [
     "Flywheel Co. <dev@flywheel.co"
   ],
-  "description": "This is a group of frequently used and re-used Sass mixins, and other helpers to assist in rapid development.",
+  "description": "A collection of Sass mixins and CSS helper classes to assist in generating cross-browser and cross-device styles.",
   "main": "_adapt.scss",
   "keywords": ["Sass", "SCSS", "framework", "CSS", "mixins", "responsive", "Flywheel Co"],
   "license": "MIT",

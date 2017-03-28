@@ -7,16 +7,14 @@
 /// @todo  This functionality can likely be cleaned up quite a bit as it's super repetitive.
 ////
 
-////
 /// Display on a given device
 ///
 /// @since 1.0.0
 /// @see   $adapt-devices
 ///
-/// @example html
+/// @example markup
 /// 	<div class="show-mobile">...</div>
 /// 	<div class="show-tablet-inline-block">...</div>
-////
 @each $device in $adapt-devices {
 
 	// without display suffix
@@ -37,16 +35,14 @@
 
 }
 
-////
 /// Display only on a given device
 ///
 /// @since 1.0.0
 /// @see   $adapt-devices
 ///
-/// @example html
+/// @example markup
 /// 	<div class="show-only-mobile">...</div>
 /// 	<div class="show-only-tablet-inline-block">...</div>
-////
 @each $device in $adapt-devices {
 
 	// without display suffix

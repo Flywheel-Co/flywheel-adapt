@@ -11,20 +11,16 @@
 ////
 @if $adapt-base-styles {
 
-	////
 	/// Document to 100% height
 	///
 	/// @since 1.0.0
-	////
 	html, body {
 		height: 100%;
 	}
 
-	////
 	/// Remove webkit styles on text-based inputs
 	///
 	/// @since 1.0.0
-	////
 	@each $type in $adapt-text-inputs {
 		input#{$type} {
 			-webkit-appearance: none;
@@ -32,11 +28,9 @@
 		}
 	}
 
-	////
 	/// Submit button style updates
 	///
 	/// @since 1.0.0
-	////
 	input[type="submit"],
 	button[type="submit"] {
 		cursor: pointer;
