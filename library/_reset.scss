@@ -2,12 +2,10 @@
 
 /// Conditionally display the Eric Meyer reset
 ///
-/// $includeReset is included for backwards compatibility
-///
 /// @since 1.0.0
 ///
 /// @require {Bool} $adapt-include-reset
-@if $adapt-include-reset or $includeReset {
+@if $adapt-include-reset {
 
   /* http://meyerweb.com/eric/tools/css/reset/
      v2.0 | 20110126
