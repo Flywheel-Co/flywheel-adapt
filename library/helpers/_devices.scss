@@ -62,7 +62,8 @@
 
         // Greater than or equal to
         @if $operator == 'gte'  {
-            $query: $query + 'and ( min-width:' + if(map-has-key( $sizes, min ), map-get($sizes, min), 9999999px) + ')';
+
+            $query: $query + 'and ( min-width:' + if(map-has-key( $sizes, min ), map-get($sizes, min), 0px) + ')';
         }
     }
 

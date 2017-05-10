@@ -62,6 +62,16 @@
 		&.gt-desktop { @include device( gt-desktop ) { @include active-device; } }
 		&.gt-large { @include device( gt-large ) { @include active-device; } }
 
+		// Greater than
+		&.gte-mobile { @include device( gte-mobile ) { @include active-device; } }
+		&.gte-mobile-landscape { @include device( gte-mobile-landscape ) { @include active-device; } }
+		&.gte-mobile-portrait { @include device( gte-mobile-portrait ) { @include active-device; } }
+		&.gte-tablet { @include device( gte-tablet ) { @include active-device; } }
+		&.gte-tablet-landscape { @include device(gte-tablet-landscape) { @include active-device; } }
+		&.gte-tablet-portrait { @include device( gte-tablet-portrait ) { @include active-device; } }
+		&.gte-desktop { @include device( gte-desktop ) { @include active-device; } }
+		&.gte-large { @include device( gte-large ) { @include active-device; } }
+
 	}
 }
 
