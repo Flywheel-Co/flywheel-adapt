@@ -1,25 +1,43 @@
+////
+/// Flywheel Adapt test environment
+///
+/// @version 2.0.0
+/// @author  chriseverson
+////
+
+/// Typography import
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+/// Import settings
+@import 'settings';
+
+/// Import adapt itself
+@import '../../../adapt';
+
+/// Import test example styles
+@import 'partials/grid';
 
 // $responsiveMap : (
 // 	mobile : (max : 900)
 // );
 
-@import 'settings';
-@import '../../../adapt';
-@import 'typography';
-@import 'header';
-@import 'layout';
+// @import 'settings';
+// @import '../../../adapt';
+// @import 'typography';
+// @import 'header';
+// @import 'layout';
 
-@import 'partials/backgrounds';
-@import 'partials/borders';
-@import 'partials/box-shadows';
-@import 'partials/box-sizing';
-@import 'partials/forms';
-@import 'partials/grayscale';
-@import 'partials/hamburger';
-@import 'partials/responsive';
-@import 'partials/transforms';
-@import 'partials/transitions';
-@import 'partials/x';
+// @import 'partials/backgrounds';
+// @import 'partials/borders';
+// @import 'partials/box-shadows';
+// @import 'partials/box-sizing';
+// @import 'partials/forms';
+// @import 'partials/grayscale';
+// @import 'partials/hamburger';
+// @import 'partials/responsive';
+// @import 'partials/transforms';
+// @import 'partials/transitions';
+// @import 'partials/x';
 
 
 

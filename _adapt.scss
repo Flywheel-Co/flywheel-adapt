@@ -1,40 +1,50 @@
 ////
 /// Flywheel Adapt
+/// This is the library entrypoint
 ///
-/// @link    https://flywheel.co
-/// @version 1.0.2
+/// @version 2.0.0
+/// @author  chriseverson
 ////
 
-@import 'utils/devices';
-@import 'utils/directions';
-@import 'utils/display';
-@import 'utils/inputs';
+@import 'node_modules/normalize-scss/sass/normalize';
 
-@import 'library/settings';
-@import 'library/prefixer';
-@import 'library/reset';
+@import 'src/variables';
 
-@import 'library/helpers/backgrounds';
-@import 'library/helpers/blur';
-@import 'library/helpers/clearfix';
-@import 'library/helpers/devices';
-@import 'library/helpers/grayscale';
-@import 'library/helpers/hamburger';
-@import 'library/helpers/sizing';
-@import 'library/helpers/text';
-@import 'library/helpers/classes-general';
-@import 'library/helpers/classes-responsive';
-@import 'library/helpers/x';
+@import 'src/functions/str-replace';
 
-@import 'library/css/animation';
-@import 'library/css/background-gradient';
-@import 'library/css/borders';
-@import 'library/css/box-shadow';
-@import 'library/css/box-sizing';
-@import 'library/css/font-face';
-@import 'library/css/forms';
-@import 'library/css/keyframes';
-@import 'library/css/transform';
-@import 'library/css/transition';
+@import 'src/grid/row';
+@import 'src/grid/col';
 
-@import 'library/base';
+// @import 'utils/devices';
+// @import 'utils/directions';
+// @import 'utils/display';
+// @import 'utils/inputs';
+
+// @import 'library/settings';
+// @import 'library/prefixer';
+// @import 'library/reset';
+
+// @import 'library/helpers/backgrounds';
+// @import 'library/helpers/blur';
+// @import 'library/helpers/clearfix';
+// @import 'library/helpers/devices';
+// @import 'library/helpers/grayscale';
+// @import 'library/helpers/hamburger';
+// @import 'library/helpers/sizing';
+// @import 'library/helpers/text';
+// @import 'library/helpers/classes-general';
+// @import 'library/helpers/classes-responsive';
+// @import 'library/helpers/x';
+
+// @import 'library/css/animation';
+// @import 'library/css/background-gradient';
+// @import 'library/css/borders';
+// @import 'library/css/box-shadow';
+// @import 'library/css/box-sizing';
+// @import 'library/css/font-face';
+// @import 'library/css/forms';
+// @import 'library/css/keyframes';
+// @import 'library/css/transform';
+// @import 'library/css/transition';
+
+// @import 'library/base';

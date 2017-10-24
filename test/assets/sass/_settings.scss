@@ -1,17 +1,17 @@
-/**
- * Colors
- */
-$colorBlack: #222;
-$colorWhite: #fff;
+////
+/// Adapt test environment settings
+////
 
-$mobileColor : #CA2124;
-$tabletColor : #34A1CA;
-$desktopColor : #22D73B;
-$largeColor : #FCE622;
+/// Colors
+$color-white:  #fff;
+$color-dark:   #222;
+$color-medium: #888;
+$color-light:  #ddd;
+$color-red:    #CA2124;
+$color-blue:   #34A1CA;
+$color-green:  #22D73B;
+$color-yellow: #FCE622;
 
-/**
- * Typography
- */
-$fontPrimary: 'Open Sans', sans-serif;
-$fontHeadline: 'Roboto', sans-serif;
-
+/// Typography
+$font-family-primary: 'Open Sans', sans-serif;
+$font-familiy-secondary: 'Roboto', sans-serif;

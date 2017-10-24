@@ -33,5 +33,8 @@
     "_adapt.scss",
     "LICENSE",
     "README.md"
-  ]
+  ],
+  "dependencies": {
+    "normalize-scss": "^7.0.0"
+  }
 }

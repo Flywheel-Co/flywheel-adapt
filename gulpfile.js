@@ -60,8 +60,9 @@ gulp.task( 'buildHtml', function() {
  */
 gulp.task('watch', function(){
 	gulp.watch( assets + '/sass/**/*.scss', ['compileSass'] );
-	gulp.watch( './library/**/*.scss', ['compileSass'] );
-	gulp.watch( './utils/**/*.scss', ['compileSass'] );
+	gulp.watch( './src/**/*.scss', ['compileSass'] );
+	// gulp.watch( './library/**/*.scss', ['compileSass'] );
+	// gulp.watch( './utils/**/*.scss', ['compileSass'] );
 	gulp.watch( './_adapt.scss', ['compileSass'] );
 
 	gulp.watch( './test/**/*.html', ['buildHtml'] );

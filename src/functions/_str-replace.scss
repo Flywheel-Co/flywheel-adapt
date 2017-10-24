@@ -1,0 +1,22 @@
+/// Replace a string inside of a string
+///
+/// @group Functions
+/// @since 2.0.0
+/// @param String $search - substring to search for
+/// @param String $replacement - replacement string
+/// @param String $target - source string
+@function str-replace($search, $replacement, $source) {
+
+	$index: str-index(#{$source}, #{$search});
+
+	@if $index {
+
+    	@return str-slice($source, 1, $index - 1) + $replacement + str-replace(str-slice($source, $index + str-length($search)), $search, $replacement);
+
+		// @return str-slice(#{$source}, 1, $index - 1) + #{$replacement} + str-replace(str-slice(#{$source}, $index + str-length(#{$source})), #{$search}, #{$replacement} );
+	}
+
+	@return $source;
+
+
+}

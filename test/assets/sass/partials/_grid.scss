@@ -1,0 +1,59 @@
+////
+/// Grid example / testing environment
+////
+
+/// Row styles
+.row {
+	background: $color-light;
+}
+
+.thing {
+	background: $color-red;
+	height: 100px;
+	@extend %row;
+}
+
+/// Column styles
+.col {
+	min-height: 100px;
+	width: 50px;
+	color: $color-white;
+	font-family: $font-family-primary;
+
+
+	&-red {
+		background: $color-red;
+	}
+
+	&-green {
+		background: $color-green;
+	}
+
+	&-blue {
+		background: $color-blue;
+	}
+
+	&-yellow {
+		background: $color-yellow;
+	}
+
+	&-tall {
+		min-height: 150px;
+	}
+
+	&-short {
+		min-height: 25px;
+	}
+
+	.row-align-baseline & {
+		padding: 42px;
+		box-sizing: border-box;
+		line-height: 1;
+
+		&:nth-child(1) { font-size: 48px; }
+		&:nth-child(2) { font-size: 36px; }
+		&:nth-child(3) { font-size: 24px; }
+		&:nth-child(4) { font-size: 12px; }
+	}
+
+}
