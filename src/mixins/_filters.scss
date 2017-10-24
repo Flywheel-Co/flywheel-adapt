@@ -14,4 +14,7 @@
 /// Blur
 ///
 /// @since 2.0.0
-@mixin blur() {}
+/// @param number $value
+@mixin blur($value) {
+	filter: blur($value);
+}
