@@ -12,8 +12,12 @@
 
 @import 'src/functions/str-replace';
 
+@import 'src/mixins/input';
+@import 'src/mixins/transform';
+
 @import 'src/grid/row';
 @import 'src/grid/col';
+
 
 // @import 'utils/devices';
 // @import 'utils/directions';
@@ -36,15 +40,11 @@
 // @import 'library/helpers/classes-responsive';
 // @import 'library/helpers/x';
 
-// @import 'library/css/animation';
-// @import 'library/css/background-gradient';
-// @import 'library/css/borders';
 // @import 'library/css/box-shadow';
 // @import 'library/css/box-sizing';
 // @import 'library/css/font-face';
 // @import 'library/css/forms';
 // @import 'library/css/keyframes';
 // @import 'library/css/transform';
-// @import 'library/css/transition';
 
 // @import 'library/base';

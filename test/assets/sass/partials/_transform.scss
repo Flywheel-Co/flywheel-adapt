@@ -1,0 +1,31 @@
+////
+/// Transform example / testing environment
+////
+
+/// Transform example item
+.transform-item {
+	background: $color-blue;
+	width: 100px;
+	height: 100px;
+
+	&#transform {
+		&-rotate {
+			@include rotate(45);
+		}
+
+		&-translate {
+			@include translate( 10%, 10% );
+
+			&-x {
+				@include translateX( -50% );
+			}
+
+			&-y {
+				@include translateY( -50% );
+			}
+		}
+
+	}
+
+
+}
