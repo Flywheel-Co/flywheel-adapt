@@ -6,16 +6,14 @@
 /// @since 1.0.0
 ////
 
-////
 /// Define a background image and hide child text
 ///
 /// @since 1.0.0
 ///
-/// @param {length}  $width   width of the element
-/// @param {length}  $height  height of the element
-/// @param {list}    $options background property options
-/// @param {boolean} $cover   [false] toggle background-size:cover
-////
+/// @param {Length} $width         - width of the element
+/// @param {Length} $height        - height of the element
+/// @param {List}   $options       - background property options
+/// @param {Bool}   $cover [false] - toggle background-size:cover
 @mixin bgimg( $width, $height, $options, $cover:false ) {
     display:     block;
     width:       $width;

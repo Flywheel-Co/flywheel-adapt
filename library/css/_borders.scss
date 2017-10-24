@@ -6,36 +6,29 @@
 /// @since 1.0.0
 ////
 
-////
 /// Define a border radius and output the vendor-prefixed definition
 ///
 /// @since 1.0.0
-/// @alias {br}
 ///
-/// @param   {length} $value               [$adapt-border-radius] value of the border radius
-/// @require {var}    $adapt-border-radius
-////
+/// @param   {Length} $value [$adapt-border-radius] - value of the border radius
+/// @require {Length} $adapt-border-radius
 @mixin border-radius( $value: $adapt-border-radius ) {
     @include p((border-radius: $value));
 }
 
-////
 /// Border radius mixin alias
 ///
 /// @since 1.0.0
-/// @see   {border-radius}
-////
+/// @alias border-radius
 @mixin br( $value: $adapt-border-radius ) { @include border-radius($value) }
 
 
-////
 /// Bottom border radius
 ///
 /// @since 1.0.0
 ///
-/// @param   {length} $value               [$adapt-border-radius] value of the border radius
-/// @require {var}    $adapt-border-radius
-////
+/// @param   {Length} $value [$adapt-border-radius] - value of the border radius
+/// @require {Length} $adapt-border-radius
 @mixin border-bottom-radius( $value: $adapt-border-radius ) {
 
     // no shorthand to prefixer due to inconsistancy
@@ -47,14 +40,12 @@
     -webkit-border-bottom-left-radius: $value;
 }
 
-////
 /// Top border radius
 ///
 /// @since 1.0.0
 ///
-/// @param   {length} $value               [$adapt-border-radius] value of the border radius
-/// @require {var}    $adapt-border-radius
-////
+/// @param   {Length} $value [$adapt-border-radius] - value of the border radius
+/// @require {Length} $adapt-border-radius
 @mixin border-top-radius( $value: $adapt-border-radius ) {
 
     // no shorthand to prefixer due to inconsistancy

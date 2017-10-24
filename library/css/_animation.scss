@@ -6,18 +6,16 @@
 /// @since 1.0.0
 ////
 
-////
 /// Define an animation and output the vendor-prefixed definition
 ///
 /// @since 1.0.0
 ///
-/// @param {time}    $delay     animation delay in seconds
-/// @param {time}    $duration  animation duration in seconds
-/// @param {string}  $animation animation name (keyframe)
-/// @param {integer} $repeat    [0] - number of times to repeat the animation
-/// @param {string}  $direction [normal] - animation direction
-/// @param {string}  $easing    [linear] - animation timing function
-////
+/// @param {Time}    $delay     - animation delay in seconds
+/// @param {Time}    $duration  - animation duration in seconds
+/// @param {String}  $animation - animation name (keyframe)
+/// @param {Integer} $repeat    [0] - number of times to repeat the animation
+/// @param {String}  $direction [normal] - animation direction
+/// @param {String}  $easing    [linear] - animation timing function
 @mixin animation ( $delay, $duration, $animation, $repeat: 0, $direction: normal, $easing: linear ) {
 	@include p((animation: $animation $duration $easing $delay $repeat $direction));
 }

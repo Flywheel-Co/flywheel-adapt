@@ -6,64 +6,54 @@
 /// @since 1.0.0
 ////
 
-////
 /// Apply a clearfix to an element
 ///
 /// @group helpers/classes
 /// @since 1.0.0
-/// @see   {clearfix}
+/// @see   clearfix
 ///
-/// @example html
+/// @example markup
 /// 	<div class="clearfix">...</div>
-////
 .clearfix {
 	@include cf;
 }
 
-////
 /// Apply a css float left to an element
 ///
 /// @since 1.0.0
 ///
-/// @example html
+/// @example markup
 /// 	<div class="floatleft">...</div>
-////
 .floatleft {
 	float: left;
 }
 
-////
 /// Apply a css float right to an element
 ///
 /// @since 1.0.0
 ///
-/// @example html
+/// @example markup
 /// 	<div class="floatright">...</div>
-////
 .floatright {
 	float: right;
 }
 
-////
 /// Preloader class
 /// This class can be used to identify when the page is loaded by removing it using JavaScript. It
 /// will disable all transitions until the page the class is removed.
 ///
 /// @since 1.0.0
 ///
-/// @example html
+/// @example markup
 /// 	<body class="preload">...</body>
-////
 .preload * {
     @include p((transition: none !important));
 }
 
-////
 /// No scroll class
 /// This class will prevent the window from scrolling.
 ///
 /// @since 1.0.0
-////
-body, html {
+body.no-scroll {
 	overflow: hidden !important;
 }

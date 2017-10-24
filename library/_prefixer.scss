@@ -1,14 +1,11 @@
 @charset "UTF-8";
 
-////
 /// Generate vendor prefixed definitions
 ///
 /// @since 1.0.0
-/// @alias {p}
 ///
-/// @param {map} $map definitions to be prefixed
-/// @param {list} $vendors vendor prefixes to apply
-////
+/// @param {Map}  $map     - definitions to be prefixed
+/// @param {List} $vendors - vendor prefixes to apply
 @mixin prefix( $map, $vendors: $adapt-browser-prefixes ) {
     @each $prop, $value in $map {
         @if $vendors {
@@ -22,10 +19,8 @@
     }
 }
 
-////
 /// Vendor prefixer mixin alias
 ///
 /// @since 1.0.0
-/// @see   {prefix}
-////
+/// @alias prefix
 @mixin p( $map, $vendors: $adapt-browser-prefixes ) { @include prefix($map, $vendors); }
