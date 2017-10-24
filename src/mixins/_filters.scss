@@ -51,6 +51,6 @@
 ///
 /// @since 2.0.0
 /// @param number $value
-@mixing saturate($value) {
+@mixin saturate($value) {
 	filter: saturate($value);
 }
