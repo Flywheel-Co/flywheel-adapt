@@ -6,7 +6,8 @@
 ////
 
 /// Typography import
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,600');
+
 
 /// Import settings
 @import 'settings';
@@ -14,20 +15,16 @@
 /// Import adapt itself
 @import '../../../adapt';
 
+/// Import components
+@import 'components/typography';
+@import 'components/layout';
+@import 'components/header';
+
 /// Import test example styles
 @import 'partials/grid';
 @import 'partials/transform';
 @import 'partials/clearfix';
 
-// $responsiveMap : (
-// 	mobile : (max : 900)
-// );
-
-// @import 'settings';
-// @import '../../../adapt';
-// @import 'typography';
-// @import 'header';
-// @import 'layout';
 
 // @import 'partials/backgrounds';
 // @import 'partials/borders';
@@ -37,7 +34,6 @@
 // @import 'partials/grayscale';
 // @import 'partials/hamburger';
 // @import 'partials/responsive';
-// @import 'partials/transforms';
 // @import 'partials/transitions';
 // @import 'partials/x';
 

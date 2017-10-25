@@ -1,0 +1,16 @@
+////
+/// Sizing helper mixins
+///
+/// @group Mixins
+/// @since 2.0.0
+////
+
+/// Width x height shorthand
+///
+/// @since 1.0.0
+/// @param number $width - element width
+/// @param number $height - element height
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}

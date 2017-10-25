@@ -1,0 +1,38 @@
+////
+/// Background helper mixins
+///
+/// @group Mixins
+/// @since 2.0.0
+////
+
+/// Background image helper
+///
+/// @since 2.0.0
+/// @param number $width - element width
+/// @param number $height - element height
+/// @param number $options - css background parameter value
+/// @param number $cover - toggle `background-size: cover`
+@mixin background-image($width, $height, $options, $cover: true) {
+	display: block;
+	width: $width;
+	height: $height;
+	background: $options;
+	text-indent: -9999px;
+	overflow: hidden;
+
+	@if $cover == true {
+		background-size: cover;
+	}
+}
+
+/// Background image helper shorthand
+///
+/// @since 1.0.0
+/// @alias mixin background-image
+/// @param number $width - element width
+/// @param number $height - element height
+/// @param number $options - css background parameter value
+/// @param number $cover - toggle `background-size: cover`
+@mixin bgimg($width, $height, $options, $cover: true) {
+	@include background-image($width, $height, $options, $cover);
+}

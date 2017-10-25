@@ -11,44 +11,38 @@
 /// @todo document this
 @import 'node_modules/css-reset-and-normalize-sass/scss/flavored-reset-and-normalize.scss';
 
+// Import default variables
 @import 'src/variables';
 
+// Import functions
 @import 'src/functions/str-replace';
 
+// Import mixins
+//
+// @todo file naming should be updated for singular/plural consistency
+@import 'src/mixins/background';
 @import 'src/mixins/clearfix';
+@import 'src/mixins/filters';
 @import 'src/mixins/input';
+@import 'src/mixins/sizing';
 @import 'src/mixins/transform';
+
 
 @import 'src/grid/row';
 @import 'src/grid/col';
-
 
 // @import 'utils/devices';
 // @import 'utils/directions';
 // @import 'utils/display';
 // @import 'utils/inputs';
 
-// @import 'library/settings';
-// @import 'library/prefixer';
-// @import 'library/reset';
-
 // @import 'library/helpers/backgrounds';
-// @import 'library/helpers/blur';
-// @import 'library/helpers/clearfix';
 // @import 'library/helpers/devices';
-// @import 'library/helpers/grayscale';
 // @import 'library/helpers/hamburger';
 // @import 'library/helpers/sizing';
 // @import 'library/helpers/text';
 // @import 'library/helpers/classes-general';
 // @import 'library/helpers/classes-responsive';
 // @import 'library/helpers/x';
-
-// @import 'library/css/box-shadow';
-// @import 'library/css/box-sizing';
-// @import 'library/css/font-face';
-// @import 'library/css/forms';
-// @import 'library/css/keyframes';
-// @import 'library/css/transform';
 
 // @import 'library/base';
