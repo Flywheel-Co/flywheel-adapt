@@ -9,31 +9,31 @@
 /// Maximum grid width
 ///
 /// @since 2.0.0
-/// @type  Number
+/// @type  number
 $adapt-grid-max-width: 1024px !default;
 
 /// Desired grid width
 ///
 /// @since 2.0.0
-/// @type  Number
+/// @type  number
 $adapt-grid-width: 90% !default;
 
 /// Grid row selector
 ///
 /// @since 2.0.0
-/// @type  List
+/// @type  list
 $adapt-grid-row-selector: '.row' !default;
 
 /// Grid column selector
 ///
 /// @since 2.0.0
-/// @type  List
+/// @type  list
 $adapt-grid-column-selector: '.col' !default;
 
 /// Number of grid columns
 ///
 /// @since 2.0.0
-/// @type  Number
+/// @type  number
 $adapt-grid-columns: 12 !default;
 
 /// Grid column margin
@@ -41,5 +41,45 @@ $adapt-grid-columns: 12 !default;
 /// @todo update to accept an array of [top/bottom, right/left] or [top, bottom, right, left]
 ///
 /// @since 2.0.0
-/// @type  Number
+/// @type  number
 $adapt-grid-column-margin: .75 !default;
+
+/// Device breakpoints
+///
+/// @since 2.0.0
+/// @type map
+$adapt-devices: (
+
+	/// Models
+  	chromebook: 1355px,
+  	ipad:       768px,
+  	ipad-air:   768px,
+  	ipad-mini:  768px,
+  	ipad-pro:   834px,
+	iphone:     320px,
+	iphone-4:   320px,
+	iphone-5:   320px,
+  	iphone-6:   375px,
+  	iphone-6p:  414px,
+  	iphone-7:   375px,
+  	iphone-7p:  414px,
+  	iphone-8:   375px,
+  	iphone-8p:  414px,
+  	iphone-x:   375px,
+  	moto-x:     360px,
+  	nexus-4:    384px,
+  	nexus-5:    360px,
+  	nexus-6:    411px,
+  	nexus-7:    600px,
+  	nexus-9:    1024px,
+  	note-4:     480px,
+  	pixel:      411px,
+  	surface:    768px,
+
+  	/// Screens
+  	mobile:    414px,
+  	tablet:    768px,
+  	desktop:   1920px,
+  	ultrawide: 2560px,
+
+) !default;
