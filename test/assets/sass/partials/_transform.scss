@@ -4,8 +4,6 @@
 
 /// Transform example item
 .transform-item {
-
-	// flex-basis: 25%;
 	background: $color-white;
 
  	div {
@@ -23,14 +21,7 @@
 		@include translate(0, -50%);
 	}
 
-	// background: $color-blue;
-	// width: 100px;
-	// height: 100px;
-
 	&#transform {
-
-
-
 		&-rotate > div {
 			background: $color-red;
 			@include rotate(45);
