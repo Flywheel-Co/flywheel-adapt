@@ -8,7 +8,7 @@
 
 /// Grayscale
 ///
-/// @since 2.0.0
+/// @since 1.0.0
 /// @param number $value
 @mixin grayscale($value) {
 	filter: grayscale($value);
@@ -16,7 +16,7 @@
 
 /// Greyscale
 ///
-/// @since 2.0.0
+/// @since 1.0.0
 /// @alias mixin greyscale
 /// @param number $value
 @mixin greyscale($value) {
@@ -25,7 +25,7 @@
 
 /// Blur
 ///
-/// @since 2.0.0
+/// @since 1.0.0
 /// @param number $value
 @mixin blur($value) {
 	filter: blur($value);

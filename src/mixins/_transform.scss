@@ -2,13 +2,15 @@
 /// Transformation mixins
 /// This is a group of mixins to provide shorthand for common transform methods
 ///
+/// @todo add more transform shorthand mixins
+///
 /// @group Mixins
 /// @since 2.0.0
 ////
 
 /// Rotate an element
 ///
-/// @since 2.0.0
+/// @since 1.0.0
 /// @param number $angle - rotation amount
 @mixin rotate($angle) {
     @if unitless($angle) {
@@ -22,7 +24,7 @@
 ///
 /// @since 2.0.0
 /// @param list $value translation amounts
-@mixin translate($xValue, $yValue: 0) {
+@mixin translate($xValue, $yValue: $xValue) {
 	transform: translate($xValue, $yValue);
 }
 

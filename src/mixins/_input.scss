@@ -7,7 +7,7 @@
 
 /// Define text-like input placeholder styles
 ///
-/// @since   2.0.0
+/// @since   1.0.0
 /// @content placeholder style definitions
 @mixin placeholder {
 	&::-webkit-input-placeholder { @content; }
