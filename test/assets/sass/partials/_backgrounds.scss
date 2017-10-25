@@ -1,0 +1,8 @@
+////
+/// Backgrounds example / testing environment
+////
+
+/// Background item
+.background-item {
+	@include background-image( 300px, 200px, url('/test/assets/img/sample.jpg') no-repeat);
+}

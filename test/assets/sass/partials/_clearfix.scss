@@ -10,14 +10,8 @@
 	@include cf;
 
 	div {
-		float: right;
 		width: 40%;
 		height: 72px;
 		background: $color-green;
-
-		&:first-child {
-			float: left;
-		}
 	}
-
 }
