@@ -33,10 +33,14 @@
 @import 'src/grid/col';
 @import 'src/grid/row';
 
+/// Classes
+@import 'src/classes/devices';
+@import 'src/classes/dom';
+@import 'src/classes/layout';
+
 // @import 'utils/inputs';
 
 // @import 'library/helpers/hamburger';
-// @import 'library/helpers/classes-general';
 // @import 'library/helpers/classes-responsive';
 
 // @import 'library/base';
