@@ -6,7 +6,10 @@
 /// @author  chriseverson
 ////
 
-@import 'node_modules/normalize-scss/sass/normalize';
+/// Import reset and normalize
+///
+/// @todo document this
+@import 'node_modules/css-reset-and-normalize-sass/scss/flavored-reset-and-normalize.scss';
 
 @import 'src/variables';
 
