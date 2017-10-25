@@ -1,0 +1,23 @@
+////
+/// Clearfix example / testing environment
+////
+
+/// Clearfix wrapper
+.clearfix-wrapper {
+	max-width: 720px;
+	background: $color-light;
+	padding: 10px;
+	@include cf;
+
+	div {
+		float: right;
+		width: 40%;
+		height: 72px;
+		background: $color-green;
+
+		&:first-child {
+			float: left;
+		}
+	}
+
+}
