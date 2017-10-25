@@ -2,21 +2,28 @@
 /// Grid example / testing environment
 ////
 
+/// Wrapper
+#grid {
+	h4 {
+		margin-top: 64px;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+}
+
 /// Row styles
 .row {
 	background: $color-light;
-}
 
-.thing {
-	background: $color-red;
-	height: 100px;
-	@extend %row;
+	@extend .row-full;
 }
 
 /// Column styles
 .col {
 	min-height: 100px;
-	width: 50px;
+	width: 150px;
 	color: $color-white;
 	font-family: $font-family-primary;
 

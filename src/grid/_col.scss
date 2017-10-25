@@ -14,6 +14,7 @@
 #{$adapt-grid-column-selector} {
 	flex-grow: 1;
 	max-width: 100%;
+	position: relative;
 	margin: unquote($adapt-grid-column-margin + '%');
 
 	&-marginless {

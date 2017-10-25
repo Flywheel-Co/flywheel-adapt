@@ -30,3 +30,15 @@ h3 {
 h4 {
 	@extend h3;
 }
+
+/// Element labels
+.label {
+	background: $color-white;
+	color: $color-dark;
+	position: absolute;
+	font-size: 12px;
+	padding: 5px 12px;
+	top: 50%;
+	left: 50%;
+	@include translate(-50%, -50%);
+}

@@ -11,15 +11,15 @@
 /// @todo document this
 @import 'node_modules/css-reset-and-normalize-sass/scss/flavored-reset-and-normalize.scss';
 
-// Import default variables
+/// Import default variables
 @import 'src/variables';
 
-// Import functions
+/// Import functions
 @import 'src/functions/str-replace';
 
-// Import mixins
-//
-// @todo file naming should be updated for singular/plural consistency
+/// Import mixins
+///
+/// @todo file naming should be updated for singular/plural consistency
 @import 'src/mixins/background';
 @import 'src/mixins/clearfix';
 @import 'src/mixins/filters';
@@ -27,20 +27,17 @@
 @import 'src/mixins/sizing';
 @import 'src/mixins/transform';
 
-
-@import 'src/grid/row';
+/// Grid
 @import 'src/grid/col';
+@import 'src/grid/row';
 
 // @import 'utils/devices';
 // @import 'utils/directions';
 // @import 'utils/display';
 // @import 'utils/inputs';
 
-// @import 'library/helpers/backgrounds';
 // @import 'library/helpers/devices';
 // @import 'library/helpers/hamburger';
-// @import 'library/helpers/sizing';
-// @import 'library/helpers/text';
 // @import 'library/helpers/classes-general';
 // @import 'library/helpers/classes-responsive';
 // @import 'library/helpers/x';
