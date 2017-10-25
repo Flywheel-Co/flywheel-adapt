@@ -1,0 +1,68 @@
+////
+/// Devices example / testing environment
+////
+
+/// Device group
+.device-group {
+}
+
+/// Device item
+.col.device-item {
+	height: 32px;
+	min-height: 0;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	opacity: .3;
+
+	&:first-child {
+		margin-top: .75%;
+	}
+
+	.label {
+		padding: 0;
+		background: transparent;
+		color: $color-white;
+	}
+
+	&.col-yellow {
+		.label {
+			color: $color-medium;
+		}
+	}
+
+	$sizes: ultrawide desktop tablet mobile;
+
+	@each $size in $sizes {
+
+		&.lte-#{$size} {
+			@include device(lte-#{$size}) {
+				opacity: 1;
+			}
+		}
+
+		&.lt-#{$size} {
+			@include device(lt-#{$size}) {
+				opacity: 1;
+			}
+		}
+
+		&.gte-#{$size} {
+			@include device(gte-#{$size}) {
+				opacity: 1;
+			}
+		}
+
+		&.gt-#{$size} {
+			@include device(gt-#{$size}) {
+				opacity: 1;
+			}
+		}
+
+		// &.#{$size} {
+		// 	@include ;
+		// }
+
+	}
+
+
+}

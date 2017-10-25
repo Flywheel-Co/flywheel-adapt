@@ -15,13 +15,14 @@
 @import 'src/variables';
 
 /// Import functions
-@import 'src/functions/str-replace';
+@import 'src/functions/parse-device-query';
 
 /// Import mixins
 ///
 /// @todo file naming should be updated for singular/plural consistency
 @import 'src/mixins/background';
 @import 'src/mixins/clearfix';
+@import 'src/mixins/devices';
 @import 'src/mixins/filters';
 @import 'src/mixins/input';
 @import 'src/mixins/sizing';
