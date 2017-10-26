@@ -1,0 +1,45 @@
+////
+/// Transformation mixins
+/// This is a group of mixins to provide shorthand for common transform methods
+///
+/// @todo add more transform shorthand mixins
+///
+/// @group Mixins
+/// @since 2.0.0
+////
+
+/// Rotate an element
+///
+/// @since 1.0.0
+/// @param number $angle - rotation amount
+@mixin rotate($angle) {
+    @if unitless($angle) {
+        $angle: $angle + deg;
+    }
+
+    transform: rotate($angle);
+}
+
+/// Translate an element
+///
+/// @since 2.0.0
+/// @param list $value translation amounts
+@mixin translate($xValue, $yValue: $xValue) {
+	transform: translate($xValue, $yValue);
+}
+
+/// Translate an elementon the X-axis
+///
+/// @since 2.0.0
+/// @param number $value transition amount
+@mixin translateX($value) {
+	transform: translateX($value);
+}
+
+/// Translate an elementon the Y-axis
+///
+/// @since 2.0.0
+/// @param number $value transition amount
+@mixin translateY($value) {
+	transform: translateY($value);
+}

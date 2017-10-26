@@ -1,0 +1,19 @@
+////
+/// Testing environment layout styles
+////
+
+/// Wrapper
+.wrapper {
+	width: 90%;
+	max-width: 720px;
+	margin: 0 auto;
+
+	&#content-wrapper {
+		margin-bottom: 72px;
+	}
+}
+
+/// Section
+section {
+	margin: 86px 0  0;
+}

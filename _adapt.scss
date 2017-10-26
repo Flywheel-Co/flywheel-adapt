@@ -1,40 +1,39 @@
 ////
 /// Flywheel Adapt
+/// This is the library entrypoint
 ///
-/// @link    https://flywheel.co
-/// @version 1.0.2
+/// @version 2.0.0
+/// @author  chriseverson
 ////
 
-@import 'utils/devices';
-@import 'utils/directions';
-@import 'utils/display';
-@import 'utils/inputs';
+/// Import reset and normalize
+///
+/// @todo document this
+@import 'node_modules/css-reset-and-normalize-sass/scss/flavored-reset-and-normalize.scss';
 
-@import 'library/settings';
-@import 'library/prefixer';
-@import 'library/reset';
+/// Import default variables
+@import 'src/variables';
 
-@import 'library/helpers/backgrounds';
-@import 'library/helpers/blur';
-@import 'library/helpers/clearfix';
-@import 'library/helpers/devices';
-@import 'library/helpers/grayscale';
-@import 'library/helpers/hamburger';
-@import 'library/helpers/sizing';
-@import 'library/helpers/text';
-@import 'library/helpers/classes-general';
-@import 'library/helpers/classes-responsive';
-@import 'library/helpers/x';
+/// Import functions
+@import 'src/functions/parse-device-query';
+@import 'src/functions/string-to-number';
+@import 'src/functions/ratio-to-percent';
 
-@import 'library/css/animation';
-@import 'library/css/background-gradient';
-@import 'library/css/borders';
-@import 'library/css/box-shadow';
-@import 'library/css/box-sizing';
-@import 'library/css/font-face';
-@import 'library/css/forms';
-@import 'library/css/keyframes';
-@import 'library/css/transform';
-@import 'library/css/transition';
+/// Import mixins
+@import 'src/mixins/backgrounds';
+@import 'src/mixins/clearfix';
+@import 'src/mixins/devices';
+@import 'src/mixins/filters';
+@import 'src/mixins/inputs';
+@import 'src/mixins/positioning';
+@import 'src/mixins/sizing';
+@import 'src/mixins/transforms';
 
-@import 'library/base';
+/// Grid
+@import 'src/grid/col';
+@import 'src/grid/row';
+
+/// Classes
+@import 'src/classes/devices';
+@import 'src/classes/dom';
+@import 'src/classes/layout';

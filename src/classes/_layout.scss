@@ -1,0 +1,28 @@
+////
+/// Layout classes
+///
+/// @group Classes
+/// @since 2.0.0
+////
+
+/// Apply a clearfix
+///
+/// @since 1.0.0
+/// @see   clearfix
+.clearfix {
+	@include clearfix();
+}
+
+/// Float an item left
+///
+/// @since 1.0.0
+.float-left {
+	float: left;
+}
+
+/// Float an item right
+///
+/// @since 1.0.0
+.float-right {
+	float: right;
+}

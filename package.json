@@ -33,5 +33,8 @@
     "_adapt.scss",
     "LICENSE",
     "README.md"
-  ]
+  ],
+  "dependencies": {
+    "css-reset-and-normalize-sass": "^0.1.2"
+  }
 }

@@ -1,0 +1,243 @@
+////
+/// Grid row
+/// Grid library row definitions
+///
+/// @group  Grid
+/// @since  2.0.0
+/// @author chriseverson
+////
+///
+
+/// Standard row
+///
+/// @since 2.0.0
+%#{str-slice($adapt-grid-row-selector, 2)},
+#{$adapt-grid-row-selector} {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+	width: $adapt-grid-width;
+	max-width: $adapt-grid-max-width;
+	margin: 0 auto;
+
+	/// Full width row
+	/// This disregards $adapt-grid-max-width and $adapt-grid-width
+	///
+	/// @since 2.0.0
+	&-full {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	/// Directions
+	///
+	/// @ignore
+	/// @since  2.0.0
+	/// @access private
+	/// @type   list
+	$directions: row row-reverse column column-reverse;
+
+	/// row-{direction}
+	///
+	/// @since 2.0.0
+	@each $direction in $directions {
+		&-#{$direction} {
+			flex-direction: #{$direction};
+		}
+	}
+
+	/// Wrap styles
+	///
+	/// @since  2.0.0
+	/// @access private
+	/// @type   list
+	$wraps: nowrap wrap wrap-reverse;
+
+	/// row-{wrap}
+	///
+	/// @since 2.0.0
+	@each $wrap in $wraps {
+		&-#{$wrap} {
+			flex-wrap: #{$wrap};
+		}
+	}
+
+	/// Justification
+	///
+	/// @since 2.0.0
+	&-justify {
+
+		/// Justify left
+		///
+		/// @since 2.0.0
+		&-left {
+			justify-content: flex-start;
+		}
+
+		/// Justify right
+		///
+		/// @since 2.0.0
+		&-right {
+			justify-content: flex-end;
+		}
+
+		/// Justify center
+		///
+		/// @since 2.0.0
+		&-center {
+			justify-content: center;
+		}
+
+		/// Justify space between
+		///
+		/// @since 2.0.0
+		&-between {
+			justify-content: space-between;
+		}
+
+		/// Justify space around
+		///
+		/// @since 2.0.0
+		&-around {
+			justify-content: space-around;
+		}
+
+		/// Justify space evenly
+		///
+		/// @since 2.0.0
+		&-evenly {
+			justify-content: space-evenly;
+		}
+	}
+
+	/// Alignment
+	///
+	/// @since 2.0.0
+	&-align {
+
+		/// Align top
+		///
+		/// @since 2.0.0
+		&-top {
+			align-items: flex-start;
+		}
+
+		/// Align bottom
+		///
+		/// @since 2.0.0
+		&-bottom {
+			align-items: flex-end;
+		}
+
+		/// Align center
+		///
+		/// @since 2.0.0
+		&-center {
+			align-items: center;
+		}
+
+		/// Align stretch
+		///
+		/// @since 2.0.0
+		&-stretch {
+			align-items: stretch;
+		}
+
+		/// Align baseline
+		///
+		/// @since 2.0.0
+		&-baseline {
+			align-items: baseline;
+		}
+	}
+
+}
+
+
+
+
+// .row {
+// 	display: flex;
+// 	width: 95%;
+// 	margin: 0 auto;
+// 	max-width: $layout-width;
+// 	flex-flow: row wrap;
+// 	align-items: stretch;
+// 	@include bs;
+// 	@include tablet {
+// 		padding: 0 20px;
+// 	}
+// 	@include mobile {
+// 		padding: 0 20px;
+// 	}
+// 	&-center {
+// 		justify-content: center;
+// 	}
+
+// 	&-vcenter {
+// 		align-items: center;
+// 	}
+
+// 	&-space-between {
+// 		justify-content: space-between;
+// 	}
+
+// 	.row {
+// 		max-width: 100%;
+// 		width: 100%;
+
+// 		@include d( mobile ) {
+// 			padding: 0;
+// 		}
+// 	}
+
+// 	&.padded {
+// 		padding: 30px 0 !important;
+// 	}
+// 	.col {
+// 		margin: unquote($grid-cell-margin + '%');
+// 		max-width: 100%;
+// 		@include bs;
+// 		@include mobile {
+// 			flex-basis: 99% !important;
+// 		}
+// 		&.center-center {
+// 			justify-content: center;
+// 			align-items: center;
+// 		}
+// 	}
+// 	// col-x
+// 	@for $i from 1 through $grid-columns {
+// 		.col-#{$i} {
+// 			flex-basis: unquote((100/$grid-columns * $i - ($grid-cell-margin * 2)) + "%");
+// 		}
+// 	}
+// 	// push-x
+// 	@for $i from 1 through $grid-columns {
+// 		.push-#{$i} {
+// 			margin-left: unquote((100/$grid-columns * $i) + "%");
+// 			@include mobile {
+// 				margin-left: 0;
+// 			}
+// 		}
+// 	}
+// 	@for $i from 1 through $grid-columns {
+// 		.offset-#{$i} {
+// 			margin-right: unquote((100/$grid-columns * $i) + "%");
+// 			@include mobile {
+// 				margin-right: 0;
+// 			}
+// 		}
+// 	}
+// }
+
+// @for $i from 1 through $grid-columns {
+// 	.indent-#{$i} {
+// 		padding-left: unquote((100/$grid-columns * $i) + "%");
+// 		@include mobile {
+// 			padding-left: 0;
+// 		}
+// 	}
+// }

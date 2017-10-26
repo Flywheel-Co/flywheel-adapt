@@ -1,0 +1,87 @@
+////
+/// Devices example / testing environment
+////
+
+/// Device class group
+.device-class-group {
+	.col {
+		padding: 20px;
+
+		.label {
+			font-size: 10px;
+		}
+	}
+}
+
+/// Device item
+.col.device-item {
+	height: 32px;
+	min-height: 0;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	opacity: .3;
+
+	&:first-child {
+		margin-top: .75%;
+	}
+
+	.label {
+		padding: 0;
+		background: transparent;
+		color: $color-white;
+	}
+
+	&.col-yellow {
+		.label {
+			color: $color-medium;
+		}
+	}
+
+	$sizes: ultrawide desktop tablet mobile;
+
+	@each $size in $sizes {
+
+		&.lte-#{$size} {
+			@include device(lte-#{$size}) {
+				opacity: 1;
+			}
+		}
+
+		&.lt-#{$size} {
+			@include device(lt-#{$size}) {
+				opacity: 1;
+			}
+		}
+
+		&.gte-#{$size} {
+			@include device(gte-#{$size}) {
+				opacity: 1;
+			}
+		}
+
+		&.gt-#{$size} {
+			@include device(gt-#{$size}) {
+				opacity: 1;
+			}
+		}
+	}
+
+
+	&.between-desktop-ultrawide {
+		@include device-between('desktop', 'ultrawide') {
+			opacity: 1;
+		}
+	}
+
+	&.between-tablet-desktop {
+		@include device-between('tablet', 'desktop') {
+			opacity: 1;
+		}
+	}
+	&.between-phone-tablet {
+		@include device-between('mobile', 'tablet') {
+			opacity: 1;
+		}
+	}
+
+}

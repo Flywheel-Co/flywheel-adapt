@@ -1,0 +1,18 @@
+////
+/// Positioning example / testing environment
+////
+
+
+/// Container
+#positioning .row {
+	height: 200px;
+	position: relative;
+}
+
+/// Positioning test item
+.positioning-item {
+	background: $color-blue;
+	padding: 20px;
+	@include size( 50% );
+	@include position( absolute, top 20px right 20px );
+}

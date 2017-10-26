@@ -1,0 +1,39 @@
+////
+/// Filters example / testing environment
+////
+
+/// Filter items
+#filters .col {
+	overflow: hidden;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.filter {
+
+		&-greyscale {
+			@include greyscale( 50 );
+		}
+
+		&-blur {
+			@include blur( 2px );
+		}
+
+		&-brightness {
+			@include brightness( 2 );
+		}
+
+		&-contrast {
+			@include contrast( 5 );
+		}
+
+		&-saturate {
+			@include saturate( 7 );
+		}
+
+	}
+
+}
