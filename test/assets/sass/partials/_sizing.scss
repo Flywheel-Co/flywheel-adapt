@@ -1,0 +1,28 @@
+////
+/// Sizing example / testing environment
+////
+
+/// Aspect ratio wrapper
+.aspect-ratio-row {
+	display: block;
+	padding: .75%;
+}
+
+/// Aspect ratio item
+.aspect-ratio {
+	padding: 0;
+	height: 0;
+	min-height: 0;
+	background: $color-blue;
+	@include aspect-ratio('16:9');
+
+	.label {
+		width: auto;
+		height: auto;
+		top: 50%;
+		left: 50%;
+		bottom: auto;
+		right: auto;
+	}
+
+}
