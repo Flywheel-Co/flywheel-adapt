@@ -37,4 +37,4 @@ Once downloaded, import the Flywheel Adapt Sass library into your project.
 ## License
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright &copy; 2017 [Flywheel Co](https://flywheel.co).
+[Flywheel Co.](https://flywheel.co)
