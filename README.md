@@ -6,19 +6,14 @@ Flywheel Adapt is a collection of Sass mixins and CSS helper classes to assist i
 
 ## Installation
 
-#### Bower
-```sh
-bower install --save flywheel-adapt
-```
-
-#### Composer
-```sh
-composer require flywheel-co/adapt
-```
-
 #### NPM
 ```sh
 npm install flywheel-adapt
+```
+
+### Composer
+```sh
+composer require flywheel-co/adapt
 ```
 
 #### Download
