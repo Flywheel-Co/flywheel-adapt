@@ -18,6 +18,7 @@
 /// 	- `gte-{$device}`: Greater than or equal to
 /// 	- `gt-{$device}`: Greater than
 ///
+/// @todo  this should implement handling for when a device is not found
 /// @see   $adapt-devices
 /// @since 1.0.0
 /// @param string $device a valid device eky
@@ -39,6 +40,22 @@
 	@media only screen #{$query} {
 		@content;
 	}
+}
+
+/// Generate a media query to target sizes between two devices
+///
+/// @todo  this should implement handling for when a device is not found
+/// @see   $adapt-devices
+/// @since 2.0.0
+/// @param number $min-device - minimum device size
+/// @param number $max-device - maximum device size
+@mixin device-between($min-device, $max-device) {
+	$min-width: map-get($adapt-devices, $min-device);
+	$max-width: map-get($adapt-devices, $max-device);
+
+ 	@media only screen and (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+ 		@content;
+ 	}
 }
 
 /// Device mixin alias

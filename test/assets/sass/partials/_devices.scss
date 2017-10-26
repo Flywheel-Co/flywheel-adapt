@@ -60,4 +60,21 @@
 	}
 
 
+	&.between-desktop-ultrawide {
+		@include device-between('desktop', 'ultrawide') {
+			opacity: 1;
+		}
+	}
+
+	&.between-tablet-desktop {
+		@include device-between('tablet', 'desktop') {
+			opacity: 1;
+		}
+	}
+	&.between-phone-tablet {
+		@include device-between('mobile', 'tablet') {
+			opacity: 1;
+		}
+	}
+
 }

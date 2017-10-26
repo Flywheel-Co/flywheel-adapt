@@ -15,8 +15,6 @@
 	height: $height;
 }
 
-@debug( ratio-to-percent('16:9') );
-
 /// Aspect ratio helper
 ///
 /// This mixin applies styles to an element which should then have an absolutely positioned child
@@ -27,8 +25,6 @@
 	position: relative;
 	padding-bottom: ratio-to-percent($ratio);
 
-	@debug( #{ ratio-to-percent($ratio) } );
-
 	/// apply styles to immediate child
 	&> * {
 		position: absolute;
@@ -37,5 +33,4 @@
 		right: 0;
 		bottom: 0;
 	}
-
 }
