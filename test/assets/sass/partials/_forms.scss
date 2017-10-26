@@ -1,0 +1,25 @@
+////
+/// Forms example / testing environment
+////
+
+
+/// Input
+#forms {
+
+	.col {
+		min-height: 0;
+	}
+
+	input {
+		margin: 42px auto;
+		width: 50%;
+		border: 1px solid $color-dark;
+		padding: 10px 20px;
+		display: block;
+		color: $color-dark;
+
+		@include placeholder {
+			color: $color-blue;
+		}
+	}
+}
