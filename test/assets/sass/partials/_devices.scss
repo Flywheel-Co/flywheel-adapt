@@ -2,8 +2,15 @@
 /// Devices example / testing environment
 ////
 
-/// Device group
-.device-group {
+/// Device class group
+.device-class-group {
+	.col {
+		padding: 20px;
+
+		.label {
+			font-size: 10px;
+		}
+	}
 }
 
 /// Device item
