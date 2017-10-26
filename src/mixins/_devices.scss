@@ -13,15 +13,15 @@
 /// the target device.
 ///
 /// Optionally, device keys can be prefixed with a comparison identifier to modify the query:
-/// 	- `lte-{$device}`: Less than or equal to
-/// 	- `lt-{$device}`: Less than
-/// 	- `gte-{$device}`: Greater than or equal to
-/// 	- `gt-{$device}`: Greater than
+///  - `lte-{$device}`: Less than or equal to
+///  - `lt-{$device}`: Less than
+///  - `gte-{$device}`: Greater than or equal to
+///  - `gt-{$device}`: Greater than
 ///
 /// @todo  this should implement handling for when a device is not found
 /// @see   $adapt-devices
 /// @since 1.0.0
-/// @param string $device a valid device eky
+/// @param {string} $device a valid device key
 @mixin device($device) {
 	$query:   parse-device-query($device);
 	$compare: map-get($query, 'compare');
@@ -47,8 +47,8 @@
 /// @todo  this should implement handling for when a device is not found
 /// @see   $adapt-devices
 /// @since 2.0.0
-/// @param number $min-device - minimum device size
-/// @param number $max-device - maximum device size
+/// @param {number} $min-device - minimum device size
+/// @param {number} $max-device - maximum device size
 @mixin device-between($min-device, $max-device) {
 	$min-width: map-get($adapt-devices, $min-device);
 	$max-width: map-get($adapt-devices, $max-device);
@@ -60,9 +60,9 @@
 
 /// Device mixin alias
 ///
-/// @alias mixin device
+/// @alias device
 /// @since 1.0.0
-/// @param string $device valid device key
+/// @param {string} $device valid device key
 @mixin d($device) {
 	@include device($device);
 }

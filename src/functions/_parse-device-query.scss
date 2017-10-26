@@ -2,7 +2,7 @@
 ///
 /// @group Functions
 /// @since 2.0.0
-/// @param string $query - device query
+/// @param {string} $query - device query - [value]
 @function parse-device-query($query) {
 	$compare: lte;
 	$device:  $query;

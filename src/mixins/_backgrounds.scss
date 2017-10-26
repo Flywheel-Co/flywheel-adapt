@@ -5,13 +5,13 @@
 /// @since 2.0.0
 ////
 
-/// Background image helper
+/// Apply a background image to an element and hide its interior text contents.
 ///
 /// @since 2.0.0
-/// @param number $width - element width
-/// @param number $height - element height
-/// @param number $options - css background parameter value
-/// @param number $cover - toggle `background-size: cover`
+/// @param {number} $width - element width
+/// @param {number} $height - element height
+/// @param {number} $options - css background parameter value
+/// @param {number} $cover [true] - toggle background size cover
 @mixin background-image($width, $height, $options, $cover: true) {
 	display: block;
 	width: $width;
@@ -25,10 +25,10 @@
 	}
 }
 
-/// Background image helper shorthand
+/// Shorthand access to `background-image(...)`.
 ///
 /// @since 1.0.0
-/// @alias mixin background-image
+/// @alias background-image
 /// @param number $width - element width
 /// @param number $height - element height
 /// @param number $options - css background parameter value

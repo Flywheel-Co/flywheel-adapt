@@ -1,7 +1,7 @@
 ////
 /// Device query classes
 ///
-/// @group Classes
+/// @group Devices
 /// @since 2.0.0
 ////
 
@@ -16,6 +16,7 @@
 
 		/// Show the element on X device
 		///
+		/// @name .show-{$device-query}
 		/// @since 2.0.0
 		.show-#{$suffix} {
 			display: none;

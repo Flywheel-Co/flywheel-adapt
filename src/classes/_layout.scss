@@ -8,9 +8,9 @@
 /// Apply a clearfix
 ///
 /// @since 1.0.0
-/// @see   mixin clearfix
+/// @see   clearfix
 .clearfix {
-	@include clearfix;
+	@include clearfix();
 }
 
 /// Float an item left

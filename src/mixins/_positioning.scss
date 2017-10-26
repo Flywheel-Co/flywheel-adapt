@@ -2,7 +2,7 @@
 /// Positioning mixins
 /// This is a group of mixins to assist with positioning elements
 ///
-/// @group Mixins
+/// @group Mixins\Positioning
 /// @since 2.0.0
 ////
 
@@ -30,7 +30,7 @@
 /// @example `@include absolute(top 10px left 10px);`
 ///
 /// @since 2.0.0
-/// @alias mixin position
+/// @alias position
 /// @param list  $args - a list of locations and values
 @mixin absolute($args) {
 	@include position('absolute', $args);
@@ -41,7 +41,7 @@
 /// @example `@include relative(top 10px left 10px);`
 ///
 /// @since 2.0.0
-/// @alias mixin position
+/// @alias position
 /// @param list  $args - a list of locations and values
 @mixin relative($args) {
 	@include position('relative', $args);
@@ -52,7 +52,7 @@
 /// @example `@include fixed(top 10px left 10px);`
 ///
 /// @since 2.0.0
-/// @alias mixin position
+/// @alias position
 /// @param list  $args - a list of locations and values
 @mixin fixed($args) {
 	@include position('fixed', $args);

@@ -17,7 +17,7 @@
 /// Greyscale
 ///
 /// @since 1.0.0
-/// @alias mixin greyscale
+/// @alias greyscale
 /// @param number $value
 @mixin greyscale($value) {
 	@include grayscale($value);

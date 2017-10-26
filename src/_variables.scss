@@ -6,37 +6,37 @@
 /// @author chriseverson
 ////
 
-/// Maximum grid width
+/// Defines the maximum width of a grid row.
 ///
 /// @since 2.0.0
 /// @type  number
 $adapt-grid-max-width: 1024px !default;
 
-/// Desired grid width
+/// Defines the desired grid row width.
 ///
 /// @since 2.0.0
 /// @type  number
 $adapt-grid-width: 90% !default;
 
-/// Grid row selector
+/// Grid row selector.
 ///
 /// @since 2.0.0
 /// @type  list
 $adapt-grid-row-selector: '.row' !default;
 
-/// Grid column selector
+/// Grid column selector.
 ///
 /// @since 2.0.0
 /// @type  list
 $adapt-grid-column-selector: '.col' !default;
 
-/// Number of grid columns
+/// Defines the number of base columns used when calculating column sizes.
 ///
 /// @since 2.0.0
 /// @type  number
 $adapt-grid-columns: 12 !default;
 
-/// Grid column margin
+/// Defines the margin between grid row columns
 ///
 /// @todo update to accept an array of [top/bottom, right/left] or [top, bottom, right, left]
 ///
@@ -44,43 +44,46 @@ $adapt-grid-columns: 12 !default;
 /// @type  number
 $adapt-grid-column-margin: .75 !default;
 
-/// Device breakpoints
+/// Device breakpoints.
+///
+/// Devices can be added or removed by extending the default device map. Device queries and their
+/// related show/hide classes are generated from this map of devices and their widths.
 ///
 /// @since 2.0.0
 /// @type map
 $adapt-devices: (
 
-	  /// Models
-  	chromebook: 1355px,
-  	ipad:       768px,
-  	ipad-air:   768px,
-  	ipad-mini:  768px,
-  	ipad-pro:   834px,
-	  iphone:     320px,
-	  iphone-4:   320px,
-	  iphone-5:   320px,
-  	iphone-6:   375px,
-  	iphone-6p:  414px,
-  	iphone-7:   375px,
-  	iphone-7p:  414px,
-  	iphone-8:   375px,
-  	iphone-8p:  414px,
-  	iphone-x:   375px,
-  	moto-x:     360px,
-  	nexus-4:    384px,
-  	nexus-5:    360px,
-  	nexus-6:    411px,
-  	nexus-7:    600px,
-  	nexus-9:    1024px,
-  	note-4:     480px,
-  	pixel:      411px,
-  	surface:    768px,
+    /// Models
+    chromebook: 1355px,
+    ipad:       768px,
+    ipad-air:   768px,
+    ipad-mini:  768px,
+    ipad-pro:   834px,
+    iphone:     320px,
+    iphone-4:   320px,
+    iphone-5:   320px,
+    iphone-6:   375px,
+    iphone-6p:  414px,
+    iphone-7:   375px,
+    iphone-7p:  414px,
+    iphone-8:   375px,
+    iphone-8p:  414px,
+    iphone-x:   375px,
+    moto-x:     360px,
+    nexus-4:    384px,
+    nexus-5:    360px,
+    nexus-6:    411px,
+    nexus-7:    600px,
+    nexus-9:    1024px,
+    note-4:     480px,
+    pixel:      411px,
+    surface:    768px,
 
-  	/// Screens
-  	mobile:    414px,
-  	tablet:    768px,
-  	desktop:   1920px,
-  	ultrawide: 2560px,
+    /// Screens
+    mobile:    414px,
+    tablet:    768px,
+    desktop:   1920px,
+    ultrawide: 2560px,
 
 ) !default;
 
