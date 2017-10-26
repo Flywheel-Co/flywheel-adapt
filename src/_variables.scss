@@ -84,6 +84,40 @@ $adapt-devices: (
 
 ) !default;
 
+/// Text-like input selectors
+///
+/// @since 1.0.0
+$adapt-text-inputs: (
+  '[type="color"]',
+  '[type="date"]',
+  '[type="datetime"]',
+  '[type="datetime-local"]',
+  '[type="email"]',
+  '[type="month"]',
+  '[type="number"]',
+  '[type="password"]',
+  '[type="search"]',
+  '[type="tel"]',
+  '[type="text"]',
+  '[type="time"]',
+  '[type="url"]',
+  '[type="week"]'
+) !default;
+
+/// Toggle-style input selectors
+///
+/// @since 1.0.0
+$adapt-toggle-inputs: (
+  '[type="checkbox"]'
+) !default;
+
+$adapt-button-inputs: (
+  '[type="button"]',
+  '[type="submit"]',
+  '[type="reset"]'
+) !default;
+
+
 /// Easings
 ///
 /// @since 2.0.0
