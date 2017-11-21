@@ -64,5 +64,7 @@
 /// @since 1.0.0
 /// @param {string} $device valid device key
 @mixin d($device) {
-	@include device($device);
+	@include device($device) {
+		@content;
+	}
 }
