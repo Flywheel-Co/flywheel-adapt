@@ -6,7 +6,6 @@
 /// @since  2.0.0
 /// @author chriseverson
 ////
-///
 
 /// Standard row
 ///
@@ -152,92 +151,4 @@
 			align-items: baseline;
 		}
 	}
-
 }
-
-
-
-
-// .row {
-// 	display: flex;
-// 	width: 95%;
-// 	margin: 0 auto;
-// 	max-width: $layout-width;
-// 	flex-flow: row wrap;
-// 	align-items: stretch;
-// 	@include bs;
-// 	@include tablet {
-// 		padding: 0 20px;
-// 	}
-// 	@include mobile {
-// 		padding: 0 20px;
-// 	}
-// 	&-center {
-// 		justify-content: center;
-// 	}
-
-// 	&-vcenter {
-// 		align-items: center;
-// 	}
-
-// 	&-space-between {
-// 		justify-content: space-between;
-// 	}
-
-// 	.row {
-// 		max-width: 100%;
-// 		width: 100%;
-
-// 		@include d( mobile ) {
-// 			padding: 0;
-// 		}
-// 	}
-
-// 	&.padded {
-// 		padding: 30px 0 !important;
-// 	}
-// 	.col {
-// 		margin: unquote($grid-cell-margin + '%');
-// 		max-width: 100%;
-// 		@include bs;
-// 		@include mobile {
-// 			flex-basis: 99% !important;
-// 		}
-// 		&.center-center {
-// 			justify-content: center;
-// 			align-items: center;
-// 		}
-// 	}
-// 	// col-x
-// 	@for $i from 1 through $grid-columns {
-// 		.col-#{$i} {
-// 			flex-basis: unquote((100/$grid-columns * $i - ($grid-cell-margin * 2)) + "%");
-// 		}
-// 	}
-// 	// push-x
-// 	@for $i from 1 through $grid-columns {
-// 		.push-#{$i} {
-// 			margin-left: unquote((100/$grid-columns * $i) + "%");
-// 			@include mobile {
-// 				margin-left: 0;
-// 			}
-// 		}
-// 	}
-// 	@for $i from 1 through $grid-columns {
-// 		.offset-#{$i} {
-// 			margin-right: unquote((100/$grid-columns * $i) + "%");
-// 			@include mobile {
-// 				margin-right: 0;
-// 			}
-// 		}
-// 	}
-// }
-
-// @for $i from 1 through $grid-columns {
-// 	.indent-#{$i} {
-// 		padding-left: unquote((100/$grid-columns * $i) + "%");
-// 		@include mobile {
-// 			padding-left: 0;
-// 		}
-// 	}
-// }
