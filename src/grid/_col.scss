@@ -17,6 +17,10 @@
 	position: relative;
 	margin: unquote($adapt-grid-column-margin + '%');
 
+	/// Marginless column
+	/// Remove the default margins from a column element
+	///
+	/// @since 2.0.0
 	&-marginless {
 		margin: 0;
 	}
