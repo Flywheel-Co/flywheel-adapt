@@ -35,6 +35,12 @@
 			flex-grow: 0;
 			flex-basis: unquote((100/$adapt-grid-columns * $i - ($adapt-grid-column-margin * 2)) + '%');
 
+			@include device(mobile) {
+				&:not(.col-nonresponsive) {
+					flex-basis: 100%;
+				}
+			}
+
 			&.col-marginless {
 				flex-basis: unquote((100/$adapt-grid-columns * $i) + '%');
 			}
@@ -68,7 +74,4 @@
 			}
 		}
 	}
-
-	// flex-basis: 30
-	// flex-basis: 33%;
 }
