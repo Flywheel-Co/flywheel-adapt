@@ -6,11 +6,6 @@
 /// @author  chriseverson
 ////
 
-/// Import reset and normalize
-///
-/// @todo document this
-@import 'node_modules/css-reset-and-normalize-sass/scss/flavored-reset-and-normalize.scss';
-
 /// Import default variables
 @import 'src/variables';
 
@@ -26,8 +21,14 @@
 @import 'src/mixins/filters';
 @import 'src/mixins/inputs';
 @import 'src/mixins/positioning';
+@import 'src/mixins/reset-and-normalize';
 @import 'src/mixins/sizing';
 @import 'src/mixins/transforms';
+
+/// Include flavored reset and normlization
+@if $adapt-reset-and-normalize == true {
+	@include reset-and-normalize;
+}
 
 /// Grid
 @import 'src/grid/col';

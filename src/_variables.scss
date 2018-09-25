@@ -6,6 +6,8 @@
 /// @author chriseverson
 ////
 
+$adapt-reset-and-normalize: true !default;
+
 /// Defines the maximum width of a grid row.
 ///
 /// @since 2.0.0
@@ -52,7 +54,6 @@ $adapt-grid-column-margin: .75 !default;
 /// @since 2.0.0
 /// @type map
 $adapt-devices: (
-
     /// Models
     chromebook: 1355px,
     ipad:       768px,
@@ -84,7 +85,6 @@ $adapt-devices: (
     tablet:    768px,
     desktop:   1920px,
     ultrawide: 2560px,
-
 ) !default;
 
 /// Text-like input selectors
