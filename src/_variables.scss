@@ -6,6 +6,10 @@
 /// @author chriseverson
 ////
 
+/// Toggle the inclusion of the reset-and-normalize mixin
+///
+/// @since 2.0.0
+/// @type  boolean
 $adapt-reset-and-normalize: true !default;
 
 /// Defines the maximum width of a grid row.
