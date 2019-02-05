@@ -1,0 +1,40 @@
+////
+/// Device query classes
+///
+/// @group Devices
+/// @since 2.0.0
+////
+
+/// Generate the classes
+///
+/// @since 1.0.0
+@each $device, $width in $adapt-devices {
+
+	$suffixes: #{$device}, lte-#{$device}, lt-#{$device}, gte-#{$device}, gt-#{$device};
+
+	@each $suffix in $suffixes {
+
+		/// Show the element on X device
+		///
+		/// @name .show-{$device-query}
+		/// @since 2.0.0
+		.show-#{$suffix} {
+			display: none;
+
+			@include device($device) {
+				display: block;
+			}
+		}
+
+		/// Hide the element on X device
+		///
+		/// @since 2.0.0
+		.hide-#{$suffix} {
+			display: inherit;
+
+			@include device($device) {
+				display: none;
+			}
+		}
+	}
+}

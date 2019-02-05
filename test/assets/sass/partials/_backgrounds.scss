@@ -1,10 +1,8 @@
-/**
- * Background
- */
-#background-gradient {
-	@include background-gradient(#EBD32B, #EB2F17);
-}
+////
+/// Backgrounds example / testing environment
+////
 
-#linear-gradient {
-	@include linear-gradient(to left, #E0E0E0 0%, #EE3B43 50%, #E0E0E0 100% );
+/// Background item
+.background-item {
+	@include background-image( 300px, 200px, url('/test/assets/img/sample.jpg') no-repeat);
 }

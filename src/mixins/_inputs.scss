@@ -1,0 +1,17 @@
+////
+/// Form input mixins
+///
+/// @group Mixins
+/// @since 2.0.0
+////
+
+/// Define text-like input placeholder styles
+///
+/// @since   1.0.0
+/// @content placeholder style definitions
+@mixin placeholder {
+	&::-webkit-input-placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+}

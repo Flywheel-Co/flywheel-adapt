@@ -1,0 +1,36 @@
+////
+/// Sizing helper mixins
+///
+/// @group Mixins
+/// @since 2.0.0
+////
+
+/// Width x height shorthand
+///
+/// @since 1.0.0
+/// @param number $width - element width
+/// @param number $height - element height
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+/// Aspect ratio helper
+///
+/// This mixin applies styles to an element which should then have an absolutely positioned child
+///
+/// @since 2.0.0
+/// @param string $ratio - aspect ratio string (e.g. '4:3')
+@mixin aspect-ratio($ratio) {
+	position: relative;
+	padding-bottom: ratio-to-percent($ratio);
+
+	/// apply styles to immediate child
+	&> * {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}

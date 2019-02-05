@@ -1,0 +1,50 @@
+////
+/// Transform example / testing environment
+////
+
+/// Transform example item
+.transform-item {
+	background: $color-white;
+
+ 	div {
+ 		position: absolute;
+ 		@include size( 50% );
+ 	}
+
+	.label {
+		color: $color-white;
+		background: none;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		padding: 0;
+		@include translate(0, -50%);
+	}
+
+	&#transform {
+		&-rotate > div {
+			background: $color-red;
+			@include rotate(45);
+		}
+
+		&-translate {
+			&> div {
+				background: $color-blue;
+				@include translate( 50%, 50% );
+			}
+
+			&-x > div {
+				background: $color-red;
+				@include translateX( 50% );
+			}
+
+			&-y > div {
+				background: $color-blue;
+				@include translateY( 50% );
+			}
+		}
+
+	}
+
+
+}

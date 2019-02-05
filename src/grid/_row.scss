@@ -1,0 +1,154 @@
+////
+/// Grid row
+/// Grid library row definitions
+///
+/// @group  Grid
+/// @since  2.0.0
+/// @author chriseverson
+////
+
+/// Standard row
+///
+/// @since 2.0.0
+%#{str-slice($adapt-grid-row-selector, 2)},
+#{$adapt-grid-row-selector} {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+	width: $adapt-grid-width;
+	max-width: $adapt-grid-max-width;
+	margin: 0 auto;
+
+	/// Full width row
+	/// This disregards $adapt-grid-max-width and $adapt-grid-width
+	///
+	/// @since 2.0.0
+	&-full {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	/// Directions
+	///
+	/// @ignore
+	/// @since  2.0.0
+	/// @access private
+	/// @type   list
+	$directions: row row-reverse column column-reverse;
+
+	/// row-{direction}
+	///
+	/// @since 2.0.0
+	@each $direction in $directions {
+		&-#{$direction} {
+			flex-direction: #{$direction};
+		}
+	}
+
+	/// Wrap styles
+	///
+	/// @since  2.0.0
+	/// @access private
+	/// @type   list
+	$wraps: nowrap wrap wrap-reverse;
+
+	/// row-{wrap}
+	///
+	/// @since 2.0.0
+	@each $wrap in $wraps {
+		&-#{$wrap} {
+			flex-wrap: #{$wrap};
+		}
+	}
+
+	/// Justification
+	///
+	/// @since 2.0.0
+	&-justify {
+
+		/// Justify left
+		///
+		/// @since 2.0.0
+		&-left {
+			justify-content: flex-start;
+		}
+
+		/// Justify right
+		///
+		/// @since 2.0.0
+		&-right {
+			justify-content: flex-end;
+		}
+
+		/// Justify center
+		///
+		/// @since 2.0.0
+		&-center {
+			justify-content: center;
+		}
+
+		/// Justify space between
+		///
+		/// @since 2.0.0
+		&-between {
+			justify-content: space-between;
+		}
+
+		/// Justify space around
+		///
+		/// @since 2.0.0
+		&-around {
+			justify-content: space-around;
+		}
+
+		/// Justify space evenly
+		///
+		/// @since 2.0.0
+		&-evenly {
+			justify-content: space-evenly;
+		}
+	}
+
+	/// Alignment
+	///
+	/// @since 2.0.0
+	&-align {
+
+		/// Align top
+		///
+		/// @since 2.0.0
+		&-top {
+			align-items: flex-start;
+		}
+
+		/// Align bottom
+		///
+		/// @since 2.0.0
+		&-bottom {
+			align-items: flex-end;
+		}
+
+		/// Align center
+		///
+		/// @since 2.0.0
+		&-center {
+			align-items: center;
+		}
+
+		/// Align stretch
+		///
+		/// @since 2.0.0
+		&-stretch {
+			align-items: stretch;
+		}
+
+		/// Align baseline
+		///
+		/// @since 2.0.0
+		&-baseline {
+			align-items: baseline;
+		}
+	}
+}

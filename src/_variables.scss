@@ -1,0 +1,154 @@
+////
+/// Variables
+///
+/// @group  Settings
+/// @since  2.0.0
+/// @author chriseverson
+////
+
+/// Toggle the inclusion of the reset-and-normalize mixin
+///
+/// @since 2.0.0
+/// @type  boolean
+$adapt-reset-and-normalize: true !default;
+
+/// Defines the maximum width of a grid row.
+///
+/// @since 2.0.0
+/// @type  number
+$adapt-grid-max-width: 1024px !default;
+
+/// Defines the desired grid row width.
+///
+/// @since 2.0.0
+/// @type  number
+$adapt-grid-width: 90% !default;
+
+/// Grid row selector.
+///
+/// @since 2.0.0
+/// @type  list
+$adapt-grid-row-selector: '.row' !default;
+
+/// Grid column selector.
+///
+/// @since 2.0.0
+/// @type  list
+$adapt-grid-column-selector: '.col' !default;
+
+/// Defines the number of base columns used when calculating column sizes.
+///
+/// @since 2.0.0
+/// @type  number
+$adapt-grid-columns: 12 !default;
+
+/// Defines the margin between grid row columns
+///
+/// @todo update to accept an array of [top/bottom, right/left] or [top, bottom, right, left]
+///
+/// @since 2.0.0
+/// @type  number
+$adapt-grid-column-margin: .75 !default;
+
+/// Device breakpoints.
+///
+/// Devices can be added or removed by extending the default device map. Device queries and their
+/// related show/hide classes are generated from this map of devices and their widths.
+///
+/// @since 2.0.0
+/// @type map
+$adapt-devices: (
+    /// Models
+    chromebook: 1355px,
+    ipad:       768px,
+    ipad-air:   768px,
+    ipad-mini:  768px,
+    ipad-pro:   834px,
+    iphone:     320px,
+    iphone-4:   320px,
+    iphone-5:   320px,
+    iphone-6:   375px,
+    iphone-6p:  414px,
+    iphone-7:   375px,
+    iphone-7p:  414px,
+    iphone-8:   375px,
+    iphone-8p:  414px,
+    iphone-x:   375px,
+    moto-x:     360px,
+    nexus-4:    384px,
+    nexus-5:    360px,
+    nexus-6:    411px,
+    nexus-7:    600px,
+    nexus-9:    1024px,
+    note-4:     480px,
+    pixel:      411px,
+    surface:    768px,
+
+    /// Screens
+    mobile:    414px,
+    tablet:    768px,
+    desktop:   1920px,
+    ultrawide: 2560px,
+) !default;
+
+/// Text-like input selectors
+///
+/// @since 1.0.0
+$adapt-text-inputs: (
+  '[type="color"]',
+  '[type="date"]',
+  '[type="datetime"]',
+  '[type="datetime-local"]',
+  '[type="email"]',
+  '[type="month"]',
+  '[type="number"]',
+  '[type="password"]',
+  '[type="search"]',
+  '[type="tel"]',
+  '[type="text"]',
+  '[type="time"]',
+  '[type="url"]',
+  '[type="week"]'
+) !default;
+
+/// Toggle-style input selectors
+///
+/// @since 1.0.0
+$adapt-toggle-inputs: (
+  '[type="checkbox"]'
+) !default;
+
+$adapt-button-inputs: (
+  '[type="button"]',
+  '[type="submit"]',
+  '[type="reset"]'
+) !default;
+
+
+/// Easings
+///
+/// @since 2.0.0
+$easing-in-cubic:     cubic-bezier(0.550, 0.055, 0.675, 0.190) !default;
+$easing-out-cubic:    cubic-bezier(0.215, 0.610, 0.355, 1.000) !default;
+$easing-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1.000) !default;
+$easing-in-circ:      cubic-bezier(0.600, 0.040, 0.980, 0.335) !default;
+$easing-out-circ:     cubic-bezier(0.075, 0.820, 0.165, 1.000) !default;
+$easing-in-out-circ:  cubic-bezier(0.785, 0.135, 0.150, 0.860) !default;
+$easing-in-expo:      cubic-bezier(0.950, 0.050, 0.795, 0.035) !default;
+$easing-out-expo:     cubic-bezier(0.190, 1.000, 0.220, 1.000) !default;
+$easing-in-out-expo:  cubic-bezier(1.000, 0.000, 0.000, 1.000) !default;
+$easing-in-quad:      cubic-bezier(0.550, 0.085, 0.680, 0.530) !default;
+$easing-out-quad:     cubic-bezier(0.250, 0.460, 0.450, 0.940) !default;
+$easing-in-out-quad:  cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
+$easing-in-quart:     cubic-bezier(0.895, 0.030, 0.685, 0.220) !default;
+$easing-out-quart:    cubic-bezier(0.165, 0.840, 0.440, 1.000) !default;
+$easing-in-out-quart: cubic-bezier(0.770, 0.000, 0.175, 1.000) !default;
+$easing-in-quint:     cubic-bezier(0.755, 0.050, 0.855, 0.060) !default;
+$easing-out-quint:    cubic-bezier(0.230, 1.000, 0.320, 1.000) !default;
+$easing-in-out-quint: cubic-bezier(0.860, 0.000, 0.070, 1.000) !default;
+$easing-in-sine:      cubic-bezier(0.470, 0.000, 0.745, 0.715) !default;
+$easing-out-sine:     cubic-bezier(0.390, 0.575, 0.565, 1.000) !default;
+$easing-in-out-sine:  cubic-bezier(0.445, 0.050, 0.550, 0.950) !default;
+$easing-in-back:      cubic-bezier(0.600, -0.280, 0.735, 0.045) !default;
+$easing-out-back:     cubic-bezier(0.175,  0.885, 0.320, 1.275) !default;
+$easing-in-out-back:  cubic-bezier(0.680, -0.550, 0.265, 1.550) !default;
