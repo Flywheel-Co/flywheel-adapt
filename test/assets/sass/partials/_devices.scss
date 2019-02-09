@@ -83,5 +83,20 @@
 			opacity: 1;
 		}
 	}
+}
 
+.device-shortcut {
+	opacity: .25;
+
+	&-mobile {
+		@include mobile {
+			opacity: 1;
+		}
+	}
+
+	&-tablet {
+		@include tablet {
+			opacity: 1;
+		}
+	}
 }
