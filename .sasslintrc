@@ -1,0 +1,24 @@
+{
+	"options": {
+		"merge-default-rules": false,
+		"max-warnings": 50
+	},
+	"files": {
+		"include": "**/*.scss",
+		"ignore": [
+			"node_modules/**/*.scss",
+			"test/**/*.scss"
+		]
+	},
+	"rules": {
+		"extends-before-mixins": 2,
+		"extends-before-declarations": 2,
+		"no-warn": 1,
+		"no-debug": 1,
+		"no-ids": 2,
+		"no-important": 2,
+		"indentation": [
+			2, { "size": 4 }
+		]
+	}
+}

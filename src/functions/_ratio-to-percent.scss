@@ -4,9 +4,9 @@
 /// @since 2.0.0
 /// @param string $ratio
 @function ratio-to-percent($ratio) {
-	$splitter: str-index($ratio, ':');
-	$width:    string-to-number( str-slice($ratio, 1, $splitter - 1) );
-	$height:   string-to-number( str-slice($ratio, $splitter + 1 ) );
+    $splitter: str-index($ratio, ':');
+    $width:    string-to-number( str-slice($ratio, 1, $splitter - 1) );
+    $height:   string-to-number( str-slice($ratio, $splitter + 1 ) );
 
-	@return unquote( ( $height / $width ) * 100 + '%' );
+    @return unquote( ( $height / $width ) * 100 + '%' );
 }

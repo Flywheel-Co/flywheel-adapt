@@ -5,18 +5,20 @@
 /// @since 2.0.0
 ////
 
+// sass-lint:disable no-important
+
 /// Preload class
 /// This class can be used to identify when a page is loaded by removing it using Javascript. All
 /// transitions will be disabled until the class is removed.
 ///
 /// @since 1.0.0
 .preload * {
-	transition: none !important;
+    transition: none !important;
 }
 
 /// Prevent body scrolling
 ///
 /// @since 1.0.0
 body.no-scroll {
-	overflow: hidden !important;
+    overflow: hidden !important;
 }

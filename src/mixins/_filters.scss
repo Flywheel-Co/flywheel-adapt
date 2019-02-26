@@ -11,7 +11,7 @@
 /// @since 1.0.0
 /// @param number $value
 @mixin grayscale($value) {
-	filter: grayscale($value);
+    filter: grayscale($value);
 }
 
 /// Greyscale
@@ -20,7 +20,7 @@
 /// @alias greyscale
 /// @param number $value
 @mixin greyscale($value) {
-	@include grayscale($value);
+    @include grayscale($value);
 }
 
 /// Blur
@@ -28,7 +28,7 @@
 /// @since 1.0.0
 /// @param number $value
 @mixin blur($value) {
-	filter: blur($value);
+    filter: blur($value);
 }
 
 /// Brightness
@@ -36,7 +36,7 @@
 /// @since 2.0.0
 /// @param number $value
 @mixin brightness($value) {
-	filter: brightness($value);
+    filter: brightness($value);
 }
 
 /// Contrast
@@ -44,7 +44,7 @@
 /// @since 2.0.0
 /// @param number $value
 @mixin contrast($value) {
-	filter: contrast($value);
+    filter: contrast($value);
 }
 
 /// Saturate
@@ -52,5 +52,5 @@
 /// @since 2.0.0
 /// @param number $value
 @mixin saturate($value) {
-	filter: saturate($value);
+    filter: saturate($value);
 }

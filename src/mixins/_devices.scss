@@ -23,23 +23,23 @@
 /// @since 1.0.0
 /// @param {string} $device a valid device key
 @mixin device($device) {
-	$query:   parse-device-query($device);
-	$compare: map-get($query, 'compare');
-	$device:  map-get($query, 'device');
+    $query:   parse-device-query($device);
+    $compare: map-get($query, 'compare');
+    $device:  map-get($query, 'device');
 
-	@if $compare == 'lte' {
-		$query: 'and (max-width: ' + map-get($adapt-devices, $device) + ')';
-	} @elseif $compare == 'lt' {
-		$query: 'and (max-width: ' + (map-get($adapt-devices, $device) - 1) + ')';
-	} @elseif $compare == 'gte' {
-		$query: 'and (min-width: ' + map-get($adapt-devices, $device) + ')';
-	} @elseif $compare == 'gt' {
-		$query: 'and (min-width: ' + (map-get($adapt-devices, $device) + 1) + ')';
-	}
+    @if $compare == 'lte' {
+        $query: 'and (max-width: ' + map-get($adapt-devices, $device) + ')';
+    } @elseif $compare == 'lt' {
+        $query: 'and (max-width: ' + (map-get($adapt-devices, $device) - 1) + ')';
+    } @elseif $compare == 'gte' {
+        $query: 'and (min-width: ' + map-get($adapt-devices, $device) + ')';
+    } @elseif $compare == 'gt' {
+        $query: 'and (min-width: ' + (map-get($adapt-devices, $device) + 1) + ')';
+    }
 
-	@media only screen #{$query} {
-		@content;
-	}
+    @media only screen #{$query} {
+        @content;
+    }
 }
 
 /// Generate a media query to target sizes between two devices
@@ -50,12 +50,12 @@
 /// @param {number} $min-device - minimum device size
 /// @param {number} $max-device - maximum device size
 @mixin device-between($min-device, $max-device) {
-	$min-width: map-get($adapt-devices, $min-device);
-	$max-width: map-get($adapt-devices, $max-device);
+    $min-width: map-get($adapt-devices, $min-device);
+    $max-width: map-get($adapt-devices, $max-device);
 
- 	@media only screen and (min-width: #{$min-width}) and (max-width: #{$max-width}) {
- 		@content;
- 	}
+    @media only screen and (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+        @content;
+    }
 }
 
 /// Device mixin alias
@@ -64,7 +64,7 @@
 /// @since 1.0.0
 /// @param {string} $device valid device key
 @mixin d($device) {
-	@include device($device) {
-		@content;
-	}
+    @include device($device) {
+        @content;
+    }
 }

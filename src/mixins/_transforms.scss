@@ -25,7 +25,7 @@
 /// @since 2.0.0
 /// @param list $value translation amounts
 @mixin translate($xValue, $yValue: $xValue) {
-	transform: translate($xValue, $yValue);
+    transform: translate($xValue, $yValue);
 }
 
 /// Translate an elementon the X-axis
@@ -33,7 +33,7 @@
 /// @since 2.0.0
 /// @param number $value transition amount
 @mixin translateX($value) {
-	transform: translateX($value);
+    transform: translateX($value);
 }
 
 /// Translate an elementon the Y-axis
@@ -41,5 +41,5 @@
 /// @since 2.0.0
 /// @param number $value transition amount
 @mixin translateY($value) {
-	transform: translateY($value);
+    transform: translateY($value);
 }
