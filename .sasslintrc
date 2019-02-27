@@ -11,12 +11,21 @@
 		]
 	},
 	"rules": {
+		"brace-style": 2,
+		"class-name-format": 2,
+		"empty-line-between-blocks": 2,
 		"extends-before-mixins": 2,
 		"extends-before-declarations": 2,
+		"function-name-format": 2,
+		"one-declaration-per-line": 2,
+		"space-after-colon": 2,
+		"space-around-operator": 2,
+		"variable-name-format": 2,
 		"no-warn": 1,
 		"no-debug": 1,
 		"no-ids": 2,
 		"no-important": 2,
+		"no-vendor-prefixes": 2,
 		"indentation": [
 			2, { "size": 4 }
 		]

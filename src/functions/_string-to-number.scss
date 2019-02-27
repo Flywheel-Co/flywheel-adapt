@@ -19,7 +19,7 @@
         $char: str-slice($number, $i, $i);
 
         @if not (index(map-keys($numbers), $char) or $char == '.') {
-            @return to-length(if($minus, -$result, $result), str-slice($number, $i))
+            @return to-length(if($minus, -$result, $result), str-slice($number, $i));
         }
 
         @if $char == '.' {
