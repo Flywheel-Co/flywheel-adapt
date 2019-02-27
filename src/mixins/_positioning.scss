@@ -14,15 +14,15 @@
 /// @param string $position - a position method
 /// @param list   $args - a list of keywords and values
 @mixin position($position, $args) {
-	position: $position;
+    position: $position;
 
-	@each $location in top right bottom left {
-		$i: index($args, $location);
+    @each $location in top right bottom left {
+        $i: index($args, $location);
 
-		@if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
-			#{$location}: nth($args, $i + 1);
-		}
-	}
+        @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+            #{$location}: nth($args, $i + 1);
+        }
+    }
 }
 
 /// Position an element absolutely
@@ -33,7 +33,7 @@
 /// @alias position
 /// @param list  $args - a list of locations and values
 @mixin absolute($args) {
-	@include position('absolute', $args);
+    @include position('absolute', $args);
 }
 
 /// Position an element realtively
@@ -44,7 +44,7 @@
 /// @alias position
 /// @param list  $args - a list of locations and values
 @mixin relative($args) {
-	@include position('relative', $args);
+    @include position('relative', $args);
 }
 
 /// Position an element fixed in the browser
@@ -55,5 +55,5 @@
 /// @alias position
 /// @param list  $args - a list of locations and values
 @mixin fixed($args) {
-	@include position('fixed', $args);
+    @include position('fixed', $args);
 }

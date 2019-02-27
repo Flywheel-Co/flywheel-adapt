@@ -4,21 +4,21 @@
 /// @since 2.0.0
 /// @param {string} $query - device query - [value]
 @function parse-device-query($query) {
-	$compare: lte;
-	$device:  $query;
+    $compare: lte;
+    $device:  $query;
 
-	@if str-index($query, 'lt-') == 1 or str-index($query, 'gt-') == 1 {
-		$compare: str-slice($query, 0, 2);
-		$device:  str-slice($query, 4, str-length($query));
-	}
+    @if str-index($query, 'lt-') == 1 or str-index($query, 'gt-') == 1 {
+        $compare: str-slice($query, 0, 2);
+        $device:  str-slice($query, 4, str-length($query));
+    }
 
-	@if str-index($query, 'lte-') == 1 or str-index($query, 'gte-') == 1 {
-		$compare: str-slice($query, 0, 3);
-		$device:  str-slice($query, 5, str-length($query));
-	}
+    @if str-index($query, 'lte-') == 1 or str-index($query, 'gte-') == 1 {
+        $compare: str-slice($query, 0, 3);
+        $device:  str-slice($query, 5, str-length($query));
+    }
 
-	@return (
-		compare: $compare,
-		device:  $device
-	);
+    @return (
+    compare: $compare,
+    device:  $device
+    );
 }

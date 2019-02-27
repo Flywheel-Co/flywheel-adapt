@@ -9,19 +9,19 @@
 ///
 /// @since 1.0.0
 @mixin clearfix {
-	zoom: 1;
+    zoom: 1;
 
-	&:before,
-	&:after {
-		content: '\0020';
-		display: block;
-		height: 0;
-		overflow: hidden;
-	}
+    &:before,
+    &:after {
+        content: '\0020';
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
 
-	&:after {
-		clear: both;
-	}
+    &:after {
+        clear: both;
+    }
 }
 
 /// Clearfix helper shorthand
@@ -29,5 +29,5 @@
 /// @since 1.0.0
 /// @alias clearfix
 @mixin cf {
-	@include clearfix;
+    @include clearfix;
 }

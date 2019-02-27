@@ -95,33 +95,33 @@ $adapt-devices: (
 ///
 /// @since 1.0.0
 $adapt-text-inputs: (
-  '[type="color"]',
-  '[type="date"]',
-  '[type="datetime"]',
-  '[type="datetime-local"]',
-  '[type="email"]',
-  '[type="month"]',
-  '[type="number"]',
-  '[type="password"]',
-  '[type="search"]',
-  '[type="tel"]',
-  '[type="text"]',
-  '[type="time"]',
-  '[type="url"]',
-  '[type="week"]'
+    '[type="color"]',
+    '[type="date"]',
+    '[type="datetime"]',
+    '[type="datetime-local"]',
+    '[type="email"]',
+    '[type="month"]',
+    '[type="number"]',
+    '[type="password"]',
+    '[type="search"]',
+    '[type="tel"]',
+    '[type="text"]',
+    '[type="time"]',
+    '[type="url"]',
+    '[type="week"]'
 ) !default;
 
 /// Toggle-style input selectors
 ///
 /// @since 1.0.0
 $adapt-toggle-inputs: (
-  '[type="checkbox"]'
+    '[type="checkbox"]'
 ) !default;
 
 $adapt-button-inputs: (
-  '[type="button"]',
-  '[type="submit"]',
-  '[type="reset"]'
+    '[type="button"]',
+    '[type="submit"]',
+    '[type="reset"]'
 ) !default;
 
 
