@@ -64,7 +64,35 @@
 /// @since 1.0.0
 /// @param {string} $device valid device key
 @mixin d($device) {
-    @include device($device) {
-        @content;
-    }
+	@include device($device) {
+		@content;
+	}
+}
+
+/// Mobile media query shortcut
+///
+/// @alias device
+/// @since 2.0.1
+@mixin mobile {
+	@if map-has-key($adapt-devices, mobile) {
+		@include device(lte-mobile) {
+			@content;
+		}
+	} @else {
+		@error "A device definition with the key 'mobile' must be present in $adapt-devices to use the mobile shortcut mixin.";
+	}
+}
+
+/// Tablet media query shortcut
+///
+/// @alias device
+/// @since 2.0.1
+@mixin tablet {
+	@if map-has-key($adapt-devices, tablet) {
+		@include device(lte-tablet) {
+			@content;
+		}
+	} @else {
+		@error "A device definition with the key 'tablet' must be present in $adapt-devices to use the tablet shortcut mixin.";
+	}
 }
