@@ -6,7 +6,7 @@
 @function string-to-number($number) {
     @if type-of($number) == 'number' {
         @return $number;
-    } @elseif type-of($number) != 'string' {
+    } @else if type-of($number) != 'string' {
         $_: log( 'Unable to convert string to number because a string was not supplied.' );
     }
 

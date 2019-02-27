@@ -29,11 +29,11 @@
 
     @if $compare == 'lte' {
         $query: 'and (max-width: ' + map-get($adapt-devices, $device) + ')';
-    } @elseif $compare == 'lt' {
+    } @else if $compare == 'lt' {
         $query: 'and (max-width: ' + (map-get($adapt-devices, $device) - 1) + ')';
-    } @elseif $compare == 'gte' {
+    } @else if $compare == 'gte' {
         $query: 'and (min-width: ' + map-get($adapt-devices, $device) + ')';
-    } @elseif $compare == 'gt' {
+    } @else if $compare == 'gt' {
         $query: 'and (min-width: ' + (map-get($adapt-devices, $device) + 1) + ')';
     }
 
