@@ -1,6 +1,6 @@
 {
   "name": "flywheel-adapt",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://adapt.flywheel.co",
   "author": "Flywheel Co. <dev@flywheel.co>",
   "description": "A collection of Sass mixins and CSS helper classes to assist in generating cross-browser and cross-device styles.",
