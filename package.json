@@ -1,6 +1,6 @@
 {
   "name": "flywheel-adapt",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://adapt.flywheel.co",
   "author": "Flywheel Co. <dev@flywheel.co>",
   "description": "A collection of Sass mixins and CSS helper classes to assist in generating cross-browser and cross-device styles.",
@@ -22,10 +22,15 @@
     "responsive"
   ],
   "devDependencies": {
+    "del": "^2.2.2",
     "gulp": "^3.9.0",
+    "gulp-dart-sass": "^0.9.1",
+    "gulp-file-include": "^1.0.0",
     "gulp-notify": "^3.0.0",
     "gulp-sass": "^3.1.0",
-    "del": "^2.2.2",
-    "gulp-file-include": "^1.0.0"
+    "sass-lint": "^1.12.1"
+  },
+  "scripts": {
+    "lint": "sass-lint -v"
   }
 }

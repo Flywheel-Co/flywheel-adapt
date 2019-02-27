@@ -10,19 +10,19 @@
 /// @since 1.0.0
 /// @see   clearfix
 .clearfix {
-	@include clearfix();
+    @include clearfix();
 }
 
 /// Float an item left
 ///
 /// @since 1.0.0
 .float-left {
-	float: left;
+    float: left;
 }
 
 /// Float an item right
 ///
 /// @since 1.0.0
 .float-right {
-	float: right;
+    float: right;
 }

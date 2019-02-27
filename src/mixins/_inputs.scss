@@ -10,8 +10,5 @@
 /// @since   1.0.0
 /// @content placeholder style definitions
 @mixin placeholder {
-	&::-webkit-input-placeholder { @content; }
-    &:-moz-placeholder { @content; }
-    &::-moz-placeholder { @content; }
-    &:-ms-input-placeholder { @content; }
+    &::placeholder { @content; }
 }

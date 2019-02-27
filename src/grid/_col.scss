@@ -12,66 +12,66 @@
 /// @since 2.0.0
 %#{str-slice($adapt-grid-column-selector, 2)},
 #{$adapt-grid-column-selector} {
-	flex-grow: 1;
-	max-width: 100%;
-	position: relative;
-	margin: unquote($adapt-grid-column-margin + '%');
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    margin: unquote($adapt-grid-column-margin + '%');
 
-	/// Marginless column
-	/// Remove the default margins from a column element
-	///
-	/// @since 2.0.0
-	&-marginless {
-		margin: 0;
-	}
+    /// Marginless column
+    /// Remove the default margins from a column element
+    ///
+    /// @since 2.0.0
+    &-marginless {
+        margin: 0;
+    }
 
-	/// Col-X
-	/// A column taking up a number of the total available columns
-	///
-	/// @see   $adapt-grid-columns
-	/// @since 2.0.0
-	@for $i from 1 through $adapt-grid-columns {
-		&-#{$i} {
-			flex-grow: 0;
-			flex-basis: unquote((100/$adapt-grid-columns * $i - ($adapt-grid-column-margin * 2)) + '%');
+    /// Col-X
+    /// A column taking up a number of the total available columns
+    ///
+    /// @see   $adapt-grid-columns
+    /// @since 2.0.0
+    @for $i from 1 through $adapt-grid-columns {
+        &-#{$i} {
+            flex-grow: 0;
+            flex-basis: unquote((100/$adapt-grid-columns * $i - ($adapt-grid-column-margin * 2)) + '%');
 
-			@include device(mobile) {
-				&:not(.col-nonresponsive) {
-					flex-basis: 100%;
-				}
-			}
+            @include device(mobile) {
+                &:not(.col-nonresponsive) {
+                    flex-basis: 100%;
+                }
+            }
 
-			&.col-marginless {
-				flex-basis: unquote((100/$adapt-grid-columns * $i) + '%');
-			}
-		}
-	}
+            &.col-marginless {
+                flex-basis: unquote((100/$adapt-grid-columns * $i) + '%');
+            }
+        }
+    }
 
-	/// Push-X
-	/// Push a column X number of columns from the left
-	///
-	/// @since 2.0.0
-	@for $i from 1 through $adapt-grid-columns {
-		&.push-#{$i} {
-			margin-left: unquote(((100 / $adapt-grid-columns * $i) + $adapt-grid-column-margin) + '%');
+    /// Push-X
+    /// Push a column X number of columns from the left
+    ///
+    /// @since 2.0.0
+    @for $i from 1 through $adapt-grid-columns {
+        &.push-#{$i} {
+            margin-left: unquote(((100 / $adapt-grid-columns * $i) + $adapt-grid-column-margin) + '%');
 
-			&.col-marginless {
-				margin-left: unquote((100 / $adapt-grid-columns * $i) + '%');
-			}
-		}
-	}
+            &.col-marginless {
+                margin-left: unquote((100 / $adapt-grid-columns * $i) + '%');
+            }
+        }
+    }
 
-	/// Offset-X
-	/// Offset a column X number of columns from the right
-	///
-	/// @since 2.0.0
-	@for $i from 1 through $adapt-grid-columns {
-		&.offset-#{$i} {
-			margin-right: unquote(((100 / $adapt-grid-columns * $i) + $adapt-grid-column-margin) + '%');
+    /// Offset-X
+    /// Offset a column X number of columns from the right
+    ///
+    /// @since 2.0.0
+    @for $i from 1 through $adapt-grid-columns {
+        &.offset-#{$i} {
+            margin-right: unquote(((100 / $adapt-grid-columns * $i) + $adapt-grid-column-margin) + '%');
 
-			&.col-marginless {
-				margin-right: unquote((100 / $adapt-grid-columns * $i) + '%');
-			}
-		}
-	}
+            &.col-marginless {
+                margin-right: unquote((100 / $adapt-grid-columns * $i) + '%');
+            }
+        }
+    }
 }

@@ -27,7 +27,7 @@
 
 /// Include flavored reset and normlization
 @if $adapt-reset-and-normalize == true {
-	@include reset-and-normalize;
+    @include reset-and-normalize;
 }
 
 /// Grid

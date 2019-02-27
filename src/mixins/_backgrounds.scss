@@ -13,16 +13,16 @@
 /// @param {number} $options - css background parameter value
 /// @param {number} $cover [true] - toggle background size cover
 @mixin background-image($width, $height, $options, $cover: true) {
-	display: block;
-	width: $width;
-	height: $height;
-	background: $options;
-	text-indent: -9999px;
-	overflow: hidden;
+    display: block;
+    width: $width;
+    height: $height;
+    background: $options;
+    text-indent: -9999px;
+    overflow: hidden;
 
-	@if $cover == true {
-		background-size: cover;
-	}
+    @if $cover == true {
+        background-size: cover;
+    }
 }
 
 /// Shorthand access to `background-image(...)`.
@@ -34,5 +34,5 @@
 /// @param number $options - css background parameter value
 /// @param number $cover - toggle `background-size: cover`
 @mixin bgimg($width, $height, $options, $cover: true) {
-	@include background-image($width, $height, $options, $cover);
+    @include background-image($width, $height, $options, $cover);
 }
