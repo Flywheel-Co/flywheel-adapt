@@ -4,7 +4,7 @@
  * @since 1.0.0
  */
 var gulp = require( 'gulp' ),
-	sass = require( 'gulp-sass' ),
+	sass = require( 'gulp-dart-sass' ),
 	notify = require( 'gulp-notify' ),
 	fileInclude = require( 'gulp-file-include' ),
 	del = require( 'del' );
