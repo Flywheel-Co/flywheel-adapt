@@ -1,75 +1,32 @@
-/**
- * Required functionality
- *
- * @since 1.0.0
- */
-var gulp = require( 'gulp' ),
-	sass = require( 'gulp-dart-sass' ),
-	notify = require( 'gulp-notify' ),
-	fileInclude = require( 'gulp-file-include' ),
-	del = require( 'del' );
+const { src, dest, series, watch } = require('gulp');
+const sass = require('gulp-dart-sass');
+const fileInclude = require('gulp-file-include');
+const del = require('del');
 
-/**
- * Assets directory
- *
- * @since 1.0.0
- * @type  {String}
- */
-var assets = './test/assets';
+const assets = './test/assets';
 
+const clean = cb => {
+    return del(['build']);
+}
 
-/**
- * Clean build directory
- *
- * @since 1.0.0
- */
-gulp.task( 'clean', function() {
-	return del( ['build'] );
-});
+const compileSass = cb => {
+    return src(assets + '/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(dest(assets + '/css/'));
+}
 
-/**
- * Compile Sass
- *
- * @since 1.0.0
- */
-gulp.task( 'compileSass', ['clean'], function() {
-	return gulp.src( assets + '/sass/**/*.scss' )
-		.pipe( sass().on( 'error', sass.logError ) )
-		.pipe( gulp.dest( assets + '/css/' ) )
-		.pipe( notify( 'adapt compiled' ) );
-});
+const buildHtml = cb => {
+    return src('./test/index.html')
+        .pipe(fileInclude({ basepath: './test/partials' }))
+        .pipe(dest('./'));
+}
 
-/**
- * Build HTML file and output to root directory
- *
- * @see   gulp-file-include
- * @since 1.0.0
- */
-gulp.task( 'buildHtml', function() {
-	return gulp.src( './test/index.html' )
-		.pipe( fileInclude({
-			basepath: './test/partials'
-		}))
-		.pipe( gulp.dest( './' ) );
-})
+const watcher = cb => {
+    watch(assets + '/sass/**/*.scss', series(compileSass));
+    watch('./src/**/*.scss', series(compileSass));
+    watch('./_adapt.scss', series(compileSass));
+    watch('./test/**/*.html', series(buildHtml));
+    watch('./test/partials/**/*.html', series(buildHtml));
+}
 
-/**
- * Watch files for changes
- *
- * @since 1.0.0
- */
-gulp.task('watch', function(){
-	gulp.watch( assets + '/sass/**/*.scss', ['compileSass'] );
-	gulp.watch( './src/**/*.scss', ['compileSass'] );
-	gulp.watch( './_adapt.scss', ['compileSass'] );
-	gulp.watch( './test/**/*.html', ['buildHtml'] );
-	gulp.watch( './test/partials/**/*.html', ['buildHtml'] );
-});
-
-
-/**
- * Define the default task
- *
- * @since 1.0.0
- */
-gulp.task( 'default', ['watch', 'compileSass', 'buildHtml'] );
+exports.default = series(clean, compileSass, buildHtml, watcher);
