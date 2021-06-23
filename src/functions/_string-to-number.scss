@@ -3,6 +3,8 @@
 /// @group Functions
 /// @since 2.0.0
 /// @param string $number
+@use "sass:math";
+
 @function string-to-number($number) {
     @if type-of($number) == 'number' {
         @return $number;
@@ -28,7 +30,7 @@
             $result: $result * 10 + map-get($numbers, $char);
         } @else {
             $digits: $digits * 10;
-            $result: $result + map-get($numbers, $char) / $digits;
+            $result: $result + math.div(map-get($numbers, $char), $digits);
         }
     }
 

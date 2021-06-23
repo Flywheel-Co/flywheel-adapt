@@ -7,6 +7,8 @@
 /// @author chriseverson
 ////
 
+@use "sass:math";
+
 /// Base column
 ///
 /// @since 2.0.0
@@ -33,7 +35,7 @@
     @for $i from 1 through $adapt-grid-columns {
         &-#{$i} {
             flex-grow: 0;
-            flex-basis: unquote((100/$adapt-grid-columns * $i - ($adapt-grid-column-margin * 2)) + '%');
+            flex-basis: unquote((math.div(100, $adapt-grid-columns) * $i - ($adapt-grid-column-margin * 2)) + '%');
 
             @include device(mobile) {
                 &:not(.col-nonresponsive) {
@@ -42,7 +44,7 @@
             }
 
             &.col-marginless {
-                flex-basis: unquote((100/$adapt-grid-columns * $i) + '%');
+                flex-basis: unquote((math.div(100, $adapt-grid-columns) * $i) + '%');
             }
         }
     }
@@ -53,10 +55,10 @@
     /// @since 2.0.0
     @for $i from 1 through $adapt-grid-columns {
         &.push-#{$i} {
-            margin-left: unquote(((100 / $adapt-grid-columns * $i) + $adapt-grid-column-margin) + '%');
+            margin-left: unquote(((math.div(100, $adapt-grid-columns) * $i) + $adapt-grid-column-margin) + '%');
 
             &.col-marginless {
-                margin-left: unquote((100 / $adapt-grid-columns * $i) + '%');
+                margin-left: unquote((math.div(100, $adapt-grid-columns) * $i) + '%');
             }
         }
     }
@@ -67,10 +69,10 @@
     /// @since 2.0.0
     @for $i from 1 through $adapt-grid-columns {
         &.offset-#{$i} {
-            margin-right: unquote(((100 / $adapt-grid-columns * $i) + $adapt-grid-column-margin) + '%');
+            margin-right: unquote(((math.div(100, $adapt-grid-columns) * $i) + $adapt-grid-column-margin) + '%');
 
             &.col-marginless {
-                margin-right: unquote((100 / $adapt-grid-columns * $i) + '%');
+                margin-right: unquote((math.div(100, $adapt-grid-columns) * $i) + '%');
             }
         }
     }

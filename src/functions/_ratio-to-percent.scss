@@ -3,10 +3,12 @@
 /// @group Functions
 /// @since 2.0.0
 /// @param string $ratio
+@use "sass:math";
+
 @function ratio-to-percent($ratio) {
     $splitter: str-index($ratio, ':');
     $width:    string-to-number( str-slice($ratio, 1, $splitter - 1) );
     $height:   string-to-number( str-slice($ratio, $splitter + 1 ) );
 
-    @return unquote( ( $height / $width ) * 100 + '%' );
+    @return unquote(  math.div($height, $width)  * 100 + '%' );
 }
