@@ -38,8 +38,8 @@
 
     &> span {
         @extend %buns;
-        top: $height / 2;
-        margin-top: -($bar-size / 2);
+        top: $height * 0.5;
+        margin-top: -($bar-size * 0.5);
 
         &:before,
         &:after {
@@ -48,13 +48,13 @@
         }
 
         &:before {
-            top: -( $height / 2 );
-            margin-top: $bar-size / 2;
+            top: -( $height * 0.5 );
+            margin-top: $bar-size * 0.5;
         }
 
         &:after {
-            top: $height /2;
-            margin-top: -($bar-size / 2);
+            top: $height *0.5;
+            margin-top: -($bar-size * 0.5);
         }
 
     }
@@ -68,7 +68,7 @@
         &:before,
         &:after {
             top: 50%;
-            left: -( $width / 2 );
+            left: -( $width * 0.5 );
             margin: 0;
         }
 
