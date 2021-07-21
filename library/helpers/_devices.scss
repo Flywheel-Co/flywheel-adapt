@@ -67,7 +67,7 @@
         }
     }
 
-    @media only screen #{$query} {
+    @media screen #{$query} {
         @content;
     }
 }
